@@ -1,0 +1,34 @@
+.color-primary-0 { color: #547F96 }
+.color-primary-1 { color: #ABBAC2 }
+.color-primary-2 { color: #8EA7B5 }
+.color-primary-3 { color: #2B617D }
+.color-primary-4 { color: #194E6B }
+
+.content {
+    max-width: 90%;
+    font-size: 1.6rem;
+    margin: 0 auto;
+    padding-top: 5%;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+li {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+a {
+    text-decoration: none;
+    color: #547F96;
+}
+.footer {
+    font-size: 1.2rem;
+    float: right;
+}
+@media (min-width: 750px) {
+    .content {
+        max-width: 60%;
+        font-size: 2.0rem;
+        margin: 0 auto;
+        padding-top: 2%;
+    }
+}
