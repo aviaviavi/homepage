@@ -5,16 +5,19 @@
 .color-primary-4 { color: #194E6B }
 
 .content {
-    max-width: 90%;
     font-size: 1.6rem;
     margin: 0 auto;
-    padding-top: 5%;
+    padding: 5%;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
 }
 li {
     padding-top: 1%;
     padding-bottom: 1%;
+}
+.no-style {
+    text-decoration: none !important;
+    color: #222 !important;
 }
 a {
     text-decoration: none;
@@ -32,3 +35,15 @@ a {
         padding-top: 2%;
     }
 }
+.side-nav {
+    text-align: center;
+}
+.nav-table{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.info {
+    color: grey;
+}
+
