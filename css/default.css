@@ -7,7 +7,7 @@
 .content {
     font-size: 1.6rem;
     margin: 0 auto;
-    padding-top: 5%;
+    padding: 5%;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
 }
@@ -35,10 +35,15 @@ a {
         padding-top: 2%;
     }
 }
-
+.side-nav {
+    text-align: center;
+}
 .nav-table{
     display: block;
     width: 100%;
     text-align: center;
+}
+.info {
+    color: grey;
 }
 

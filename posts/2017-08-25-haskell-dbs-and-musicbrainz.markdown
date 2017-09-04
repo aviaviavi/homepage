@@ -4,17 +4,20 @@ title: Easy database access with Haskell and postgresql-simple
 
 ## Easy database access with Haskell and postgresql-simple
 
-Working with a database can be a challenging task for newcomers to Haskell. It
-was for me, anyway. With libraries like persistent, unfamiliar Template Haskell
-combined with the complex types involved ramped the learning curve making it was
+Working with a database can be a challenging task for newcomers to Haskell. 
+For me, it became a non trivial hurdle on the road to productivity with the language.
+With libraries like persistent, unfamiliar Template Haskell
+combined with the complex types involved ramped the learning curve making it
 hard to get much done.
 
-I found myself needing to write a script to import some data from a data dump
-file into postgres (It was a dump of artists from
+I recently found myself needing to write a script to import some data from a data dump
+file into postgresql (It was a dump of artists from
 [musicbrainz](https://musicbrainz.org/) if you're interested). This time, I gave
 `postgrseql-simple` a shot and it was surprisingly easy to use! My script ended
 up being small and quick to write. If you find yourself just needing a simple
-and straightforward way to talk to a database, it's a great choice.
+and straightforward way to talk to a database, it's a great choice. I'll give a brief
+intro to what I did here, and maybe it can help others get the ball rolling for their own
+projects.
 
 Mapping a data type to a database table and getting a connection is easy:
 
@@ -28,17 +31,20 @@ import           Database.PostgreSQL.Simple.FromRow
 import           Database.PostgreSQL.Simple.ToRow
 import           Database.PostgreSQL.Simple.ToField
 
--- The data type we want as a table in the database We define our data models as
--- regular data records, no template haskell needed!
+-- The data type we want as a table in the database. 
+-- We define our data models as regular data 
+-- records, no template haskell needed!
 data Artist = Artist
   { musicbrainzId :: String
   , name :: String
   }
 
--- Define a mapping from rows to be unmarshaled into your data type. Just use
--- one literal `<*> field` for each field in your record
+-- Define a mapping from rows to be unmarshaled 
+-- into your data type. Just use one literal 
+-- `<*> field` for each field in your record
 instance FromRow Artist where
     fromRow = Artist <$> field <*> field
+
 
 -- ... And the same for marshaling your datatype into a db row
 instance ToRow Artist where
@@ -72,7 +78,7 @@ need to reach for monad transformers to use this productively.
 * The database connection is explicitly passed around rather than obfuscated behind a more complicated type.
 
 The trade-off in type safety is well worth the ease of use if, like me, you're
-not an expert Haskell developer. Lets tie everything together. To make things a
+not an expert Haskell developer. To tie everything together and make things a
 little more usable, lets also make our insert function print its progress in the
 entire import:
 
