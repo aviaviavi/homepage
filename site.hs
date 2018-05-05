@@ -16,10 +16,6 @@ main = hakyll $ do
         compile compressCssCompiler
 
     match (fromList ["about.rst", "contact.markdown"]) $ do
-            <div id="navigation">
-                <a href="/">Home</a>
-                <a href="/archive.html">Posts</a>
-            </div>
         route   $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
