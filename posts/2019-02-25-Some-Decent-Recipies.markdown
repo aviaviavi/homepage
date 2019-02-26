@@ -4,11 +4,11 @@ title: Some decent recipes that I make now and then
 
 ### Some recipes I like
 
-Some of these are just links to recipes online, others were taught to me or were
-recipe's I've adapted. For my own recipes, most of the seasonings don't have
-real measurements (yet), because I tend to just season by taste. I'm not yet sure what
-the "best" amounts are for a lot of it, but will be editing this periodically with
-more specific amounts and other recipes.
+Some of these are just links to recipes online, others I've been taught or
+adapted. For my own recipes, most of the seasonings don't have real measurements
+(yet), because I tend to just season by taste. I'm not yet sure what the "best"
+amounts are for a lot of it, but will be editing this periodically with more
+specific amounts and other recipes.
 
 ### 1. [Japanese Chicken Curry](https://www.justonecookbook.com/simple-chicken-curry/)
 
