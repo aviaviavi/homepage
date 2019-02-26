@@ -18,7 +18,7 @@ more specific amounts and other recipes.
 - You can substitue whatever vegetables you want in here, it's a pretty
   forgiving recipe.
   
-### 2. [Shephards Pie](https://www.cookingchanneltv.com/recipes/alton-brown/shepherds-pie-1942900)
+### 2. [Shephard's Pie](https://www.cookingchanneltv.com/recipes/alton-brown/shepherds-pie-1942900)
 
 ### 3. Pasta + Chicken + Cream Sauce
 
