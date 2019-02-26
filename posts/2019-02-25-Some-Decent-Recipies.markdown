@@ -2,13 +2,15 @@
 title: Some decent recipes that I make now and then
 ---
 
-Some recipes here are just links to recipes online I like, others are ones I've
-adapted. For my own recipes, most of the seasonings don't have real
-measurements, because I tend to just season by taste. I'm not yet sure what the
-"best" amounts are for a lot of it. I'll be editing this periodically with more
-specific amounts and other recipes
+### Some recipes I like
 
-## 1. [Japanese Chicken Curry](https://www.justonecookbook.com/simple-chicken-curry/)
+Some of these are just links to recipes online, others were taught to me or were
+recipe's I've adapted. For my own recipes, most of the seasonings don't have
+real measurements (yet), because I tend to just season by taste. I'm not yet sure what
+the "best" amounts are for a lot of it, but will be editing this periodically with
+more specific amounts and other recipes.
+
+### 1. [Japanese Chicken Curry](https://www.justonecookbook.com/simple-chicken-curry/)
 
 #### Notes
 
@@ -16,11 +18,11 @@ specific amounts and other recipes
 - You can substitue whatever vegetables you want in here, it's a pretty
   forgiving recipe.
   
-## 2. [Shephards Pie](https://www.cookingchanneltv.com/recipes/alton-brown/shepherds-pie-1942900)
+### 2. [Shephards Pie](https://www.cookingchanneltv.com/recipes/alton-brown/shepherds-pie-1942900)
 
-## 3. Pasta + Chicken + Cream Sauce
+### 3. Pasta + Chicken + Cream Sauce
 
-## Ingredients
+#### Ingredients
 
 - 2 cloves garlic (but really, as much as you're comfortable with)
 - 1 lb. boneless chicken thigh, sliced
@@ -50,7 +52,7 @@ specific amounts and other recipes
 
 - You can sub in just about any other vegetables you have on hand.
 
-## 4. Chow Mein
+### 4. Chow Mein
 
 #### Ingredients
 - Chow mein noodles (Fresh if possible. It's way better)
@@ -79,13 +81,13 @@ specific amounts and other recipes
 - Add the noodles to the vegetables. Add light soy sauce, and hoisin sauce to taste.
 - Garnish with green onions and sesame seeds and serve
 
-### Notes
+#### Notes
 
 I rarely make the thing here twice. You can throw in any vegetables you like. I
 will also sometimes scramble an egg or two in the wok just before adding the
 noodles.
 
-## 5. Brussel Srouts
+### 5. Brussel Srouts
 
 #### Ingredients
 - Brussel Sprouts - as many as you want to eat
@@ -114,7 +116,7 @@ noodles.
   at 375 F. I do this if they are large, it will just cook them through
   without burning them.
 
-## 6. Shrimp Scampi
+### 6. Shrimp Scampi
 
 #### Ingredients 
 
@@ -143,7 +145,7 @@ noodles.
 - You can add any other vegetables you like to it, just cook them ahead of the
   shrimp since they cook so fast.
 
-## 7. The easiest bread recipe that's actually good
+### 7. The easiest bread recipe that's actually good
 
 As someone who likes to bake bread a lot, this recipe is almost
 discouraging in how little effort it takes to make a good basic bread.
