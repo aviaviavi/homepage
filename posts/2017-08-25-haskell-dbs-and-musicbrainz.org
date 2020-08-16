@@ -7,7 +7,7 @@
 
 Avi Press | August 25, 2017
 
-[[file:~/dev/homepage.org/index.org][Home]]
+[[file:~/dev/homepage/index.org][Home]]
 
 ---
 
