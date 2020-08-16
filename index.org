@@ -6,7 +6,7 @@
 - Software engineer, functional programming enthusiast
 - Founder and CEO of [[https://scarf.sh][Scarf]] - Helping open-source developers get paid and deliver better software
 - Former engineer at Pandora. Among other things, I built a concert recommendation system with Songkick and Ticketfly integrations to help people find great concerts.
-- 
+ 
 * Projects 
   
 - [[https://scarf.sh][Scarf]] - Helping open-source developers get paid and deliver better software
