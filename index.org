@@ -1,25 +1,28 @@
 #+title: Avi Press
-#+OPTIONS: num:nil toc:nil
+#+options: num:nil toc:nil
 
-*** About
+* About
 
-  - Software engineer, functional programming enthusiast
-  - Founder and CEO of [[https://scarf.sh][Scarf]] - A project to help open-source developers distribute and monetize their work when used in a commercial setting.
-  - Former engineer at Pandora. Among other things, I built a concert recommendation system with Songkick and Ticketfly integrations to help people find great concerts.
-  - Other projects
-    - [[https://github.com/aviaviavi/toodles][Toodles]] - Project management directly from the TODO's in your code
-    - [[https://github.com/aviaviavi/curl-runnings][curl-runnings]] - a framework for quickly and correctly writing integration tests for json APIs and more
-    - [[https://github.com/aviaviavi/confetti][Confetti]] - a simple configuration file swapping tool
-    - [[https://tabdextension.com][Tabd]] - a chrome extension for sharing tabs. Give it a try!
-    - [[https://github.com/aviaviavi/legion][Legion]] - an as-simple-as-possible blockchain server implementation
- 
-*** Contact
+- Software engineer, functional programming enthusiast
+- Founder and CEO of [[https://scarf.sh][Scarf]] - Helping open-source developers get paid and deliver better software
+- Former engineer at Pandora. Among other things, I built a concert recommendation system with Songkick and Ticketfly integrations to help people find great concerts.
+- 
+* Projects 
   
-  - Follow me on [[https://twitter.com/avi_press][Twitter]], [[https://github.com/aviaviavi][Github]]
-  - Ping me on [[https://keybase.io/aviaviavi][Keybase]]
+- [[https://scarf.sh][Scarf]] - Helping open-source developers get paid and deliver better software
+- [[https://github.com/aviaviavi/toodles][Toodles]] - Project management directly from the TODO's in your code
+- [[https://github.com/aviaviavi/curl-runnings][curl-runnings]] - a framework for quickly and correctly writing integration tests for json APIs and more
+- [[https://github.com/aviaviavi/confetti][Confetti]] - a simple configuration file swapping tool
+- [[https://tabdextension.com][Tabd]] - a chrome extension for sharing tabs. Give it a try!
+- [[https://github.com/aviaviavi/legion][Legion]] - an as-simple-as-possible blockchain server implementation
+ 
+* Contact
+  
+- Follow me on [[https://twitter.com/avi_press][Twitter]], [[https://github.com/aviaviavi][Github]]
+- Ping me on [[https://keybase.io/aviaviavi][Keybase]]
 
-*** Posts
+* Posts
 
-  - [[https://medium.com/swlh/a-failed-effort-to-get-paid-for-an-open-source-project-bd7fa4658a1e][A Failed Effort to Get Paid for an Open Source Project - May 29, 2019]]
-  - [[file:posts/2017-08-25-haskell-dbs-and-musicbrainz.org][Easy database access with Haskell and postgresql-simple - August 25, 2017]]
-  - [[https://cocosci.princeton.edu/mike/CachingAlgorithms.pdf][Caching Algorithms and Rational Models of Memory - May, 2014]]
+- [[https://medium.com/swlh/a-failed-effort-to-get-paid-for-an-open-source-project-bd7fa4658a1e][A Failed Effort to Get Paid for an Open Source Project - May 29, 2019]]
+- [[file:posts/2017-08-25-haskell-dbs-and-musicbrainz.org][Easy database access with Haskell and postgresql-simple - August 25, 2017]]
+- [[https://cocosci.princeton.edu/mike/CachingAlgorithms.pdf][Caching Algorithms and Rational Models of Memory - May, 2014]]
