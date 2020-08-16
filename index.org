@@ -1,5 +1,5 @@
 #+title: Avi Press
-#+options: num:nil toc:nil
+#+options: num:nil toc:nil author:nil
 
 * About
 
