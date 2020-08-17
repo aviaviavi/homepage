@@ -1,0 +1,28 @@
+#+title: Analytics and Open Source Sustainability
+#+options: num:nil toc:nil date:nil
+
+Avi Press | July 10, 2020
+
+[[file:../index.org][Home]]
+
+---
+
+Last week, a discussion was sparked about Scarf's JavaScript analytics package, scarf-js. An issue was opened on GitHub and the discussion grew, ultimately moving into the Reactiflux Discord server with many people jumping in and voicing opinions on the topic. An excellent blog post from a scarf-js user, Erik Rasmussen, explained his perspective on this topic as an open-source maintainer. This post shares Scarf's perspective.
+
+If you haven't seen scarf-js before, it's a JavaScript package that works like Google Analytics but for open-source JavaScript packages. Its primary purpose is informing maintainers about which companies are using their software, in efforts to connect maintainers to their commercial users in order to set up support agreements and/or sponsorship. Even if a maintainer has no desire to monetize their project, having a well filled out "Used By" section on a project's README or website is effective for marketing. Scarf-js works by providing a post-install hook that makes a minimal (non-personally-identifying) analytics call after it is installed via an ~npm install~. Scarf then surfaces this information only to the maintainer.
+
+A concern raised about scarf-js is that when developers run ~npm install~, they don't expect data to be sent to anyone besides npm. Even though npm/GitHub/Microsoft already has the exact same data Scarf is collecting (even more actually: [[https://www.npmjs.com/policies/privacy#data][https://www.npmjs.com/policies/privacy#data]]), to many developers, it's more about expectations than about the actual data being collected. Some people are simply against analytics in any context, which is also understandable but unfortunately far less pragmatic for those responsible for keeping software running smoothly.
+
+* But why do this at all?
+  
+People start open-source projects for all kinds of reasons, but rarely for monetary gain. This is what makes the OSS community so special - solve a problem you have, share your solution to help people around the world, and collaborate with anyone who wants to participate and contribute back. Use whatever you need to solve your problems at hand, no strings attached. Today however, OSS maintainers often find themselves in an unexpected position - companies are heavily relying on their work, and have demanding expectations of maintainers. Features they want need to be added. Documentation needs to be superb. Bugs need to not only be fixed, but also back-ported to older release branches, as companies are often slow to update to the latest major release of any particular package. All of these expectations are communicated in public, with the maintainers' personal reputation on the line if they don't consistently deliver. Their passion project which should be an asset has turned into a public liability.
+
+What makes this even harder is that maintainers are working in the dark. They don't find out about issues until someone tells them about it, and unfortunately this is often done in a less-than-empathetic manner. It's challenging to spot problems in advance, and maintainers have no choice but to be mainly reactive, which can be stressful. In most other domains of software that a business might use or build - websites, apps, connected devices, or otherwise - pushing out code with no observability into what the code is actually doing would be a reckless choice. Collectively, we've decided we're okay with that tradeoff. We give up some privacy, but we get to use more reliable software as a result. We have yet to allow open-source maintainers this same privilege, but this double standard is becoming less and less practical. As an OSS maintainer, your code could be critical to the operation of every Fortune 500 company in the world yet you still have no idea how your code is being run and used except when users explicitly tell you about it.
+
+If maintainers are to be fairly compensated for the valuable software they create, it will fall largely on commercial organizations to pay them - whether for support, managed services, sponsorship, or anything else. To that end, keeping maintainers in the loop about who their commercial users are is vital. Providing information that directly makes maintenance more effective helps both maintainers and everyone that uses their software. Scarf is stepping in to bridge this observability gap by providing these analytics as responsibly as possible.
+
+* Where Scarf is headed next
+  
+Overall, Scarf won't succeed in its mission of helping open-source maintainers without the larger developer community behind us. We're prioritizing additional components of our suite of tools to provide maintainers with basic analytics that still respects individual privacy and also don't go against developers' expectations about how and when data can be collected. We're currently in a world where big companies collect extremely personal details about our lives, yet rebuke when the software they use for free tries to collect even the smallest amount of data about them - even when it's easy to just opt-out. In the relationship between open-source developers and their commercial users, it's time to tip the scales back towards the open-source developers. Stay tuned for more details!
+
+
