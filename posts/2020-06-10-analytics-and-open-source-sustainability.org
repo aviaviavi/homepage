@@ -1,6 +1,6 @@
 #+title: Analytics and Open Source Sustainability
 #+options: num:nil toc:nil date:nil
-#+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="./images/dwarf-icon.png">
+#+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="/images/dwarf-icon.png">
 
 Avi Press | July 10, 2020
 
