@@ -4,6 +4,7 @@
 #+options: toc:nil
 #+OPTIONS: date:nil
 #+options: <:nil
+#+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="./images/dwarf-icon.png">
 
 Avi Press | August 25, 2017
 
