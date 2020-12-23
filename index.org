@@ -5,11 +5,11 @@
 
 * About
   
+- Founder and CEO of [[https://scarf.sh][Scarf]] - Scarf helps open-source developers distribute their software with better observability and control. Scarf's distribution toolchain and analytics platform can help maintainers understand how their work is being used and connect with their commercial end-users.
 - Software engineer, functional programming enthusiast
-- Founder and CEO of [[https://scarf.sh][Scarf]] - We help open-source developers get compensated for their work and deliver better software to their users. We help businesses more effectively leverage their open-source dependencies
 - Former engineer at Pandora. Among other things, I built a concert recommendation system with Songkick and Ticketfly integrations to help people find great concerts.
  
-* Projects 
+* Other Projects 
   
 - [[https://github.com/aviaviavi/toodles][Toodles]] - Project management directly from the TODO's in your code
 - [[https://github.com/aviaviavi/curl-runnings][curl-runnings]] - a framework for quickly and correctly writing integration tests for json APIs and more
@@ -22,9 +22,11 @@
 - Follow me on [[https://twitter.com/avi_press][Twitter]], [[https://github.com/aviaviavi][Github]]
 - Ping me on [[https://keybase.io/aviaviavi][Keybase]]
 
-* Posts
-
-- [[file:posts/2020-06-10-analytics-and-open-source-sustainability.org][Analyics and Open Source Sustainability - July 10, 2020]]
-- [[https://medium.com/swlh/a-failed-effort-to-get-paid-for-an-open-source-project-bd7fa4658a1e][A Failed Effort to Get Paid for an Open Source Project - May 29, 2019]]
-- [[file:posts/2017-08-25-haskell-dbs-and-musicbrainz.org][Easy database access with Haskell and postgresql-simple - August 25, 2017]]
-- [[https://cocosci.princeton.edu/mike/CachingAlgorithms.pdf][Caching Algorithms and Rational Models of Memory - May, 2014]]
+* Content
+|---------------------------------------------------------+-------------------|
+| [[https://about.scarf.sh/post/package-registries-and-open-source][Are Package Registries Holding Open-Source Hostage?]]     | July 10, 2020     |
+| [[https://gitpitch.com/aviaviavi/talks?p=intro-to-parsers-2019-01#/1][Introduction to Parsers in Haskell (slides)]]             | September 1, 2019 |
+| [[https://medium.com/swlh/a-failed-effort-to-get-paid-for-an-open-source-project-bd7fa4658a1e][A Failed Effort to Get Paid for an Open Source Project]]  | May 29, 2019      |
+| [[file:posts/2017-08-25-haskell-dbs-and-musicbrainz.org][Easy Database Access with Haskell and postgresql-simple]] | August 25, 2017   |
+| [[https://cocosci.princeton.edu/mike/CachingAlgorithms.pdf][Caching Algorithms and Rational Models of Memory]]        | May, 2014         |
+ 
