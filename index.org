@@ -24,6 +24,7 @@
 
 * Content
 |---------------------------------------------------------+-------------------|
+| [[https://about.scarf.sh/post/direct-downloads-via-scarf-gateway][Measuring Downloads of Anything You Distribute]]    | September 8, 2021 |
 | [[https://about.scarf.sh/post/announcing-scarf-gateway][Announcing The Scarf Gateway]] | March 3, 2021     |
 | [[https://about.scarf.sh/post/package-registries-and-open-source][Are Package Registries Holding Open-Source Hostage?]]     | July 10, 2020     |
 | [[https://gitpitch.com/aviaviavi/talks?p=intro-to-parsers-2019-01#/1][Introduction to Parsers in Haskell (slides)]]             | September 1, 2019 |
