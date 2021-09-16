@@ -24,10 +24,10 @@
 
 * Content
 |---------------------------------------------------------+-------------------|
-| [[https://about.scarf.sh/post/direct-downloads-via-scarf-gateway][Measuring Downloads of Anything You Distribute]]    | September 8, 2021 |
+| [[https://about.scarf.sh/post/direct-downloads-via-scarf-gateway][Measuring Downloads of Anything You Distribute]]    | September 3, 2021 |
 | [[https://about.scarf.sh/post/announcing-scarf-gateway][Announcing The Scarf Gateway]] | March 3, 2021     |
 | [[https://about.scarf.sh/post/package-registries-and-open-source][Are Package Registries Holding Open-Source Hostage?]]     | July 10, 2020     |
-| [[https://gitpitch.com/aviaviavi/talks?p=intro-to-parsers-2019-01#/1][Introduction to Parsers in Haskell (slides)]]             | September 1, 2019 |
+| [[https://github.com/aviaviavi/talks/blob/master/intro-to-parsers-2019-01/PITCHME.md][Introduction to Parsers in Haskell (slides)]]             | September 1, 2019 |
 | [[https://medium.com/swlh/a-failed-effort-to-get-paid-for-an-open-source-project-bd7fa4658a1e][A Failed Effort to Get Paid for an Open Source Project]]  | May 29, 2019      |
 | [[file:posts/2017-08-25-haskell-dbs-and-musicbrainz.org][Easy Database Access with Haskell and postgresql-simple]] | August 25, 2017   |
 | [[https://cocosci.princeton.edu/mike/CachingAlgorithms.pdf][Caching Algorithms and Rational Models of Memory]]        | May, 2014         |
