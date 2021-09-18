@@ -15,7 +15,6 @@
 - [[https://github.com/aviaviavi/curl-runnings][curl-runnings]] - a framework for quickly and correctly writing integration tests for json APIs and more
 - [[https://github.com/aviaviavi/confetti][Confetti]] - a simple configuration file swapping tool
 - [[https://tabdextension.com][Tabd]] - a chrome extension for sharing tabs. Give it a try!
-- [[https://github.com/aviaviavi/legion][Legion]] - an as-simple-as-possible blockchain server implementation
  
 * Contact
   
