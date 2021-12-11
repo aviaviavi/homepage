@@ -5,7 +5,7 @@
 
 * About
   
-- Founder and CEO of [[https://scarf.sh][Scarf]] - Scarf helps open-source developers distribute their software with better observability and control. Scarf's distribution toolchain and analytics platform can help maintainers understand how their work is being used and connect with their commercial end-users.
+- Founder and CEO of [[https://scarf.sh][Scarf]] - Scarf builds maintainer-friendly tools for open-source software distribution, analytics, and commercialization.
 - Software engineer, functional programming enthusiast, open-source maintainer
 - Former engineer at Pandora. Among other things, I built a concert recommendation system with Songkick and Ticketfly integrations to help people find great concerts.
  
