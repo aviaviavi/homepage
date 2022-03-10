@@ -20,7 +20,9 @@
 
 * Content
 |----------------------------------------------------------------+-------------------|
+| [[https://some.engineering/podcasts/2022/03/08/measuring-open-source-adoption][Some Engineering Podcast: Measuring Open Source Adoption]]       | March 8, 2022     |
 | [[https://about.scarf.sh/post/standing-with-ukraine][Scarf Will Block Package Downloads from the Russian Government]] | March 2, 2022     |
+| [[https://podcast.chaoss.community/53][CHOASSCast: Gathering Open Source Usage Data with Avi Press]]    | February 25, 2022 |
 | [[https://about.scarf.sh/post/direct-downloads-via-scarf-gateway][Measuring Downloads of Anything You Distribute]]                 | September 3, 2021 |
 | [[https://about.scarf.sh/post/announcing-scarf-gateway][Announcing The Scarf Gateway]]                                   | March 3, 2021     |
 | [[https://about.scarf.sh/post/package-registries-and-open-source][Are Package Registries Holding Open-Source Hostage?]]            | July 10, 2020     |
