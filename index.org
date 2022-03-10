@@ -22,7 +22,7 @@
 |------------------------------------------------------------------------------------------+-------------------|
 | [[https://some.engineering/podcasts/2022/03/08/measuring-open-source-adoption][Some Engineering Podcast: Measuring Open Source Adoption]]                                 | March 8, 2022     |
 | [[https://about.scarf.sh/post/standing-with-ukraine][Scarf Will Block Package Downloads from the Russian Government]]                           | March 2, 2022     |
-| [[https://podcast.chaoss.community/53][CHOASSCast: Gathering Open Source Usage Data with Avi Press]]                              | February 25, 2022 |
+| [[https://podcast.chaoss.community/53][CHAOSSCast: Gathering Open Source Usage Data with Avi Press]]                              | February 25, 2022 |
 | [[https://about.scarf.sh/post/direct-downloads-via-scarf-gateway][Measuring Downloads of Anything You Distribute]]                                           | September 3, 2021 |
 | [[https://podcast.curiefense.io/15][Committing to Cloud Native Podcast: Analytics for Open Source Maintainers with Avi Press]] | June 28, 2021     |
 | [[https://podcast.sustainoss.org/70][Sustain OSS Podcast: Avi Press and Scarf]]                                                 | March 5, 2021     |
