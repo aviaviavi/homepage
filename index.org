@@ -5,19 +5,20 @@
 
 * About
   
-  - Founder and CEO of [[https://scarf.sh][Scarf]] - Scarf is building advanced maintainer-friendly tools for open-source software distribution and analytics.
+  - Founder and CEO of [[https://scarf.sh][Scarf]] - Scarf buildins advanced maintainer-friendly tools for open-source software distribution and analytics.
   - Software engineer, functional programming enthusiast, open-source maintainer
   - Former engineer at Pandora
-
-* Other Projects 
-  
-  - [[https://tabdextension.com][Tabd]] - a chrome extension for sharing tabs. Give it a try!
 
 * Contact
   
   - Follow me on [[https://twitter.com/avi_press][Twitter]], [[https://github.com/aviaviavi][Github]]
   - I hold open office hours for anyone that you can book with me [[https://calendly.com/avi-press/office-hours][here]], no prior confirmation from me required.
   - Email: [[mailto:mail@avi.press][mail@avi.press]]
+   
+* Other things
+  
+  - [[file:wilson-reunion.org][Wilson High School Class of 2010 Reunion]]
+  - [[https://tabdextension.com][Tabd]] - a chrome extension for sharing tabs. Give it a try!
     
 * Content
 |-------------------------------------------------------------------------------------------------------------------------------------+-------------------|
