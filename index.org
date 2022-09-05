@@ -5,7 +5,7 @@
 
 * About
   
-  - Founder and CEO of [[https://scarf.sh][Scarf]] - Scarf buildins advanced maintainer-friendly tools for open-source software distribution and analytics.
+  - Founder and CEO of [[https://scarf.sh][Scarf]] - Scarf build advanced tools for open-source software distribution and analytics.
   - Software engineer, functional programming enthusiast, open-source maintainer
   - Former engineer at Pandora
 
