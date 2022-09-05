@@ -1,0 +1,16 @@
+#+title: Wilson High School Class of 2010 Reunion
+#+options: num:nil toc:nil author:nil
+#+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="./images/dwarf-icon.png">
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="./css/styles.css">
+
+*Reunion planning is underway and we need planning committee volunteers. Date TBD.*
+  
+#+BEGIN_EXPORT html
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Favi.press%2Fposts%2Fpfbid09YVjUdgLeqh1tYeK8hicKEhJerManQTbeL36oZRMo8zmq2TGntvKJaSRRtTrr8j6l&show_text=true&width=500" width="500" height="277" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+#+END_EXPORT
+
+Please join us by getting in touch: [[mailto:mail@avi.press][mail@avi.press]]
+
+I'll be posting updates here. See you all soon!
+
+  -- Avi

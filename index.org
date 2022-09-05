@@ -16,8 +16,8 @@
 * Contact
   
   - Follow me on [[https://twitter.com/avi_press][Twitter]], [[https://github.com/aviaviavi][Github]]
-  - Ping me on [[https://keybase.io/aviaviavi][Keybase]]
   - I hold open office hours for anyone that you can book with me [[https://calendly.com/avi-press/office-hours][here]], no prior confirmation from me required.
+  - Email: [[mailto:mail@avi.press][mail@avi.press]]
     
 * Content
 |-------------------------------------------------------------------------------------------------------------------------------------+-------------------|
