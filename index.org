@@ -1,12 +1,12 @@
 #+title: Avi Press
 #+SETUPFILE: ./stylish_white.theme
-#+options: num:nil toc:nil author:nil
+#+options: num:nil toc:nil author:nil timestamp:nil
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="./images/dwarf-icon.png">
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="./css/styles.css">
 
 * About me
 
-  - Software engineer, functional programming enthusiast, open-source maintainer and advocate
+  - Software engineer, functional programming enthusiast, open source maintainer and advocate
   - Founder and CEO of [[https://scarf.sh][Scarf]] - Scarf build advanced download and adoption metrics for open source software
   - Former engineer at Pandora
   - Based in Oakland, California
