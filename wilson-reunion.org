@@ -2,7 +2,6 @@
 #+options: num:nil toc:nil author:nil timestamp:nil
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="./images/dwarf-icon.png">
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="./css/styles.css">
-#+SETUPFILE: ./stylish_white.theme
 
 [[file:index.org][[Back to home]​]]
 

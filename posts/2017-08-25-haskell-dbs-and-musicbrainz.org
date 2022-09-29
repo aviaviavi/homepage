@@ -1,11 +1,11 @@
 #+title: Easy database access with Haskell and postgresql-simple
-#+SETUPFILE: ../stylish_white.theme
 #+author: Avi Press
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/styles.css">
 #+options: num:nil
 #+options: toc:nil
 #+OPTIONS: date:nil
 #+options: <:nil
-#+options: num:nil toc:nil author:nil
+#+options: num:nil toc:nil author:nil timestamp: nil
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="/images/dwarf-icon.png">
 
 Avi Press | August 25, 2017
