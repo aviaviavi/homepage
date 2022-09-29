@@ -1,3 +1,3 @@
 Avi Press's personal website at https://avi.press
 
-This site is generated from org files.
+The site is written in .org format, and published as HTML via Emacs Org Mode. 
