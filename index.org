@@ -1,4 +1,5 @@
 #+title: Avi Press
+#+SETUPFILE: ./stylish_white.theme
 #+options: num:nil toc:nil author:nil
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="./images/dwarf-icon.png">
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="./css/styles.css">
@@ -43,7 +44,8 @@
 | [[https://podcast.sustainoss.org/70][Sustain OSS Podcast: Avi Press and Scarf]]                                                                                            | March 5, 2021     |
 | [[https://about.scarf.sh/post/announcing-scarf-gateway][Announcing The Scarf Gateway]]                                                                                                        | March 3, 2021     |
 | [[https://www.coss.community/cossc/ocs-2020-breakout-avi-press-founder-and-ceo-of-scarf-63j][Open Core Summit: Fireside Chat with Joseph Jacks on OSS Analytics]]                                                                  | December 16, 2020 |
-| [[https://about.scarf.sh/post/package-registries-and-open-source][Are Package Registries Holding Open-Source Hostage?]]                                                                                 | July 10, 2020     |
+| [[https://about.scarf.sh/post/package-registries-and-open-source][Are Package Registries Holding Open-Source Hostage?]]                                                                                 | November 11, 2020 |
+| [[https://about.scarf.sh/post/analytics-and-open-source-sustainability][Analytics and Open Source Sustainability]]                                                                                            | July 9, 2020      |
 | [[https://github.com/aviaviavi/talks/blob/master/intro-to-parsers-2019-01/PITCHME.md][Introduction to Parsers in Haskell (slides)]]                                                                                         | September 1, 2019 |
 | [[https://podcastaddict.com/episode/https%3A%2F%2Ffeeds.soundcloud.com%2Fstream%2F639597036-user-410091210-open-source-case-study-reality-of-getting-paid-for-free-software.mp3&podcastId=3302482][Cloud2030 Podcast: Reality of Getting Paid for Free Software]]                                                                        | June 22, 2012     |
 | [[https://medium.com/swlh/a-failed-effort-to-get-paid-for-an-open-source-project-bd7fa4658a1e][A Failed Effort to Get Paid for an Open Source Project]]                                                                              | May 29, 2019      |
