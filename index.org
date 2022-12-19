@@ -10,8 +10,9 @@
 
 * About me
 
-  - Software engineer, functional programming enthusiast, open source maintainer and advocate
   - Founder and CEO of [[https://scarf.sh][Scarf]] - Scarf builds advanced download and adoption metrics for open source software
+  - Open source maintainer and advocate
+  - Functional programming enthusiast
   - Former engineer at Pandora
   - Based in Oakland, California
   - This site is built with [[https://orgmode.org/][Org Mode]]. 
@@ -24,11 +25,13 @@
    
 * Other things
   
+  - I'm a host of the [[https://www.youtube.com/@opensourcebusiness][Hacking Open Source Business Podcast]]. Smash that subscribe button, etc. 
   - [[https://tabdextension.com][Tabd]] - a chrome extension for sharing tabs. Give it a try!
   - [[file:wilson-reunion.org][Wilson High School Class of 2010 Reunion]]
     
 * Content
 |-------------------------------------------------------------------------------------------------------------------------------------+-------------------|
+| [[https://www.youtube.com/watch?v=7XHlbqLLFXs&list=PL6kQg8bP1Ji55k6rDro2rIL8GMzTRQwB3&index=8][How Do You Know if Your Project is Any Good? (All Things Open)]]                                                                      | November 2, 2022  |
 | [[https://twit.tv/shows/floss-weekly/episodes/693?autostart=false][FLOSS Weekly Podcast]]                                                                                                                | August 10, 2022   |
 | [[https://www.youtube.com/watch?v=Yt_IgHZD4v4][The Secret Sauce: Who's Looking At Your GitHub Project? (YouTube)]]                                                                   | August 3, 2022    |
 | [[https://percona.podbean.com/e/data-collection-download-metrics-and-scarf-percona-database-podcast-77-w-avi-press/][Percona's HOSS Talks FOSS Podcast]]                                                                                                   | July 1, 2022      |
