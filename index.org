@@ -15,20 +15,19 @@
   - Functional programming enthusiast
   - Former engineer at Pandora
   - Based in Oakland, California
-  - This site is built with [[https://orgmode.org/][Org Mode]]. 
-    
+  - This site is built with [[https://orgmode.org/][Org Mode]].
 * Contact
-  
+
   - Follow me on [[https://twitter.com/avi_press][Twitter]], [[https://github.com/aviaviavi][Github]]
-  - I hold open office hours for anyone that you can book with me [[https://calendly.com/avi-press/office-hours][here]], no prior confirmation from me required.
+  - I hold open office hours for anyone that you can book with me [[https://cal.com/avi-press/office-hours][here]], no prior confirmation from me required.
   - Email: [[mailto:mail@avi.press][mail@avi.press]]
-   
+
 * Other things
-  
-  - I'm a host of the [[https://www.youtube.com/@opensourcebusiness][Hacking Open Source Business Podcast]]. Smash that subscribe button, etc. 
+
+  - I'm a host of the [[https://www.youtube.com/@opensourcebusiness][Hacking Open Source Business Podcast]]. Smash that subscribe button, etc.
   - [[https://tabdextension.com][Tabd]] - a chrome extension for sharing tabs. Give it a try!
   - [[file:wilson-reunion.org][Wilson High School Class of 2010 Reunion]]
-    
+
 * Content
 |-------------------------------------------------------------------------------------------------------------------------------------+-------------------|
 | [[https://www.youtube.com/watch?v=7XHlbqLLFXs&list=PL6kQg8bP1Ji55k6rDro2rIL8GMzTRQwB3&index=8][How Do You Know if Your Project is Any Good? (All Things Open)]]                                                                      | November 2, 2022  |
