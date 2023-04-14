@@ -10,7 +10,7 @@
 
 * About me
 
-  - Founder and CEO of [[https://scarf.sh][Scarf]] - Scarf builds advanced download and adoption metrics for open source software
+  - Founder and CEO of [[https://scarf.sh][Scarf]] - Scarf builds advanced user & customer intelligence for open source software projects
   - Open source maintainer and advocate
   - Functional programming enthusiast
   - Former engineer at Pandora
