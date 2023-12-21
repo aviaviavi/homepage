@@ -24,9 +24,8 @@
 
 * Other things
 
-  - I'm a host of the [[https://www.youtube.com/@opensourcebusiness][Hacking Open Source Business Podcast]]. Smash that subscribe button, etc.
+  - I'm a host of the [[https://www.youtube.com/watch?v=WERFZq5Oe2Y&list=PLS9wrEdf4JzWxrsk0hc4tZ98viiy6mrWV][Hacking Open Source Business Podcast]]. Smash that subscribe button, etc.
   - [[https://tabdextension.com][Tabd]] - a chrome extension for sharing tabs. Give it a try!
-  - [[file:wilson-reunion.org][Wilson High School Class of 2010 Reunion]]
 
 * Content
 |-------------------------------------------------------------------------------------------------------------------------------------+-------------------|
