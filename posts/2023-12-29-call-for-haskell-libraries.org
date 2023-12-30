@@ -8,7 +8,7 @@
 #+options: num:nil toc:nil author:nil timestamp: nil
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="/images/dwarf-icon.png">
 
-[[file:../index.org][Avi Press]] | Deceber 29, 2023
+[[file:../index.org][Avi Press]] | December 29, 2023
 
 --
 
