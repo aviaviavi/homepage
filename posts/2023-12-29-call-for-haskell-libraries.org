@@ -33,3 +33,11 @@ IHP is making great progress here, but I still list this because it's crucial an
 *A phenomenal ORM.*
 
 All of the ORMs in Haskell leave something to be desired. They are thoughtful, but they are not phenomenal. Haskell's type system should make ORMs better, but they currently make them significantly cumbersome and hard to use. I think Haskell should boast one of the best ORMs of any language. This also means good support for databases besides PostgreSQL (I /love/ psql, to be clear, there are just situations that call for other databases.)
+
+*Polished SDKs for Supabase, Firebase, and other major web-backend platforms*
+
+An increasing portion of web backends don't really require dealing with your own servers and/or infra thanks to these application platforms. Haskell bindings to these platforms will be increasingly important to remain relevant to people building "boring" web apps.
+
+*Better Haskell API access to cabal*
+
+I've wanted to re-use their build planner / contraint manager but it wasn't made available. Maybe that's changed?
