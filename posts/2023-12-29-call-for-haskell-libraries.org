@@ -12,7 +12,7 @@
 [[file:../index.org][Avi Press]] | December 29, 2023
 
 #+BEGIN_EXPORT html
-<img src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81"></img>
+<img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
 #+END_EXPORT
 
 
