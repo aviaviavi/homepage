@@ -1,7 +1,6 @@
 #+title: Call for Haskell Libraries
 #+author: Avi Press
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/styles.css">
-#+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" href="">
 #+options: num:nil
 #+options: toc:nil
 #+OPTIONS: date:nil
@@ -14,7 +13,6 @@
 #+BEGIN_EXPORT html
 <img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
 #+END_EXPORT
-
 
 --
 

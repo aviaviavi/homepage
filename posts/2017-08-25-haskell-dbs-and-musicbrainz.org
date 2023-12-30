@@ -1,7 +1,6 @@
 #+title: Easy database access with Haskell and postgresql-simple
 #+author: Avi Press
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/styles.css">
-#+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" href="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81">
 #+options: num:nil
 #+options: toc:nil
 #+OPTIONS: date:nil
@@ -9,9 +8,11 @@
 #+options: num:nil toc:nil author:nil timestamp: nil
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="/images/dwarf-icon.png">
 
-Avi Press | August 25, 2017
+[[file:../index.org][Avi Press]] | August 25, 2017
 
-[[file:../index.org][Home]]
+#+BEGIN_EXPORT html
+<img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
+#+END_EXPORT
 
 ---
 
