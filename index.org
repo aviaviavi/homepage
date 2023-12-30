@@ -28,6 +28,7 @@
   - [[https://tabdextension.com][Tabd]] - a chrome extension for sharing tabs. Give it a try!
 
 * Content
+
 |-----------------------------------------------------------------------------------------------------------------+-------------------|
 | [[file:posts/2023-12-29-call-for-haskell-libraries.org][Call for Haskell Libraries]]                                                                                      | December 29, 2023 |
 | [[https://www.youtube.com/watch?v=qw4S_6FXsp4][Why Haskell is a Terrible Choice For Startups (And Why We Picked It Anyway)]]                                     | December 7, 2023  |
@@ -44,7 +45,6 @@
 | [[https://podcast.chaoss.community/53][CHAOSSCast:Gathering Open Source Usage Data with Avi Press]]                                                      | February 25, 2022 |
 | [[https://www.emilyomier.com/podcast/making-data-transparent-and-accessible-with-avi-press][Cloud Native Startup Podcast: Making Data Transparent and Accessible]]                                            | January 26, 2022  |
 | [[https://serokell.io/blog/how-scarf-uses-haskell][Serokell Blog Interview: Haskell in Production @ Scarf]]                                                          | November 9, 2021  |
-| [[https://juniortosenior.io/67][Junior to Senior Podcast]]                                                                                        | November 1, 2021  |
 | [[https://about.scarf.sh/post/direct-downloads-via-scarf-gateway][Measuring Downloads of Anything You Distribute]]                                                                  | September 3, 2021 |
 | [[https://podcast.curiefense.io/15][Committing to Cloud Native Podcast: Analytics for Open Source Maintainers with Avi Press]]                        | June 28, 2021     |
 | [[https://console.substack.com/p/console-51?s=r][My interview on the Console Newsletter]]                                                                          | May 2, 2021       |
@@ -54,8 +54,6 @@
 | [[https://about.scarf.sh/post/package-registries-and-open-source][Are Package Registries Holding Open-Source Hostage?]]                                                             | November 11, 2020 |
 | [[https://about.scarf.sh/post/analytics-and-open-source-sustainability][Analytics and Open Source Sustainability]]                                                                        | July 9, 2020      |
 | [[https://github.com/aviaviavi/talks/blob/master/intro-to-parsers-2019-01/PITCHME.md][Introduction to Parsers in Haskell (slides)]]                                                                     | September 1, 2019 |
-| [[https://podcastaddict.com/episode/https%3A%2F%2Ffeeds.soundcloud.com%2Fstream%2F639597036-user-410091210-open-source-case-study-reality-of-getting-paid-for-free-software.mp3&podcastId=3302482][Cloud2030 Podcast: Reality of Getting Paid for Free Software]]                                                    | June 22, 2012     |
 | [[https://medium.com/swlh/a-failed-effort-to-get-paid-for-an-open-source-project-bd7fa4658a1e][A Failed Effort to Get Paid for an Open Source Project]]                                                          | May 29, 2019      |
 | [[file:posts/2017-08-25-haskell-dbs-and-musicbrainz.org][Easy Database Access with Haskell and postgresql-simple]]                                                         | August 25, 2017   |
 | [[https://cocosci.princeton.edu/mike/CachingAlgorithms.pdf][Caching Algorithms and Rational Models of Memory]]                                                                | May, 2014         |
- 
