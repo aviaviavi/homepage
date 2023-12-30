@@ -1,0 +1,31 @@
+#+title: Call for Haskell Libraries
+#+author: Avi Press
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/styles.css">
+#+options: num:nil
+#+options: toc:nil
+#+OPTIONS: date:nil
+#+options: <:nil
+#+options: num:nil toc:nil author:nil timestamp: nil
+#+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="/images/dwarf-icon.png">
+
+[[file:../index.org][Avi Press]] | Deceber 29, 2023
+
+--
+
+The Haskell ecosystem needs more good libraries. This page will serve as my personal wishlist. If you feel like building out any of these, you should reach out to me! [[https://scarf.sh][Scarf]] would likely sponsor some of your work.
+
+*A Clickhouse client*
+
+The existing solutions are some combination of incomplete, years out of date, or poorly designed. We've started working on our own at Scarf, but for the forseeable future it will only be very thin wrapper around the JSON API.
+
+*A Parquet serialization library*
+
+Scarf has been sticking with Avro in anger without a good way to work with Parquet in Haskell.
+
+*A robust GRPC framework*
+
+It's been a while since I looked but I remember having a hard time with protobufs in Haskell generally. Maybe that's improved in the years since I looked.
+
+*A full analog for Rails/Django/etc*
+
+IHP is making great progress here, but I still list this because it's crucial and there's a still a long way to go before there's real feature parity here.

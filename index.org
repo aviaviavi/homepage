@@ -29,6 +29,7 @@
 
 * Content
 |-------------------------------------------------------------------------------------------------------------------------------------+-------------------|
+| [[file:posts/2023-12-29-call-for-haskell-libraries.org][Call for Haskell Libraries]]                                                                                                          | December 29, 2023 |
 | [[https://www.youtube.com/watch?v=7XHlbqLLFXs&list=PL6kQg8bP1Ji55k6rDro2rIL8GMzTRQwB3&index=8][How Do You Know if Your Project is Any Good? (All Things Open)]]                                                                      | November 2, 2022  |
 | [[https://twit.tv/shows/floss-weekly/episodes/693?autostart=false][FLOSS Weekly Podcast]]                                                                                                                | August 10, 2022   |
 | [[https://www.youtube.com/watch?v=Yt_IgHZD4v4][The Secret Sauce: Who's Looking At Your GitHub Project? (YouTube)]]                                                                   | August 3, 2022    |
