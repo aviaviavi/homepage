@@ -1,5 +1,6 @@
 #+title: Avi Press
 #+options: num:nil toc:nil author:nil timestamp:nil
+#+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" href="https://static.scarf.sh/a.png?x-pxid=81e4a851-7a38-4727-af19-05a9106609c0">
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="./images/dwarf-icon.png">
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="./css/styles.css">
 

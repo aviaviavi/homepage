@@ -1,6 +1,7 @@
 #+title: Easy database access with Haskell and postgresql-simple
 #+author: Avi Press
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/styles.css">
+#+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" href="https://static.scarf.sh/a.png?x-pxid=81e4a851-7a38-4727-af19-05a9106609c0">
 #+options: num:nil
 #+options: toc:nil
 #+OPTIONS: date:nil
