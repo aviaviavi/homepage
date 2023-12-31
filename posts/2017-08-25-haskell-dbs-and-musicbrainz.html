@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <title>Easy database access with Haskell and postgresql-simple</title>
-<!-- 2023-12-30 Sat 10:27 -->
+<!-- 2023-12-31 Sun 11:00 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Org-mode">
@@ -187,7 +187,8 @@ $(function() {
 
     $('.bs-docs-sidebar').affix();
 });
-</script><link rel="stylesheet" href="../css/styles.css">
+</script><link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css">
+<link rel="stylesheet" href="../css/styles.css">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/dwarf-icon.png">
 </head>
 <body>
@@ -217,33 +218,33 @@ Mapping a data type to a database table and getting a connection is easy:
 
 <div class="org-src-container">
 
-<pre class="src src-haskell"><span style="color: #4f97d7; font-weight: bold;">module</span> <span style="color: #ce537a; font-weight: bold;">Main</span> <span style="color: #4f97d7; font-weight: bold;">where</span>
+<pre class="src src-haskell"><span style="color: #3a81c3; font-weight: bold;">module</span> <span style="color: #ba2f59; font-weight: bold;">Main</span> <span style="color: #3a81c3; font-weight: bold;">where</span>
 
-<span style="color: #4f97d7; font-weight: bold;">import</span>           <span style="color: #ce537a; font-weight: bold;">Control.Monad.IO.Class</span>
-<span style="color: #4f97d7; font-weight: bold;">import</span>           <span style="color: #ce537a; font-weight: bold;">Data.String.Utils</span>
-<span style="color: #4f97d7; font-weight: bold;">import</span>           <span style="color: #ce537a; font-weight: bold;">Database.PostgreSQL.Simple</span>
-<span style="color: #4f97d7; font-weight: bold;">import</span>           <span style="color: #ce537a; font-weight: bold;">Database.PostgreSQL.Simple.FromRow</span>
-<span style="color: #4f97d7; font-weight: bold;">import</span>           <span style="color: #ce537a; font-weight: bold;">Database.PostgreSQL.Simple.ToRow</span>
-<span style="color: #4f97d7; font-weight: bold;">import</span>           <span style="color: #ce537a; font-weight: bold;">Database.PostgreSQL.Simple.ToField</span>
+<span style="color: #3a81c3; font-weight: bold;">import</span>           <span style="color: #ba2f59; font-weight: bold;">Control.Monad.IO.Class</span>
+<span style="color: #3a81c3; font-weight: bold;">import</span>           <span style="color: #ba2f59; font-weight: bold;">Data.String.Utils</span>
+<span style="color: #3a81c3; font-weight: bold;">import</span>           <span style="color: #ba2f59; font-weight: bold;">Database.PostgreSQL.Simple</span>
+<span style="color: #3a81c3; font-weight: bold;">import</span>           <span style="color: #ba2f59; font-weight: bold;">Database.PostgreSQL.Simple.FromRow</span>
+<span style="color: #3a81c3; font-weight: bold;">import</span>           <span style="color: #ba2f59; font-weight: bold;">Database.PostgreSQL.Simple.ToRow</span>
+<span style="color: #3a81c3; font-weight: bold;">import</span>           <span style="color: #ba2f59; font-weight: bold;">Database.PostgreSQL.Simple.ToField</span>
 
-<span style="color: #2aa1ae; background-color: #292e34;">-- </span><span style="color: #2aa1ae; background-color: #292e34;">The data type we want as a table in the database. </span>
-<span style="color: #2aa1ae; background-color: #292e34;">-- </span><span style="color: #2aa1ae; background-color: #292e34;">We define our data models as regular data </span>
-<span style="color: #2aa1ae; background-color: #292e34;">-- </span><span style="color: #2aa1ae; background-color: #292e34;">records, no template haskell needed!</span>
-<span style="color: #4f97d7; font-weight: bold;">data</span> <span style="color: #ce537a; font-weight: bold;">Artist</span> <span style="color: #7590db;">=</span> <span style="color: #ce537a; font-weight: bold;">Artist</span>
-  <span style="color: #4f97d7;">{</span> musicbrainzId <span style="color: #7590db;">::</span> <span style="color: #ce537a; font-weight: bold;">String</span>
-  , name <span style="color: #7590db;">::</span> <span style="color: #ce537a; font-weight: bold;">String</span>
-  <span style="color: #4f97d7;">}</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">-- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">The data type we want as a table in the database. </span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">-- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">We define our data models as regular data </span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">-- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">records, no template haskell needed!</span>
+<span style="color: #3a81c3; font-weight: bold;">data</span> <span style="color: #ba2f59; font-weight: bold;">Artist</span> <span style="color: #715ab1;">=</span> <span style="color: #ba2f59; font-weight: bold;">Artist</span>
+  <span style="color: #3a81c3;">{</span> musicbrainzId <span style="color: #715ab1;">::</span> <span style="color: #ba2f59; font-weight: bold;">String</span>
+  , name <span style="color: #715ab1;">::</span> <span style="color: #ba2f59; font-weight: bold;">String</span>
+  <span style="color: #3a81c3;">}</span>
 
-<span style="color: #2aa1ae; background-color: #292e34;">-- </span><span style="color: #2aa1ae; background-color: #292e34;">Define a mapping from rows to be unmarshaled </span>
-<span style="color: #2aa1ae; background-color: #292e34;">-- </span><span style="color: #2aa1ae; background-color: #292e34;">into your data type. Just use one literal </span>
-<span style="color: #2aa1ae; background-color: #292e34;">-- </span><span style="color: #2aa1ae; background-color: #292e34;">`&lt;*&gt; field` for each field in your record</span>
-<span style="color: #4f97d7; font-weight: bold;">instance</span> <span style="color: #ce537a; font-weight: bold;">FromRow</span> <span style="color: #ce537a; font-weight: bold;">Artist</span> <span style="color: #4f97d7; font-weight: bold;">where</span>
-    fromRow <span style="color: #7590db;">=</span> <span style="color: #ce537a; font-weight: bold;">Artist</span> <span style="color: #7590db;">&lt;$&gt;</span> field <span style="color: #7590db;">&lt;*&gt;</span> field
+<span style="color: #2aa1ae; background-color: #ecf3ec;">-- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">Define a mapping from rows to be unmarshaled </span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">-- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">into your data type. Just use one literal </span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">-- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">`&lt;*&gt; field` for each field in your record</span>
+<span style="color: #3a81c3; font-weight: bold;">instance</span> <span style="color: #ba2f59; font-weight: bold;">FromRow</span> <span style="color: #ba2f59; font-weight: bold;">Artist</span> <span style="color: #3a81c3; font-weight: bold;">where</span>
+    fromRow <span style="color: #715ab1;">=</span> <span style="color: #ba2f59; font-weight: bold;">Artist</span> <span style="color: #715ab1;">&lt;$&gt;</span> field <span style="color: #715ab1;">&lt;*&gt;</span> field
 
 
-<span style="color: #2aa1ae; background-color: #292e34;">-- </span><span style="color: #2aa1ae; background-color: #292e34;">... And the same for marshaling your datatype into a db row</span>
-<span style="color: #4f97d7; font-weight: bold;">instance</span> <span style="color: #ce537a; font-weight: bold;">ToRow</span> <span style="color: #ce537a; font-weight: bold;">Artist</span> <span style="color: #4f97d7; font-weight: bold;">where</span>
-  toRow a <span style="color: #7590db;">=</span> <span style="color: #4f97d7;">[</span>toField <span style="color: #bc6ec5;">(</span>musicbrainzId a<span style="color: #bc6ec5;">)</span>, toField <span style="color: #bc6ec5;">(</span>name a<span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">]</span>
+<span style="color: #2aa1ae; background-color: #ecf3ec;">-- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">... And the same for marshaling your datatype into a db row</span>
+<span style="color: #3a81c3; font-weight: bold;">instance</span> <span style="color: #ba2f59; font-weight: bold;">ToRow</span> <span style="color: #ba2f59; font-weight: bold;">Artist</span> <span style="color: #3a81c3; font-weight: bold;">where</span>
+  toRow a <span style="color: #715ab1;">=</span> <span style="color: #3a81c3;">[</span>toField <span style="color: #6c3163;">(</span>musicbrainzId a<span style="color: #6c3163;">)</span>, toField <span style="color: #6c3163;">(</span>name a<span style="color: #6c3163;">)</span><span style="color: #3a81c3;">]</span>
 </pre>
 </div>
 
@@ -253,11 +254,11 @@ We can easily grab a connection like so:
 
 <div class="org-src-container">
 
-<pre class="src src-haskell"><span style="color: #bc6ec5; font-weight: bold;">main</span> <span style="color: #7590db;">=</span> <span style="color: #4f97d7; font-weight: bold;">do</span>
-  conn <span style="color: #7590db;">&lt;-</span> connect defaultConnectInfo <span style="color: #4f97d7;">{</span> connectUser <span style="color: #7590db;">=</span> <span style="color: #2d9574;">"my_username"</span>
-                                      , connectDatabase <span style="color: #7590db;">=</span> <span style="color: #2d9574;">"my_dbname"</span>
-                                      <span style="color: #4f97d7;">}</span>
-  <span style="color: #2aa1ae; background-color: #292e34;">-- </span><span style="color: #2aa1ae; background-color: #292e34;">do some stuff</span>
+<pre class="src src-haskell"><span style="color: #6c3163; font-weight: bold;">main</span> <span style="color: #715ab1;">=</span> <span style="color: #3a81c3; font-weight: bold;">do</span>
+  conn <span style="color: #715ab1;">&lt;-</span> connect defaultConnectInfo <span style="color: #3a81c3;">{</span> connectUser <span style="color: #715ab1;">=</span> <span style="color: #2d9574;">"my_username"</span>
+                                      , connectDatabase <span style="color: #715ab1;">=</span> <span style="color: #2d9574;">"my_dbname"</span>
+                                      <span style="color: #3a81c3;">}</span>
+  <span style="color: #2aa1ae; background-color: #ecf3ec;">-- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">do some stuff</span>
 </pre>
 </div>
 
@@ -268,8 +269,8 @@ We can now write:
 
 <div class="org-src-container">
 
-<pre class="src src-haskell"><span style="color: #bc6ec5; font-weight: bold;">insertArtist</span> <span style="color: #7590db;">::</span> <span style="color: #ce537a; font-weight: bold;">Connection</span> <span style="color: #7590db;">-&gt;</span> <span style="color: #ce537a; font-weight: bold;">Artist</span> <span style="color: #7590db;">-&gt;</span> <span style="color: #ce537a; font-weight: bold;">IO</span> <span style="color: #ce537a; font-weight: bold;">Int64</span>
-<span style="color: #bc6ec5; font-weight: bold;">insertArtist</span> conn artist <span style="color: #7590db;">=</span>
+<pre class="src src-haskell"><span style="color: #6c3163; font-weight: bold;">insertArtist</span> <span style="color: #715ab1;">::</span> <span style="color: #ba2f59; font-weight: bold;">Connection</span> <span style="color: #715ab1;">-&gt;</span> <span style="color: #ba2f59; font-weight: bold;">Artist</span> <span style="color: #715ab1;">-&gt;</span> <span style="color: #ba2f59; font-weight: bold;">IO</span> <span style="color: #ba2f59; font-weight: bold;">Int64</span>
+<span style="color: #6c3163; font-weight: bold;">insertArtist</span> conn artist <span style="color: #715ab1;">=</span>
   execute conn
     <span style="color: #2d9574;">"insert into artist (musicbrainz_id, name) values (?, ?)"</span> artist
 </pre>
@@ -292,18 +293,18 @@ The trade-off in type safety is well worth the ease of use if, like me, you're n
 
 <div class="org-src-container">
 
-<pre class="src src-haskell"><span style="color: #bc6ec5; font-weight: bold;">main</span> <span style="color: #7590db;">=</span> <span style="color: #4f97d7; font-weight: bold;">do</span>
-  conn <span style="color: #7590db;">&lt;-</span> connect defaultConnectInfo <span style="color: #4f97d7;">{</span> connectUser <span style="color: #7590db;">=</span> <span style="color: #2d9574;">"my_username"</span>
-                                      , connectDatabase <span style="color: #7590db;">=</span> <span style="color: #2d9574;">"my_dbname"</span>
-                                      <span style="color: #4f97d7;">}</span>
-  <span style="color: #4f97d7; font-weight: bold;">let</span> artists <span style="color: #7590db;">=</span> <span style="color: #7590db;">...</span> <span style="color: #2aa1ae; background-color: #292e34;">-- </span><span style="color: #2aa1ae; background-color: #292e34;">some unrelated file parsing</span>
-  mapM_ <span style="color: #4f97d7;">(</span>uncurry <span style="color: #7590db;">$</span> insertAndPrintCount conn<span style="color: #4f97d7;">)</span> <span style="color: #7590db;">$</span> zip <span style="color: #4f97d7;">[</span><span style="color: #a45bad;">1</span> <span style="color: #7590db;">..</span><span style="color: #4f97d7;">]</span> artists
+<pre class="src src-haskell"><span style="color: #6c3163; font-weight: bold;">main</span> <span style="color: #715ab1;">=</span> <span style="color: #3a81c3; font-weight: bold;">do</span>
+  conn <span style="color: #715ab1;">&lt;-</span> connect defaultConnectInfo <span style="color: #3a81c3;">{</span> connectUser <span style="color: #715ab1;">=</span> <span style="color: #2d9574;">"my_username"</span>
+                                      , connectDatabase <span style="color: #715ab1;">=</span> <span style="color: #2d9574;">"my_dbname"</span>
+                                      <span style="color: #3a81c3;">}</span>
+  <span style="color: #3a81c3; font-weight: bold;">let</span> artists <span style="color: #715ab1;">=</span> <span style="color: #715ab1;">...</span> <span style="color: #2aa1ae; background-color: #ecf3ec;">-- </span><span style="color: #2aa1ae; background-color: #ecf3ec;">some unrelated file parsing</span>
+  mapM_ <span style="color: #3a81c3;">(</span>uncurry <span style="color: #715ab1;">$</span> insertAndPrintCount conn<span style="color: #3a81c3;">)</span> <span style="color: #715ab1;">$</span> zip <span style="color: #3a81c3;">[</span><span style="color: #4e3163;">1</span> <span style="color: #715ab1;">..</span><span style="color: #3a81c3;">]</span> artists
   close conn
-  return <span style="color: #4f97d7; font-weight: bold;">()</span>
+  return <span style="color: #3a81c3; font-weight: bold;">()</span>
 
-<span style="color: #bc6ec5; font-weight: bold;">insertAndPrintCount</span> <span style="color: #7590db;">::</span> <span style="color: #ce537a; font-weight: bold;">Connection</span> <span style="color: #7590db;">-&gt;</span> <span style="color: #ce537a; font-weight: bold;">Int</span> <span style="color: #7590db;">-&gt;</span> <span style="color: #ce537a; font-weight: bold;">Artist</span> <span style="color: #7590db;">-&gt;</span> <span style="color: #ce537a; font-weight: bold;">IO</span> <span style="color: #ce537a; font-weight: bold;">Int64</span>
-<span style="color: #bc6ec5; font-weight: bold;">insertAndPrintCount</span>  conn count artist <span style="color: #7590db;">=</span> <span style="color: #4f97d7; font-weight: bold;">do</span>
-  insertedId <span style="color: #7590db;">&lt;-</span> execute conn
+<span style="color: #6c3163; font-weight: bold;">insertAndPrintCount</span> <span style="color: #715ab1;">::</span> <span style="color: #ba2f59; font-weight: bold;">Connection</span> <span style="color: #715ab1;">-&gt;</span> <span style="color: #ba2f59; font-weight: bold;">Int</span> <span style="color: #715ab1;">-&gt;</span> <span style="color: #ba2f59; font-weight: bold;">Artist</span> <span style="color: #715ab1;">-&gt;</span> <span style="color: #ba2f59; font-weight: bold;">IO</span> <span style="color: #ba2f59; font-weight: bold;">Int64</span>
+<span style="color: #6c3163; font-weight: bold;">insertAndPrintCount</span>  conn count artist <span style="color: #715ab1;">=</span> <span style="color: #3a81c3; font-weight: bold;">do</span>
+  insertedId <span style="color: #715ab1;">&lt;-</span> execute conn
     <span style="color: #2d9574;">"insert into artist (musicbrainz_id, name) values (?, ?)"</span> artist
   printf <span style="color: #2d9574;">"total inserted: %d\n"</span> count
   return insertedId

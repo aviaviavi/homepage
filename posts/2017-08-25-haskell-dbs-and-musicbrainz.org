@@ -1,5 +1,6 @@
 #+title: Easy database access with Haskell and postgresql-simple
 #+author: Avi Press
+#+HTML_HEAD_EXTRA: <link rel='stylesheet' href="https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css">
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/styles.css">
 #+options: num:nil
 #+options: toc:nil

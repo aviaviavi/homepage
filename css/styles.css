@@ -2,6 +2,10 @@ td {
     min-width: 20rem;
 }
 
-#content {
-    font-family: monospace;
+body {
+    font-family: 'Hack'
+}
+
+footer {
+    background-color: white;
 }
