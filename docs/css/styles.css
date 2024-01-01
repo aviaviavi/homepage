@@ -9,3 +9,17 @@ body {
 footer {
     background-color: white;
 }
+
+@media (prefers-color-scheme: dark) {
+    body, footer {
+        background-color: #333;
+        color: #fff;
+
+        .table-striped>tbody>tr:nth-of-type(odd) {
+            background-color: #444;
+        }
+
+        .table-hover>tbody>tr:hover {
+            background-color: #555
+        }
+}
