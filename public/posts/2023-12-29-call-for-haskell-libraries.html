@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Wilson High School Class of 2010 Reunion</title>
+<title>Call for Haskell Libraries</title>
+<!-- 2023-12-31 Sun 17:16 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Org-mode">
+<meta name="author" content="Avi Press">
 
 <link  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -176,7 +178,7 @@ figcaption {
     }
 }
 </style>
-<style>body { margin-bottom: 0px; }</style><script>
+<script>
 $(function() {
     'use strict';
 
@@ -186,19 +188,90 @@ $(function() {
 
     $('.bs-docs-sidebar').affix();
 });
-</script><link rel="icon" type="image/png" sizes="32x32" href="./images/dwarf-icon.png">
-<link rel="stylesheet" href="./css/styles.css">
+</script><link rel="icon" type="image/png" sizes="32x32" href="../images/dwarf-icon.png">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css">
 </head>
 <body>
 <div id="content" class="container">
-<div class="row"><div class="col-md-12"><h1 class="title">Wilson High School Class of 2010 Reunion</h1>
+<div class="row"><div class="col-md-12"><h1 class="title">Call for Haskell Libraries</h1>
 <p>
-<a href="index.html">[Back to home]​</a>
+<a href="../index.html">Avi Press</a> | December 29, 2023
+</p>
+
+<img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
+
+<p>
+&#x2013;
 </p>
 
 <p>
-Join us on 8/19! <a href="https://Wilson2010reunion.eventbrite.com">Get your tickets here!</a>
+The Haskell ecosystem needs more good libraries. This page will serve as my personal wishlist. If you feel like building out any of these, you should reach out to me! <a href="https://scarf.sh">Scarf</a> would likely sponsor some of your work.
+</p>
+
+<p>
+<b>A Clickhouse client</b>
+</p>
+
+<p>
+The existing solutions are some combination of incomplete, years out of date, or poorly designed. We've started working on our own at Scarf, but for the foreseeable future it will only be very thin wrapper around the JSON API.
+</p>
+
+<p>
+<b>A Parquet serialization library</b>
+</p>
+
+<p>
+Scarf has been sticking with Avro in anger without a good way to work with Parquet in Haskell.
+</p>
+
+<p>
+<b>A robust GRPC framework</b>
+</p>
+
+<p>
+It's been a while since I looked but I remember having a hard time with protobufs in Haskell generally. Maybe that's improved in the years since I looked.
+</p>
+
+<p>
+<b>A full analog for Rails/Django/etc</b>
+</p>
+
+<p>
+IHP is making great progress here, but I still list this because it's crucial and there's a still a long way to go before there's real feature parity here.
+</p>
+
+<p>
+<b>A phenomenal ORM.</b>
+</p>
+
+<p>
+All of the ORMs in Haskell leave something to be desired. They are thoughtful, but they are not phenomenal. Haskell's type system should make ORMs better, but they currently make them significantly cumbersome and hard to use. I think Haskell should boast one of the best ORMs of any language. This also means good support for databases besides PostgreSQL (I <i>love</i> psql, to be clear, there are just situations that call for other databases.)
+</p>
+
+<p>
+<b>Polished SDKs for Supabase, Firebase, and other major web-backend platforms</b>
+</p>
+
+<p>
+An increasing portion of web backends don't really require dealing with your own servers and/or infra thanks to these application platforms. Haskell bindings to these platforms will be increasingly important to remain relevant to people building "boring" web apps.
+</p>
+
+<p>
+<b>Better Haskell API access to cabal</b>
+</p>
+
+<p>
+I've wanted to re-use their build planner / contraint manager but it wasn't made available. Maybe that's changed?
 </p>
 </div></div></div>
+<footer id="postamble" class="">
+<p class="postamble">© Avi Press 2024</p>
+            <p class="postamble">
+              <a href="https://twitter.com/avi_press">Twitter</a>
+              <a href="https://github.com/aviaviavi">GitHub</a>
+              <a href="https://www.linkedin.com/in/avi-press-4437a356">LinkedIn</a>
+  </p>
+</footer>
 </body>
 </html>

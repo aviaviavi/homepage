@@ -1,4 +1,7 @@
-#+TITLE: Sitemap for project homepage
+#+TITLE: Sitemap for project homepage-content
 
 - [[file:index.org][Avi Press]]
-- [[file:wilson-reunion.org][Wilson High School Class of 2010 Reunion]]
+- posts
+  - [[file:posts/2020-06-10-analytics-and-open-source-sustainability.org][Analytics and Open Source Sustainability]]
+  - [[file:posts/2023-12-29-call-for-haskell-libraries.org][Call for Haskell Libraries]]
+  - [[file:posts/2017-08-25-haskell-dbs-and-musicbrainz.org][Easy database access with Haskell and postgresql-simple]]

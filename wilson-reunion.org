@@ -1,8 +1,0 @@
-#+title: Wilson High School Class of 2010 Reunion
-#+options: num:nil toc:nil author:nil timestamp:nil
-#+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="./images/dwarf-icon.png">
-#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="./css/styles.css">
-
-[[file:index.org][[Back to home]​]]
-
-Join us on 8/19! [[https://Wilson2010reunion.eventbrite.com][Get your tickets here!]]
