@@ -3,7 +3,6 @@
 
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="../images/dwarf-icon.png">
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/styles.css">
-#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css">
 
 [[file:../index.org][Avi Press]] | December 29, 2023
 
@@ -13,9 +12,9 @@
 
 --
 
-The Haskell ecosystem needs more good libraries. This page will serve as my personal wishlist. If you feel like building out any of these, you should reach out to me! [[https://scarf.sh][Scarf]] would likely sponsor some of your work.
+The Haskell ecosystem needs more good libraries. This page will serve as my personal wishlist. If you feel like building out any of these, you should reach out to me! [[https://scarf.sh][Scarf]] would likely sponsor some of your work and/or contribute to it.
 
-*A Clickhouse client*
+A Clickhouse client*
 
 The existing solutions are some combination of incomplete, years out of date, or poorly designed. We've started working on our own at Scarf, but for the foreseeable future it will only be very thin wrapper around the JSON API.
 

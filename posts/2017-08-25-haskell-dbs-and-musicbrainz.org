@@ -2,7 +2,6 @@
 #+author: Avi Press
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="../images/dwarf-icon.png">
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/styles.css">
-#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css">
 
 [[file:../index.org][Avi Press]] | August 25, 2017
 

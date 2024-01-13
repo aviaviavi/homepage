@@ -1,7 +1,6 @@
 #+title: Avi Press
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="./images/dwarf-icon.png">
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="./css/styles.css">
-#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack-subset.css">
 
 #+BEGIN_EXPORT html
 <img style="height:15rem;" src="./images/portrait.jpg"></img>
