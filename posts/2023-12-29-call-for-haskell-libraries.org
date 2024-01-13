@@ -14,31 +14,31 @@
 
 The Haskell ecosystem needs more good libraries. This page will serve as my personal wishlist. If you feel like building out any of these, you should reach out to me! [[https://scarf.sh][Scarf]] would likely sponsor some of your work and/or contribute to it.
 
-A Clickhouse client*
+*_A Clickhouse client_*
 
 The existing solutions are some combination of incomplete, years out of date, or poorly designed. We've started working on our own at Scarf, but for the foreseeable future it will only be very thin wrapper around the JSON API.
 
-*A Parquet serialization library*
+*_A Parquet serialization library_*
 
 Scarf has been sticking with Avro in anger without a good way to work with Parquet in Haskell.
 
-*A robust GRPC framework*
+*_A robust GRPC framework_*
 
 It's been a while since I looked but I remember having a hard time with protobufs in Haskell generally. Maybe that's improved in the years since I looked.
 
-*A full analog for Rails/Django/etc*
+*_A full analog for Rails/Django/etc_*
 
 IHP is making great progress here, but I still list this because it's crucial and there's a still a long way to go before there's real feature parity here.
 
-*A phenomenal ORM.*
+*_A phenomenal ORM._*
 
 All of the ORMs in Haskell leave something to be desired. They are thoughtful, but they are not phenomenal. Haskell's type system should make ORMs better, but they currently make them significantly cumbersome and hard to use. I think Haskell should boast one of the best ORMs of any language. This also means good support for databases besides PostgreSQL (I /love/ psql, to be clear, there are just situations that call for other databases.)
 
-*Polished SDKs for Supabase, Firebase, and other major web-backend platforms*
+*_Polished SDKs for Supabase, Firebase, and other major web-backend platforms_*
 
 An increasing portion of web backends don't really require dealing with your own servers and/or infra thanks to these application platforms. Haskell bindings to these platforms will be increasingly important to remain relevant to people building "boring" web apps.
 
-*Better Haskell API access to cabal*
+*_Better Haskell API access to cabal_*
 
 I've wanted to re-use their build planner / contraint manager but it wasn't made available. Maybe that's changed?
 
