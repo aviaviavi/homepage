@@ -1,4 +1,5 @@
 #+title: Avi Press
+#+HTML_HEAD_EXTRA: <meta name="viewport" content="width=device-width, initial-scale=1">
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="./images/dwarf-icon.png">
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="./css/styles.css">
 
@@ -28,31 +29,31 @@
 
 * Content
 
-|-----------------------------------------------------------------------------------------------------------------+-------------------|
-| [[file:posts/2023-12-29-call-for-haskell-libraries.org][Call for Haskell Libraries]]                                                                                      | December 29, 2023 |
-| [[https://www.youtube.com/watch?v=qw4S_6FXsp4][Why Haskell is a Terrible Choice For Startups (And Why We Picked It Anyway)]]                                     | December 7, 2023  |
-| [[https://www.youtube.com/watch?v=7XHlbqLLFXs&list=PL6kQg8bP1Ji55k6rDro2rIL8GMzTRQwB3&index=8][How Do You Know if Your Project is Any Good? (All Things Open)]]                                                  | November 2, 2022  |
-| [[https://twit.tv/shows/floss-weekly/episodes/693?autostart=false][FLOSS Weekly Podcast]]                                                                                            | August 10, 2022   |
-| [[https://www.youtube.com/watch?v=Yt_IgHZD4v4][The Secret Sauce: Who's Looking At Your GitHub Project? (YouTube)]]                                               | August 3, 2022    |
-| [[https://percona.podbean.com/e/data-collection-download-metrics-and-scarf-percona-database-podcast-77-w-avi-press/][Percona's HOSS Talks FOSS Podcast]]                                                                               | July 1, 2022      |
-| [[https://www.forbes.com/sites/forbestechcouncil/2022/06/01/distribution-and-the-economics-of-open-source-software][Distribution and the Economics of Open-Source Software (Forbes)]]                                                 | June 1, 2022      |
-| [[https://www.youtube.com/watch?v=aKUJ0_n0KZ0&list=PLmyjALM1NE24x6-vPqfgnMWrymQddJHy6][PyCon 2022 Talk - Beyond the Download Count: Understanding the Usage of your Public Python Packages]]             | April 29, 2022    |
-| [[https://anchor.fm/ossstartuppodcast/episodes/E31-Understanding-Your-Open-Source-Usage-with-Scarf-e1honsa][Open Source Startup Podcast: Understanding Your Open Source Usage with Scarf]]                                    | April 7, 2022     |
-| [[https://www.forbes.com/sites/forbestechcouncil/2022/04/06/uniting-to-act-on-untapped-leverage-how-open-source-maintainers-can-work-together-and-prioritize-long-term-sustainability][Uniting To Act On Untapped Leverage: How Open-Source Maintainers Can Work Together And Prioritize Long-Term Sustainability (Forbes)]] | April 6, 2022     |
-| [[https://www.youtube.com/watch?v=ZEo7JZb3Xpo][Cloud Native Containers Meetup - Beyond the Download: Understanding the Usage of Your Public Containers]]         | March 22, 2022    |
-| [[https://about.scarf.sh/post/standing-with-ukraine][Scarf Will Block Package Downloads from the Russian Government]]                                                  | March 2, 2022     |
-| [[https://podcast.chaoss.community/53][CHAOSSCast:Gathering Open Source Usage Data with Avi Press]]                                                      | February 25, 2022 |
-| [[https://www.emilyomier.com/podcast/making-data-transparent-and-accessible-with-avi-press][Cloud Native Startup Podcast: Making Data Transparent and Accessible]]                                            | January 26, 2022  |
-| [[https://serokell.io/blog/how-scarf-uses-haskell][Serokell Blog Interview: Haskell in Production @ Scarf]]                                                          | November 9, 2021  |
-| [[https://about.scarf.sh/post/direct-downloads-via-scarf-gateway][Measuring Downloads of Anything You Distribute]]                                                                  | September 3, 2021 |
-| [[https://podcast.curiefense.io/15][Committing to Cloud Native Podcast: Analytics for Open Source Maintainers with Avi Press]]                        | June 28, 2021     |
-| [[https://console.substack.com/p/console-51?s=r][My interview on the Console Newsletter]]                                                                          | May 2, 2021       |
-| [[https://podcast.sustainoss.org/70][Sustain OSS Podcast: Avi Press and Scarf]]                                                                        | March 5, 2021     |
-| [[https://about.scarf.sh/post/announcing-scarf-gateway][Announcing The Scarf Gateway]]                                                                                    | March 3, 2021     |
-| [[https://www.coss.community/cossc/ocs-2020-breakout-avi-press-founder-and-ceo-of-scarf-63j][Open Core Summit: Fireside Chat with Joseph Jacks on OSS Analytics]]                                              | December 16, 2020 |
-| [[https://about.scarf.sh/post/package-registries-and-open-source][Are Package Registries Holding Open-Source Hostage?]]                                                             | November 11, 2020 |
-| [[https://about.scarf.sh/post/analytics-and-open-source-sustainability][Analytics and Open Source Sustainability]]                                                                        | July 9, 2020      |
-| [[https://github.com/aviaviavi/talks/blob/master/intro-to-parsers-2019-01/PITCHME.md][Introduction to Parsers in Haskell (slides)]]                                                                     | September 1, 2019 |
-| [[https://medium.com/swlh/a-failed-effort-to-get-paid-for-an-open-source-project-bd7fa4658a1e][A Failed Effort to Get Paid for an Open Source Project]]                                                          | May 29, 2019      |
-| [[file:posts/2017-08-25-haskell-dbs-and-musicbrainz.org][Easy Database Access with Haskell and postgresql-simple]]                                                         | August 25, 2017   |
-| [[https://cocosci.princeton.edu/mike/CachingAlgorithms.pdf][Caching Algorithms and Rational Models of Memory]]                                                                | May, 2014         |
+|-------------------------------------------------------------------------------------------------------------------------------------+------------|
+| [[file:posts/2023-12-29-call-for-haskell-libraries.org][Call for Haskell Libraries]]                                                                                                          | 2023-12-29 |
+| [[https://www.youtube.com/watch?v=qw4S_6FXsp4][Why Haskell is a Terrible Choice For Startups (And Why We Picked It Anyway)]]                                                         | 2023-12-07 |
+| [[https://www.youtube.com/watch?v=7XHlbqLLFXs&list=PL6kQg8bP1Ji55k6rDro2rIL8GMzTRQwB3&index=8][How Do You Know if Your Project is Any Good? (All Things Open)]]                                                                      | 2022-11-02 |
+| [[https://twit.tv/shows/floss-weekly/episodes/693?autostart=false][FLOSS Weekly Podcast]]                                                                                                                | 2022-08-10 |
+| [[https://www.youtube.com/watch?v=Yt_IgHZD4v4][The Secret Sauce: Who's Looking At Your GitHub Project? (YouTube)]]                                                                   | 2022-08-03 |
+| [[https://percona.podbean.com/e/data-collection-download-metrics-and-scarf-percona-database-podcast-77-w-avi-press/][Percona's HOSS Talks FOSS Podcast]]                                                                                                   | 2022-07-01 |
+| [[https://www.forbes.com/sites/forbestechcouncil/2022/06/01/distribution-and-the-economics-of-open-source-software][Distribution and the Economics of Open-Source Software (Forbes)]]                                                                     | 2022-06-01 |
+| [[https://www.youtube.com/watch?v=aKUJ0_n0KZ0&list=PLmyjALM1NE24x6-vPqfgnMWrymQddJHy6][PyCon 2022 Talk - Beyond the Download Count: Understanding the Usage of your Public Python Packages]]                                 | 2022-04-29 |
+| [[https://anchor.fm/ossstartuppodcast/episodes/E31-Understanding-Your-Open-Source-Usage-with-Scarf-e1honsa][Open Source Startup Podcast: Understanding Your Open Source Usage with Scarf]]                                                        | 2022-04-07 |
+| [[https://www.forbes.com/sites/forbestechcouncil/2022/04/06/uniting-to-act-on-untapped-leverage-how-open-source-maintainers-can-work-together-and-prioritize-long-term-sustainability][Uniting To Act On Untapped Leverage: How Open-Source Maintainers Can Work Together And Prioritize Long-Term Sustainability (Forbes)]] | 2022-04-06 |
+| [[https://www.youtube.com/watch?v=ZEo7JZb3Xpo][Cloud Native Containers Meetup - Beyond the Download: Understanding the Usage of Your Public Containers]]                             | 2022-03-22 |
+| [[https://about.scarf.sh/post/standing-with-ukraine][Scarf Will Block Package Downloads from the Russian Government]]                                                                      | 2022-03-02 |
+| [[https://podcast.chaoss.community/53][CHAOSSCast:Gathering Open Source Usage Data with Avi Press]]                                                                          | 2022-02-25 |
+| [[https://www.emilyomier.com/podcast/making-data-transparent-and-accessible-with-avi-press][Cloud Native Startup Podcast: Making Data Transparent and Accessible]]                                                                | 2022-01-26 |
+| [[https://serokell.io/blog/how-scarf-uses-haskell][Serokell Blog Interview: Haskell in Production @ Scarf]]                                                                              | 2021-11-09 |
+| [[https://about.scarf.sh/post/direct-downloads-via-scarf-gateway][Measuring Downloads of Anything You Distribute]]                                                                                      | 2021-09-03 |
+| [[https://podcast.curiefense.io/15][Committing to Cloud Native Podcast: Analytics for Open Source Maintainers with Avi Press]]                                            | 2021-06-28 |
+| [[https://console.substack.com/p/console-51?s=r][My interview on the Console Newsletter]]                                                                                              | 2021-05-02 |
+| [[https://podcast.sustainoss.org/70][Sustain OSS Podcast: Avi Press and Scarf]]                                                                                            | 2021-03-05 |
+| [[https://about.scarf.sh/post/announcing-scarf-gateway][Announcing The Scarf Gateway]]                                                                                                        | 2021-03-03 |
+| [[https://www.coss.community/cossc/ocs-2020-breakout-avi-press-founder-and-ceo-of-scarf-63j][Open Core Summit: Fireside Chat with Joseph Jacks on OSS Analytics]]                                                                  | 2020-12-16 |
+| [[https://about.scarf.sh/post/package-registries-and-open-source][Are Package Registries Holding Open-Source Hostage?]]                                                                                 | 2020-11-11 |
+| [[https://about.scarf.sh/post/analytics-and-open-source-sustainability][Analytics and Open Source Sustainability]]                                                                                            | 2020-07-09 |
+| [[https://github.com/aviaviavi/talks/blob/master/intro-to-parsers-2019-01/PITCHME.md][Introduction to Parsers in Haskell (slides)]]                                                                                         | 2019-09-01 |
+| [[https://medium.com/swlh/a-failed-effort-to-get-paid-for-an-open-source-project-bd7fa4658a1e][A Failed Effort to Get Paid for an Open Source Project]]                                                                              | 2019-05-29 |
+| [[file:posts/2017-08-25-haskell-dbs-and-musicbrainz.org][Easy Database Access with Haskell and postgresql-simple]]                                                                             | 2017-08-25 |
+| [[https://cocosci.princeton.edu/mike/CachingAlgorithms.pdf][Caching Algorithms and Rational Models of Memory]]                                                                                    | 2014-05-01 |
