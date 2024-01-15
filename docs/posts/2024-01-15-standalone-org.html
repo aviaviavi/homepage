@@ -1,11 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Sitemap for project homepage-content</title>
+<title>Let's Help Org Mode Escape From Emacs</title>
 <!-- 2024-01-15 Mon 10:16 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="Org-mode">
+<meta name="author" content="Avi Press">
 
 <link  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -187,27 +188,91 @@ $(function() {
 
     $('.bs-docs-sidebar').affix();
 });
-</script>
+</script><link rel="icon" type="image/png" sizes="32x32" href="../images/dwarf-icon.png">
+<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 <div id="content" class="container">
-<div class="row"><div class="col-md-12"><h1 class="title">Sitemap for project homepage-content</h1>
+<div class="row"><div class="col-md-12"><h1 class="title">Let's Help Org Mode Escape From Emacs</h1>
+<p>
+<a href="../index.html">Avi Press</a> | January 15, 2024
+</p>
+
+<img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
+
+<p>
+&#x2013;
+</p>
+
+<p>
+I love <a href="https://orgmode.org/">org mode</a>. This very post was written in, and generated from org mode. From note taking, to task management, to blogging to organizing my recipes, I use org mode for a lot, and I do it from <a href="https://www.spacemacs.org/">Spacemacs</a>.
+</p>
+
+<p>
+These days, my work running a startup offers virtually no time to write code. My days are spent on calls, in Slack, and and in Notion, but I do still find myself in Spacemacs a lot for my own notes and task tracking.
+</p>
+
+<p>
+For the little code I <i>do</i> write, I find having AI assistance (via CoPilot or Cody) to be tremendously helpful. So helpful, in fact, that I now tend to jump into VSCode for actual coding, and then back into Spacemacs for anything I need do in org mode. Getting these tools to work correctly in Spacemacs proved to be a huge pain and I don't have time for config tinkering any more.
+</p>
+
+<p>
+I wish I could either:
+</p>
+
 <ul class="org-ul">
-<li><a href="index.html">Avi Press</a>
+<li><i>Use Spacemacs for everything I can do in VSCode.</i> However, the relative pace of progress in the Emacs world vs VSCode's plugin ecosystem are increasingly making this wish a pipe dream. VSCode is winning the editor war.
 </li>
-<li>posts
+<li><i>Use VSCode for everything</i>. For me, this requires a full-featured org mode implementation.
+</li>
+</ul>
+
+<p>
+<b>Sadly, the only full-featured org mode implementation is Emacs. You should be able to use org mode in any text editor</b>.
+</p>
+
+<p>
+There are many examples of people trying to jailbreak org mode out of Emacs, but to date, they have failed.
+</p>
+
+<p>
+From my perspective, they have failed to grow into a full org implementation for a few reasons. Projects try to get bug-for-bug compatibility with Emacs org mode. This is both <a href="https://github.com/org-rs/org-rs/issues/41#issuecomment-527443876">very difficult</a> and not a good goal. Some of the projects picked programming languages that severely limit the base of potential contributors (eg, org-rs and Pandoc).
+</p>
+
+<p>
+I am interested in kicking off a new effort to create a stand-alone implementation of org mode. Its primary goal would be to <i>ensure that a comprehensive org mode experience could be achieved outside of Emacs.</i>
+</p>
+
+<p>
+A few design choices I believe would be correct for this goal:
+</p>
+
 <ul class="org-ul">
-<li><a href="posts/2020-06-10-analytics-and-open-source-sustainability.html">Analytics and Open Source Sustainability</a>
+<li>Establishing a more formal yet sane standard for org-mode behavior.
+<ul class="org-ul">
+<li>Letting go of bug-for-bug compatibility with Emacs as a goal. Let's let the quirky behavior die off and move forward with a more cohesive program, even if it looks a little bit different.
 </li>
-<li><a href="posts/2023-12-29-call-for-haskell-libraries.html">Call for Haskell Libraries</a>
+</ul>
 </li>
-<li><a href="posts/2017-08-25-haskell-dbs-and-musicbrainz.html">Easy database access with Haskell and postgresql-simple</a>
+<li>Implemented in a popular programming language. Rewriting org mode is a large undertaking, and its success will rely on a community of contributors. This effort will fail if 50% of the people who <i>would</i> contribute end up not doing so because they don't have time to learn Rust or Haskell first.
 </li>
-<li><a href="posts/2024-01-15-standalone-org.html">Let's Help Org Mode Escape From Emacs</a>
+<li>Portable. It should not be difficult to get this integrated into any editor.
+</li>
+<li>Ensuring some of org mode's best features are on the starting roadmap, not an afterthought:
+<ul class="org-ul">
+<li>Agenda view
+</li>
+<li>Publishing
+</li>
+<li>Plugins like org-roam, org-crypt
 </li>
 </ul>
 </li>
 </ul>
+
+<p>
+If working on this would be of interest, please get in touch! I'm interested in getting a small group together to get this side project off the ground.
+</p>
 </div></div></div>
 <footer id="postamble" class="">
 <p class="postamble">© Avi Press 2024</p>

@@ -1,0 +1,45 @@
+#+title: Let's Help Org Mode Escape From Emacs
+#+author: Avi Press
+
+#+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="../images/dwarf-icon.png">
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/styles.css">
+
+[[file:../index.org][Avi Press]] | January 15, 2024
+
+#+BEGIN_EXPORT html
+<img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
+#+END_EXPORT
+
+--
+
+I love [[https://orgmode.org/][org mode]]. This very post was written in, and generated from org mode. From note taking, to task management, to blogging to organizing my recipes, I use org mode for a lot, and I do it from [[https://www.spacemacs.org/][Spacemacs]].
+
+These days, my work running a startup offers virtually no time to write code. My days are spent on calls, in Slack, and and in Notion, but I do still find myself in Spacemacs a lot for my own notes and task tracking.
+
+For the little code I /do/ write, I find having AI assistance (via CoPilot or Cody) to be tremendously helpful. So helpful, in fact, that I now tend to jump into VSCode for actual coding, and then back into Spacemacs for anything I need do in org mode. Getting these tools to work correctly in Spacemacs proved to be a huge pain and I don't have time for config tinkering any more.
+
+I wish I could either:
+
+- /Use Spacemacs for everything I can do in VSCode./ However, the relative pace of progress in the Emacs world vs VSCode's plugin ecosystem are increasingly making this wish a pipe dream. VSCode is winning the editor war.
+- /Use VSCode for everything/. For me, this requires a full-featured org mode implementation.
+
+*Sadly, the only full-featured org mode implementation is Emacs. You should be able to use org mode in any text editor*.
+
+There are many examples of people trying to jailbreak org mode out of Emacs, but to date, they have failed.
+
+From my perspective, they have failed to grow into a full org implementation for a few reasons. Projects try to get bug-for-bug compatibility with Emacs org mode. This is both [[https://github.com/org-rs/org-rs/issues/41#issuecomment-527443876][very difficult]] and not a good goal. Some of the projects picked programming languages that severely limit the base of potential contributors (eg, org-rs and Pandoc).
+
+I am interested in kicking off a new effort to create a stand-alone implementation of org mode. Its primary goal would be to /ensure that a comprehensive org mode experience could be achieved outside of Emacs./
+
+A few design choices I believe would be correct for this goal:
+
+- Establishing a more formal yet sane standard for org-mode behavior.
+  - Letting go of bug-for-bug compatibility with Emacs as a goal. Let's let the quirky behavior die off and move forward with a more cohesive program, even if it looks a little bit different.
+- Implemented in a popular programming language. Rewriting org mode is a large undertaking, and its success will rely on a community of contributors. This effort will fail if 50% of the people who /would/ contribute end up not doing so because they don't have time to learn Rust or Haskell first.
+- Portable. It should not be difficult to get this integrated into any editor.
+- Ensuring some of org mode's best features are on the starting roadmap, not an afterthought:
+  - Agenda view
+  - Publishing
+  - Plugins like org-roam, org-crypt
+
+If working on this would be of interest, please get in touch! I'm interested in getting a small group together to get this side project off the ground.
