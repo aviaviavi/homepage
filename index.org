@@ -30,6 +30,7 @@
 * Content
 
 |-------------------------------------------------------------------------------------------------------------------------------------+------------|
+| [[file:posts/2024-01-15-standalone-org.org][Let's Help Org Mode Escape From Emacs]]                                                                                               | 2024-01-15 |
 | [[file:posts/2023-12-29-call-for-haskell-libraries.org][Call for Haskell Libraries]]                                                                                                          | 2023-12-29 |
 | [[https://www.youtube.com/watch?v=qw4S_6FXsp4][Why Haskell is a Terrible Choice For Startups (And Why We Picked It Anyway)]]                                                         | 2023-12-07 |
 | [[https://www.youtube.com/watch?v=7XHlbqLLFXs&list=PL6kQg8bP1Ji55k6rDro2rIL8GMzTRQwB3&index=8][How Do You Know if Your Project is Any Good? (All Things Open)]]                                                                      | 2022-11-02 |

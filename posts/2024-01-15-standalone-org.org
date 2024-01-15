@@ -35,7 +35,7 @@ A few design choices I believe would be correct for this goal:
 
 - Establishing a more formal yet sane standard for org-mode behavior.
   - Letting go of bug-for-bug compatibility with Emacs as a goal. Let's let the quirky behavior die off and move forward with a more cohesive program, even if it looks a little bit different.
-- Implemented in a popular programming language. Rewriting org mode is a large undertaking, and its success will rely on a community of contributors. This effort will fail if 50% of the people who /would/ contribute end up not doing so because they don't have time to learn Rust or Haskell first.
+- Implemented in a popular programming language. Rewriting org mode is a large undertaking, and its success will rely on a community of contributors. This effort will fail if 50% of the people who /would/ contribute end up not doing so because they don't have time to learn Rust or Haskell.
 - Portable. It should not be difficult to get this integrated into any editor.
 - Ensuring some of org mode's best features are on the starting roadmap, not an afterthought:
   - Agenda view
