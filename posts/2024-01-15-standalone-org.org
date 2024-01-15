@@ -12,18 +12,18 @@
 
 --
 
-I love [[https://orgmode.org/][org mode]]. This very post was written in, and generated from org mode. From note taking, to task management, to blogging to organizing my recipes, I use org mode for a lot, and I do it from [[https://www.spacemacs.org/][Spacemacs]].
+I love [[https://orgmode.org/][org mode]]. This very post was written in, and generated from org mode. From note taking, to task management, to blogging, to organizing my cooking recipes, I use org mode for a lot, and I do it from [[https://www.spacemacs.org/][Spacemacs]].
 
-These days, my work running a startup offers virtually no time to write code. My days are spent on calls, in Slack, and and in Notion, but I do still find myself in Spacemacs a lot for my own notes and task tracking.
+These days, my work running a startup offers virtually no time to write code, but I still find myself in Spacemacs a lot for my own notes and task tracking.
 
 For the little code I /do/ write, I find having AI assistance (via CoPilot or Cody) to be tremendously helpful. So helpful, in fact, that I now tend to jump into VSCode for actual coding, and then back into Spacemacs for anything I need do in org mode. Getting these tools to work correctly in Spacemacs proved to be a huge pain and I don't have time for config tinkering any more.
 
 I wish I could either:
 
-- /Use Spacemacs for everything I can do in VSCode./ However, the relative pace of progress in the Emacs world vs VSCode's plugin ecosystem are increasingly making this wish a pipe dream. VSCode is winning the editor war.
-- /Use VSCode for everything/. For me, this requires a full-featured org mode implementation.
+- /Use Spacemacs for everything I can do in VSCode./ However, the relative pace of progress in the Emacs world vs VSCode and its plugin ecosystem are increasingly making this wish a pipe dream. VSCode is winning the editor war.
+- /Use VSCode for everything/. For me, this requires a full-featured org mode implementation. I currently feel stuck in Emacs just because of how great org mode is.
 
-*Sadly, the only full-featured org mode implementation is Emacs. You should be able to use org mode in any text editor*.
+*Sadly, the only complete org mode implementation is Emacs. You should be able to use org mode in any text editor*.
 
 There are many examples of people trying to jailbreak org mode out of Emacs, but to date, they have failed.
 
