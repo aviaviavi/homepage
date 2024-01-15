@@ -1,5 +1,5 @@
 td {
-    min-width: 20rem;
+    min-width: 12rem;
 }
 
 body {
@@ -30,4 +30,17 @@ footer {
 
 .table-condensed>tbody>tr>td {
     padding: 1px;
+    width: 40%;
 }
+
+
+/* .table .min-width-column { */
+/*     white-space: nowrap; */
+/*     width: 1px; */
+/* } */
+
+/* /\* If you're targeting a specific column number, you can use the nth-child selector *\/ */
+/* .table td:nth-child(2) { /\* Adjust the number 2 to target the correct column *\/ */
+/*     white-space: nowrap; */
+/*     width: 1px; */
+/* } */
