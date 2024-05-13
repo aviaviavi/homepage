@@ -12,12 +12,11 @@
 
   - Founder and CEO of [[https://scarf.sh][Scarf]] - Scarf builds advanced user & customer intelligence for open source software projects
   - Open source maintainer and advocate
-  - Functional programming enthusiast
+  - Functional programming enthusiast. I'm serving on the [[https://haskell.foundation][Haskell Foundation]] board, as well as the [[https://haskell.org][Haskell.org]] committee.
   - Former engineer at Pandora
   - Based in Oakland, California
   - This site is built with [[https://orgmode.org/][Org Mode]].
 * Contact
-
   - Follow me on [[https://twitter.com/avi_press][Twitter]], [[https://github.com/aviaviavi][Github]]
   - I hold open office hours for anyone that you can book with me [[https://cal.com/avi-press/office-hours][here]], no prior confirmation from me required.
   - Email: [[mailto:mail@avi.press][mail@avi.press]]
