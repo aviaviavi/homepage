@@ -1,0 +1,22 @@
+#+title: Analytics are Starting to Win in Open Source
+#+author: Avi Press
+#+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="../images/dwarf-icon.png">
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/styles.css">
+
+[[file:../index.org][Avi Press]] | February 29, 2024
+
+#+BEGIN_EXPORT html
+<img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
+#+END_EXPORT
+
+---
+
+When I started working on Scarf back in 2019, many people expressed skepticism that usage analytics would ever be tolerated in the open source world. There was a widespread belief that I was barking up the wrong tree on a problem that couldn't be solved. Open source developers would never know how their software was really being used because the culture norm was absolutely against any kind of tracking, telemetry, or analytics. I pushed forward anyway, with conviction. Six months earlier, I was faced with a hard decision around whether I would leave my day job to work on open source full-time, and build a small business around tools I had been maintaining during nights and weekends. Unfortunately, I lacked the necessary information I needed to reasonably navigate that decision. The resistance to tracking and telemetry was deeply ingrained in open source culture, so I felt I had to make that decision in the dark. In that darkness, I hedged my bet by reducing my hours to part-time rather than fully departing, and in the end, the endeavor was unsuccessful. The idea for Scarf came soon after, when I talked to other OSS developers and learned my difficulties were not unique to me. Lots of developers struggled with simply not knowing which companies were relying on their work or what impact it was actually having day to day.
+
+Fast-forward 5 years to today as I write this post: Scarf has shown this once solidified cultural norm can indeed change. Scarf is now being used by thousands of open source projects, and officially approved for use within major OSS foundations like The Apache Software Foundation and more recently The Linux Foundation and its sub foundations like the CNCF. These organizations were not quick to officially get on board the idea. It required demonstrating real value over time to projects individually in order for both foundations to even consider dedicating the time and effort to go through procurement with us and get contracts in place. But we did get that work done together.
+
+That work has led to the most personally rewarding part of building Scarf -- hearing stories about the impact that usage data can have, directly from our users. It was a moving experience when I first watched an open source developer, who I admire, look at their Scarf dashboard and have that "lightbulb moment" where they suddenly had a clearer understanding of the impact their work, and to see them be invigorated and inspired from the knowledge that their work mattered a little more than they thought. I love hearing when our customers close a new large enterprise contract with a company they only knew was already a user because of the very data they would've had a hard time collecting just a few years ago.
+
+Today, the practice of usage analytics in open source has still yet to become mainstream. However, Scarf has made concrete progress in advancing the embrace of data-driven open source development, and it's not the only organization to do so (just look at Next.js or Go). Open source's cultural norms around usage analytics have shifted in the past half decade that I've been dedicating my life to this problem. This broader opinion can change. In a recent conversation I had with Maxime Beauchemin, the creator of Apache Airflow and Apache Superset, he distilled it best: "If you care about open source, you should care about the metrics."
+
+I have more conviction than ever that usage intelligence can materially improve the lives of the people who work on open source, and in turn, foster more open software in the world. Seeing more open source in the world is a goal that's worth the effort.

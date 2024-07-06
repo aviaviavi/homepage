@@ -31,6 +31,7 @@
 |-------------------------------------------------------------------------------------------------------------------------------------+------------|
 | [[https://www.youtube.com/watch?v=mLujlRte1hw][Open Source Summit: What Information are Package & Container Registries Hiding From You?]]                                            | 2024-04-18 |
 | [[https://www.youtube.com/watch?v=D36tRYg4MZM][Open Source Summit: Lessons from 1 Billion OSS Downloads]]                                                                            | 2024-04-17 |
+| [[file:posts/2024-02-29-analytics-are-winning.org][Analytics are Starting to Win in Open Source]]                                                                                        | 2024-02-29 |
 | [[file:posts/2024-01-15-standalone-org.org][Let's Help Org Mode Escape From Emacs]]                                                                                               | 2024-01-15 |
 | [[file:posts/2023-12-29-call-for-haskell-libraries.org][Call for Haskell Libraries]]                                                                                                          | 2023-12-29 |
 | [[https://www.youtube.com/watch?v=qw4S_6FXsp4][Why Haskell is a Terrible Choice For Startups (And Why We Picked It Anyway)]]                                                         | 2023-12-07 |
