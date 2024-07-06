@@ -10,8 +10,8 @@
 
 * About me
 
-  - Founder and CEO of [[https://scarf.sh][Scarf]] - Scarf builds advanced user & customer intelligence for open source software projects
-  - Open source maintainer and advocate
+  - Founder and CEO of [[https://scarf.sh][Scarf]] - Scarf builds sales & marketing intelligence for open source software projects.
+  - Open source maintainer and advocate.
   - Functional programming enthusiast. I'm serving on the [[https://haskell.foundation][Haskell Foundation]] board, as well as the [[https://haskell.org][Haskell.org]] committee.
   - Former engineer at Pandora
   - Based in Oakland, California
