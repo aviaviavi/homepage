@@ -8,7 +8,9 @@
 <img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
 #+END_EXPORT
 
-* About me
+\\
+
+*About me*
 
   - Founder and CEO of [[https://scarf.sh][Scarf]] - Scarf builds sales & marketing intelligence for open source software projects.
   - Open source maintainer and advocate.
@@ -16,17 +18,19 @@
   - Former engineer at Pandora
   - Based in Oakland, California
   - This site is built with [[https://orgmode.org/][Org Mode]].
-* Contact
+
+*Contact*
+
   - Follow me on [[https://twitter.com/avi_press][Twitter]], [[https://github.com/aviaviavi][Github]]
   - I hold open office hours for anyone that you can book with me [[https://cal.com/avi-press/office-hours][here]], no prior confirmation from me required.
   - Email: [[mailto:mail@avi.press][mail@avi.press]]
 
-* Other things
+*Other things*
 
   - I'm a host of the [[https://www.youtube.com/watch?v=WERFZq5Oe2Y&list=PLS9wrEdf4JzWxrsk0hc4tZ98viiy6mrWV][Hacking Open Source Business Podcast]]. Smash that subscribe button, etc.
   - [[https://tabdextension.com][Tabd]] - a chrome extension for sharing tabs. Give it a try!
 
-* Content
+*Content*
 
 |-------------------------------------------------------------------------------------------------------------------------------------+------------|
 | [[https://www.youtube.com/watch?v=mLujlRte1hw][Open Source Summit: What Information are Package & Container Registries Hiding From You?]]                                            | 2024-04-18 |
