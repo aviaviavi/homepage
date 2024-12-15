@@ -21,7 +21,7 @@
 
 *Contact*
 
-  - Follow me on [[https://twitter.com/avi_press][Twitter]], [[https://github.com/aviaviavi][Github]]
+  - Follow me on [[https://twitter.com/avi_press][Twitter]], [[https://bsky.app/profile/avi.press][Bluesky]], [[https://github.com/aviaviavi][Github]]
   - I hold open office hours for anyone that you can book with me [[https://cal.com/avi-press/office-hours][here]], no prior confirmation from me required.
   - Email: [[mailto:mail@avi.press][mail@avi.press]]
 
