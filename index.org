@@ -1,11 +1,11 @@
 #+title: Avi Press
 #+HTML_HEAD_EXTRA: <meta name="viewport" content="width=device-width, initial-scale=1">
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="./images/dwarf-icon.png">
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="./css/monospace-web.css">
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="./css/styles.css">
 
 #+BEGIN_EXPORT html
-<img style="height:15rem;" src="./images/portrait.jpg"></img>
-<img referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
+<img class="collapse" referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
 #+END_EXPORT
 
 \\
@@ -17,7 +17,6 @@
   - Functional programming enthusiast. I'm serving on the [[https://haskell.foundation][Haskell Foundation]] board, as well as the [[https://haskell.org][Haskell.org]] committee.
   - Former engineer at Pandora
   - Based in Oakland, California
-  - This site is built with [[https://orgmode.org/][Org Mode]].
 
 *Contact*
 
@@ -28,7 +27,6 @@
 *Other things*
 
   - I'm a host of the [[https://www.youtube.com/watch?v=WERFZq5Oe2Y&list=PLS9wrEdf4JzWxrsk0hc4tZ98viiy6mrWV][Hacking Open Source Business Podcast]]. Smash that subscribe button, etc.
-  - [[https://tabdextension.com][Tabd]] - a chrome extension for sharing tabs. Give it a try!
 
 *Content*
 
@@ -64,3 +62,8 @@
 | [[https://medium.com/swlh/a-failed-effort-to-get-paid-for-an-open-source-project-bd7fa4658a1e][A Failed Effort to Get Paid for an Open Source Project]]                                                                              | 2019-05-29 |
 | [[file:posts/2017-08-25-haskell-dbs-and-musicbrainz.org][Easy Database Access with Haskell and postgresql-simple]]                                                                             | 2017-08-25 |
 | [[https://cocosci.princeton.edu/mike/CachingAlgorithms.pdf][Caching Algorithms and Rational Models of Memory]]                                                                                    | 2014-05-01 |
+
+
+*About this site*
+  - Written and built in [[https://orgmode.org/][Org Mode]].
+  - Styles are from https://github.com/owickstrom/the-monospace-web
