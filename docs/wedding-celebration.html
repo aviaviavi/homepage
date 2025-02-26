@@ -90,6 +90,22 @@
     button:hover {
       background-color: #246628;
     }
+    /* Add champagne background image to bottom left */
+    body::after {
+      content: "";
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 250px; /* Adjust size as needed */
+      height: 250px; /* Adjust size as needed */
+      background-image: url('images/champaign.png');
+      background-repeat: no-repeat;
+      background-position: bottom left;
+      background-size: contain;
+      z-index: -1; /* Places it behind content */
+      opacity: 0.8; /* Adjust transparency as needed */
+      pointer-events: none; /* Allows clicking through the image */
+    }
   </style>
 </head>
 <body>
