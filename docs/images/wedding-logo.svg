@@ -1,0 +1,18 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Heart shape (pink fill, green stroke) -->
+  <path d="M100,40 
+           C50,0 0,50 100,140 
+           C200,50 150,0 100,40 Z"
+        fill="#e48f94" 
+        stroke="#2e7d32" 
+        stroke-width="2" />
+  
+  <!-- Centered text (S + A) -->
+  <text x="50%" y="52%" 
+        text-anchor="middle" 
+        fill="#2e7d32" 
+        font-family="Georgia, serif" 
+        font-size="36">
+    S + A
+  </text>
+</svg>

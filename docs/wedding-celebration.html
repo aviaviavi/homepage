@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sarah + Avi's Family Wedding Celebration</title>
+  <link rel="icon" href="images/wedding-logo.svg" type="image/svg+xml">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #fdf8f6; /* soft neutral background */
+      color: #2e7d32; /* green text */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      margin-bottom: 5px;
+      font-size: 2rem;
+      color: #2e7d32; /* green */
+    }
+    h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: #e48f94; /* pinkish accent */
+    }
+    p {
+      max-width: 600px;
+      text-align: center;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    form {
+      background-color: #fff;
+      border: 2px solid #2e7d32;
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 400px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    label {
+      display: block;
+      margin: 15px 0 8px;
+      font-weight: bold;
+      width: 100%;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      height: 40px;
+    }
+    textarea {
+      min-height: 100px;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+      width: 18px;
+      height: 18px;
+    }
+    button {
+      background-color: #2e7d32;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      width: 100%;
+      margin-top: 10px;
+      height: 45px;
+    }
+    button:hover {
+      background-color: #246628;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Save Our Date</h1>
+  <h2>Sarah and Avi are getting married!</h2>
+  <p>
+    We'd love for you to celebrate our engagement with us the weekend of <strong>August 9, 2025</strong>
+    in <strong>Malahide, Ireland</strong>. Please let us know if you'll attend.
+  </p>
+
+  <p>We're figuring out some specifics, more details to come!</p>
+
+<form
+    action="https://formspree.io/f/movjobng"
+    method="POST"
+>
+    <label>
+        Your name:
+        <input type="text" name="name" required>
+    </label>
+    
+    <label>
+        Your email:
+        <input type="email" name="email" required>
+    </label>
+    
+    <label>
+        Will you attend?
+        <select name="attending" required>
+            <option value="">Please select</option>
+            <option value="yes">Yes, I'll be there!</option>
+            <option value="no">Sorry, I can't make it</option>
+        </select>
+    </label>
+    
+    <label>
+        Number of attendees:
+        <input type="number" name="attendees" min="1" max="10" value="1">
+    </label>
+    
+    <div class="checkbox-container">
+        <input type="checkbox" name="require_lodging" id="require_lodging">
+        <label for="require_lodging" style="display: inline; margin: 0;">
+            I/we are interested in lodging options for the weekend.
+        </label>
+    </div>
+    
+    <label for="notes">
+        Additional comments or questions:
+        <textarea id="notes" name="notes" rows="4" style="height: auto; resize: vertical;"></textarea>
+    </label>
+    
+    <button type="submit">Send</button>
+</form>
+
+</body>
+</html>
+
+
+
