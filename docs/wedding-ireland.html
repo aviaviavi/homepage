@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sarah + Avi's Family Wedding Celebration</title>
+  <link rel="icon" href="images/wedding-logo.svg" type="image/svg+xml">
+  <link href="https://db.onlinewebfonts.com/c/56b1d105d2fa63f97d89d9626b476ec8?family=Bobby+Jones+Soft+Regular" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: #fdf8f6; /* soft neutral background */
+      color: #2e7d32; /* green text */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      font-family: "Bobby Jones Soft Regular", "Helvetica Neue", Arial, sans-serif;
+      margin-bottom: 5px;
+      font-size: 2rem;
+      color: #2e7d32; /* green */
+    }
+    h2 {
+      font-family: "Bobby Jones Soft Regular", "Helvetica Neue", Arial, sans-serif;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: #e48f94; /* pinkish accent */
+    }
+    h3 {
+      font-family: "Bobby Jones Soft Regular", "Helvetica Neue", Arial, sans-serif;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+      color: #2e7d32; /* green */
+    }
+    p {
+      max-width: 600px;
+      text-align: center;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    form {
+      background-color: #fff;
+      border: 2px solid #2e7d32;
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 400px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    label {
+      display: block;
+      margin: 15px 0 8px;
+      font-weight: bold;
+      width: 100%;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      height: 40px;
+    }
+    textarea {
+      min-height: 100px;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+    }
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin: 15px 0;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+      width: 18px;
+      height: 18px;
+    }
+    button {
+      background-color: #2e7d32;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      width: 100%;
+      margin-top: 10px;
+      height: 45px;
+    }
+    button:hover {
+      background-color: #246628;
+    }
+    /* Add champagne background image to bottom left */
+    body::after {
+      content: "";
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 250px; /* Adjust size as needed */
+      height: 250px; /* Adjust size as needed */
+      background-image: url('images/champaign.png');
+      background-repeat: no-repeat;
+      background-position: bottom left;
+      background-size: contain;
+      z-index: -1; /* Places it behind content */
+      opacity: 0.8; /* Adjust transparency as needed */
+      pointer-events: none; /* Allows clicking through the image */
+    }
+    /* New styles for the updated content */
+    .content-section {
+      max-width: 800px;
+      margin-bottom: 40px;
+      width: 100%;
+    }
+    .content-section p {
+      text-align: left;
+      max-width: 100%;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #f8f8f8;
+      font-weight: bold;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .button-link {
+      display: inline-block;
+      background-color: #2e7d32;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      margin: 10px;
+      font-size: 1rem;
+    }
+    .button-link:hover {
+      background-color: #246628;
+    }
+    .buttons-container {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    
+    /* Navigation Bar Styles */
+    .nav-container {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      background-color: #fdf8f6;
+      border-bottom: 2px solid #2e7d32;
+      padding: 10px 0;
+      z-index: 100;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    
+    nav a {
+      color: #2e7d32;
+      text-decoration: none;
+      padding: 8px 15px;
+      margin: 0 5px;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    
+    nav a:hover {
+      background-color: #e48f94;
+      color: white;
+    }
+    
+    /* Add some padding to section tops to account for the sticky navbar */
+    section {
+      scroll-margin-top: 80px;
+    }
+    
+    /* Main content wrapper to handle padding */
+    .content-wrapper {
+      width: 100%;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    /* Add space above the first heading to compensate for removed body padding */
+    section#home {
+      padding-top: 40px;
+      text-align: center;
+    }
+    
+    /* Override left text alignment for paragraphs in the home section */
+    section#home .content-section p {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Make the first column in schedule table wider */
+    #schedule table td:first-child {
+      min-width: 120px;
+      width: 15%;
+      white-space: nowrap; /* Prevent text wrapping in time cells */
+    }
+    
+    /* Set specific widths for all columns in the schedule table for better layout */
+    #schedule table td:nth-child(2) {
+      width: 60%;
+    }
+    
+    #schedule table td:nth-child(3) {
+      width: 25%;
+    }
+    
+    /* Style the table row cells with date headers */
+    #schedule table tr td strong {
+      display: inline-block;
+      width: 100%;
+    }
+    
+    /* Specifically target the date header rows by adding a class */
+    #schedule table tr td strong.date-header {
+      background-color: #f8f8f8;
+    }
+    
+    /* Improve date header appearance */
+    .date-header td {
+      text-align: center !important;
+      background-color: #f8f8f8;
+      padding-top: 15px;
+      padding-bottom: 15px; /* Add more padding at the bottom */
+      font-weight: bold;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav-container">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#travel">Travel</a>
+      <a href="#" style="pointer-events: none; opacity: 0.6;">Registry (coming soon)</a>
+      <a href="./wedding-celebration.html">RSVP</a>
+    </nav>
+  </div>
+
+  <div class="content-wrapper">
+    <section id="home">
+      <h1>Sarah and Avi are getting married!</h1>
+      
+      <div class="content-section">
+        <p>
+          We'd love for you to celebrate with us the weekend of <strong>August 9, 2025</strong>
+          in <strong>Malahide, Ireland</strong>. Please let us know if you'll attend.
+        </p>
+      </div>
+
+      <div class="content-section" style="text-align: center;">
+        <img src="images/sarah-avi.jpg" alt="Sarah and Avi's Wedding Logo" style="width: 50%; height: auto;">
+      </div>
+    </section>
+
+    <section id="schedule" class="content-section">
+      <h2>Schedule</h2>
+      <table>
+        <tr class="date-header">
+          <td><strong>Friday, August 8</strong></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>5:00-7:00pm</td>
+          <td>Welcome Drinks together. Everyone can make their own plans for dinner (see Malahide info for a list of restaurants in walking distance).<br><br>Attire: Smart Casual</td>
+          <td>Griffin Bar, Grand Hotel Malahide</td>
+        </tr>
+        <tr class="date-header">
+          <td><strong>Saturday, August 9</strong></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4:30pm-5:15pm</td>
+          <td>Wedding Ceremony.<br><br>Attire: Formal</td>
+          <td>Grand Hotel</td>
+        </tr>
+        <tr>
+          <td>5:30pm-7:15pm</td>
+          <td>Drinks and appetizers</td>
+          <td>Griffin Bar, Grand Hotel Malahide</td>
+        </tr>
+        <tr>
+          <td>7:30pm-10:30pm</td>
+          <td>Reception & Dinner</td>
+          <td>SeaBank (TBD)</td>
+        </tr>
+        <tr>
+          <td>10:30pm-12am</td>
+          <td>For those who want to keep the party going, we will go out for more festivities.</td>
+          <td>Gibney's</td>
+        </tr>
+        <tr class="date-header">
+          <td><strong>Additional Activities</strong></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="date-header">
+          <td><strong>Sunday, August 10</strong></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3pm</td>
+          <td>Trad Session (traditional Irish music played live in a pub)</td>
+          <td>Somewhere in Dublin</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="travel" class="content-section">
+      <h2>Travel</h2>
+      
+      <h3>Accommodations</h3>
+      <p>We have held a block of rooms at The Grand Hotel for everyone travelling in. Paul has been so kind to get a discounted rate on rooms. We can offer the following:</p>
+      
+      <table>
+        <tr>
+          <td><strong>Superior Room</strong></td>
+          <td>Single Occupancy: €165/night</td>
+          <td>Double Occupancy: €205/night</td>
+        </tr>
+        <tr>
+          <td><strong>Superior Room (with Sea View)</strong></td>
+          <td>Single Occupancy: €195/night</td>
+          <td>Double Occupancy: €235/night</td>
+        </tr>
+      </table>
+      
+      <p>Adjoining rooms are available upon request</p>
+      
+      <h3>About the <a href="https://www.thegrand.ie/" target="_blank">Grand Hotel</a></h3>
+      <p>We love this hotel and stay there often when in town. It's centrally located to Malahide village, with many shops and restaurants within a 5-minute walk. It's also across the road from the beach and marina, and approximately a 10-minute walk to the train station, which can take you into Dublin. The hotel has a first-class spa available to all guests, including sauana, steam room, and an (indoor) Olympic size pool.</p>
+      
+      <div class="hotel-images">
+        <div class="image-column" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
+          <div class="column-item">
+            <img src="https://www.thegrand.ie/wp-content/uploads/2023/08/Home-banner.jpg" alt="Grand Hotel Malahide Exterior" width="400" height="250" style="object-fit: cover;">
+          </div>
+          <div class="column-item">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/267956926.jpg?k=cb5b82b030c25c5ae7087b1fa74bb74eef3dff93a1faa2d8e1737a03c6b99c56&o=&hp=1" alt="Coast Road Restaurant at The Grand Hotel" width="400" height="250" style="object-fit: cover;">
+          </div>
+          <div class="column-item">
+            <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/18475949.jpg?k=f611238835a9152bb2332590aaf2f2494081f1f5442b549be076ad9a3f73c5bb&o=" alt="The Grand Hotel Entrance" width="400" height="250" style="object-fit: cover;">
+          </div>
+        </div>
+      </div>
+      
+      
+      <h3>About Malahide</h3>
+      <p>Malahide is a charming seaside village just north of Dublin, known for its picturesque marina, vibrant restaurants, and historic Malahide Castle. With its scenic coastal walks and cozy pubs, it's the perfect place to soak in Irish charm before and after the wedding. This is where Sarah's father, Paul, grew up, and where much of her Irish family still lives today. We can't wait to celebrate with you in this beautiful spot!</p>
+      
+      <h3>Things to do while in Malahide</h3>
+      <ul>
+        <li><strong>Malahide Castle & Gardens</strong> – Tour the historic 12th-century castle and explore its stunning gardens.</li>
+        <li><strong>Coastal Walks</strong> – Stroll along the scenic beach or take the path toward Portmarnock for gorgeous sea views.</li>
+        <li><strong>Malahide Marina</strong> – Relax by the waterfront, watch the boats, or grab a coffee at one of the nearby cafés.</li>
+        <li><strong>Local Pubs & Restaurants</strong> – Enjoy fresh seafood, a pint of Guinness, and live music at spots like Gibney's or Seabank Bistro.</li>
+        <li><strong>Boutique Shopping</strong> – Browse unique local shops and pick up a little piece of Malahide to take home.</li>
+      </ul>
+      
+      <h3>Restaurant list</h3>
+      <ul>
+        <li><strong>Greedy Goose (reservation recommended)</strong> - Irish style tapas served in a lovely location overlooking the marina. Good vibes and a great way to try a mix of local food.</li>
+        <li><strong>That's A'more</strong> - Italian food in the center of town.</li>
+        <li><strong>Scotch Bonnet</strong> - Family friendly restaurant located in the heart of Malahide. We cater for all occasions. Famous for our mouthwatering ribs, wings, pizzas, great cocktails & super friendly staff.</li>
+        <li><strong>Old Street (reservation recommended)</strong> – A modern restaurant with creative dishes and a great wine list.</li>
+        <li><strong>Kajjal</strong> – A top-notch Pakistani restaurant with rich flavors and a warm atmosphere.</li>
+      </ul>
+      
+      <h3>Things to do in Dublin</h3>
+      <ul>
+        <li><strong>Grafton Street</strong> is a main thoroughfare in the heart of Dublin. This cobblestone street home to lots of shopping and pubs. There are also traditionally lots of busking musicians.</li>
+        <li><strong>Trinity College Dublin</strong> is Ireland's most prestigious university, home to stunning architecture and the famous Long Room Library. The highlight is the <strong>Book of Kells</strong>, a beautifully illuminated 9th-century manuscript that showcases intricate Celtic artwork. A visit offers a glimpse into Ireland's rich literary and artistic history.</li>
+        <li><strong>Temple Bar</strong> is Dublin's most famous cultural and nightlife district, known for its lively pubs, cobblestone streets, and vibrant atmosphere. It's packed with traditional Irish music, bustling bars, and quirky shops. While touristy, it's a must-visit for a taste of Dublin's energy and charm.</li>
+        <li><strong>Guinness Storehouse</strong> is a must-visit for beer lovers, offering a deep dive into the history and brewing process of Ireland's most famous stout. The experience ends with a pint at the <strong>Gravity Bar</strong>, which boasts panoramic views of Dublin.</li>
+        <li><strong>Kilmainham Gaol</strong> is a former prison turned museum that tells the powerful story of Ireland's fight for independence. A guided tour takes you through its hauntingly atmospheric corridors and cells, where many revolutionaries were once held.</li>
+      </ul>
+      
+      <h3>Restaurant & Pub List</h3>
+      <ul>
+        <li><strong>Marco Pierre White</strong> - A stylish steakhouse serving top-quality Irish beef and seafood with a French-inspired touch. Perfect for a special night out with great service and an excellent wine list.</li>
+        <li><strong>Sole</strong> - Dublin's top seafood spot, known for its fresh oysters, lobster, and expertly prepared fish. A refined yet welcoming place for seafood lovers.</li>
+        <li><strong>Elephant and Castle</strong> - A lively Temple Bar favorite, famous for its <strong>chicken wings</strong> and hearty comfort food. Expect a casual vibe, big portions, and great cocktails.</li>
+        <li><strong>Cassidy's</strong> – A quirky, laid-back pub with graffiti-covered walls, board games, and a great craft beer selection. Perfect for those looking for a fun, alternative vibe away from the typical tourist spots.</li>
+        <li><strong>The Brazen Head</strong> – Dublin's oldest pub, dating back to 1198, offering a historic atmosphere with live music and hearty Irish food. A must-visit for those wanting a pint with a side of history.</li>
+        <li><strong>Toner's</strong> – A classic Victorian-era pub known for its cozy snug and perfectly poured pints of Guinness. A favorite among locals and even once visited by W.B. Yeats. It's very bustling, and a club-like atmostphere at night.</li>
+      </ul>
+      
+      <h3>Other Ireland recommendations</h3>
+      <ul>
+        <li><strong>The Ring of Kerry</strong> – A stunning scenic drive through Ireland's southwest, featuring rugged coastline, charming villages, and breathtaking mountain views. A must-do for anyone looking to experience Ireland's natural beauty.</li>
+        <li><strong>Westport / The Wild Atlantic Way</strong> – Westport is a charming town along the Wild Atlantic Way, known for its lively pubs, scenic views, and access to Croagh Patrick. The Wild Atlantic Way itself is a dramatic coastal route stretching 2,500 km, showcasing Ireland's most stunning seascapes.</li>
+        <li><strong>Adare</strong> – A picturesque village in County Limerick, famous for its thatched cottages, historic abbeys, and charming streets. Often called Ireland's prettiest village, it's a perfect stop for a relaxed stroll and a cozy meal. Home to two of Ireland's most famous hotels, Adare Manor and Dunraven Arms.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
+
+
+
