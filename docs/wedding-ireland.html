@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sarah + Avi's Family Wedding Celebration</title>
   <link rel="icon" href="images/wedding-logo.svg" type="image/svg+xml">
   <link href="https://db.onlinewebfonts.com/c/56b1d105d2fa63f97d89d9626b476ec8?family=Bobby+Jones+Soft+Regular" rel="stylesheet">
@@ -15,25 +16,28 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      font-size: 16px; /* Base font size */
     }
     h1 {
       font-family: "Bobby Jones Soft Regular", "Helvetica Neue", Arial, sans-serif;
       margin-bottom: 5px;
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: #2e7d32; /* green */
+      text-align: center;
     }
     h2 {
       font-family: "Bobby Jones Soft Regular", "Helvetica Neue", Arial, sans-serif;
       margin-top: 0;
       margin-bottom: 20px;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       color: #e48f94; /* pinkish accent */
+      text-align: center;
     }
     h3 {
       font-family: "Bobby Jones Soft Regular", "Helvetica Neue", Arial, sans-serif;
       margin-top: 30px;
       margin-bottom: 10px;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       color: #2e7d32; /* green */
     }
     p {
@@ -41,6 +45,7 @@
       text-align: center;
       margin-bottom: 20px;
       line-height: 1.5;
+      font-size: 1.1rem;
     }
     form {
       background-color: #fff;
@@ -56,6 +61,7 @@
       margin: 15px 0 8px;
       font-weight: bold;
       width: 100%;
+      font-size: 1.1rem;
     }
     input[type="text"],
     input[type="email"],
@@ -69,6 +75,7 @@
       border-radius: 4px;
       box-sizing: border-box;
       height: 40px;
+      font-size: 1rem;
     }
     textarea {
       min-height: 100px;
@@ -91,7 +98,7 @@
       padding: 12px 20px;
       border-radius: 4px;
       cursor: pointer;
-      font-size: 1rem;
+      font-size: 1.1rem;
       width: 100%;
       margin-top: 10px;
       height: 45px;
@@ -124,11 +131,13 @@
     .content-section p {
       text-align: left;
       max-width: 100%;
+      font-size: 1.1rem;
     }
     table {
       width: 100%;
       border-collapse: collapse;
       margin: 20px 0;
+      font-size: 1.1rem;
     }
     th, td {
       padding: 12px;
@@ -146,6 +155,7 @@
     li {
       margin-bottom: 10px;
       line-height: 1.5;
+      font-size: 1.1rem;
     }
     .button-link {
       display: inline-block;
@@ -155,7 +165,7 @@
       padding: 12px 24px;
       border-radius: 4px;
       margin: 10px;
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
     .button-link:hover {
       background-color: #246628;
@@ -164,6 +174,7 @@
       display: flex;
       justify-content: center;
       margin: 30px 0;
+      flex-wrap: wrap;
     }
     
     /* Navigation Bar Styles */
@@ -177,6 +188,29 @@
       z-index: 100;
       margin-bottom: 20px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    /* Hamburger menu styles - moved UP in the style sheet */
+    .hamburger {
+      display: none; /* Hidden by default on desktop */
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+      cursor: pointer;
+      margin: 10px auto;
+      z-index: 101; /* Ensure it stays above other elements */
+    }
+    
+    .hamburger .bar {
+      height: 3px;
+      width: 100%;
+      background-color: #2e7d32;
+      border-radius: 10px;
     }
     
     nav {
@@ -186,16 +220,18 @@
       max-width: 800px;
       margin: 0 auto;
       flex-wrap: wrap;
+      width: 100%;
     }
     
     nav a {
       color: #2e7d32;
       text-decoration: none;
       padding: 8px 15px;
-      margin: 0 5px;
+      margin: 5px;
       border-radius: 4px;
       font-weight: bold;
       transition: all 0.3s ease;
+      font-size: 1.1rem;
     }
     
     nav a:hover {
@@ -215,6 +251,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      box-sizing: border-box;
     }
     
     /* Add space above the first heading to compensate for removed body padding */
@@ -266,11 +303,172 @@
       font-weight: bold;
       border-top: 1px solid #ddd;
     }
+    
+    /* Make images responsive */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Responsive styles for mobile devices */
+    @media screen and (max-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      h3 {
+        font-size: 1.3rem;
+      }
+      
+      /* Stack navigation items vertically on small screens */
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      nav a {
+        margin: 4px 0;
+        width: 80%;
+        text-align: center;
+        font-size: 1.1rem;
+      }
+      
+      /* Make table responsive on small screens */
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      
+      /* Hide table headers on mobile */
+      thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      
+      tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+      }
+      
+      td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+      }
+      
+      /* Special handling for the schedule table */
+      #schedule table tr {
+        border: none;
+        margin-bottom: 0;
+      }
+      
+      #schedule table td {
+        padding-left: 12px;
+        width: auto !important;
+      }
+      
+      #schedule table td:first-child {
+        font-weight: bold;
+        background-color: #f8f8f8;
+        border-top: 1px solid #ddd;
+      }
+      
+      /* Special handling for date header rows */
+      .date-header {
+        margin-top: 20px;
+      }
+      
+      .date-header td {
+        background-color: #e8f5e9;
+        font-weight: bold;
+        padding: 10px;
+        text-align: center !important;
+      }
+      
+      /* Fix for the hotel images grid */
+      .hotel-images .image-column {
+        flex-direction: column;
+      }
+      
+      .hotel-images .column-item img {
+        width: 100%;
+        height: auto;
+      }
+      
+      /* Adjust padding for content */
+      .content-wrapper {
+        padding: 0 15px;
+      }
+      
+      p, li, td {
+        font-size: 1.05rem;
+      }
+      
+      /* Hide champagne background on mobile */
+      body::after {
+        display: none; /* Hide the champagne graphic completely on mobile */
+      }
+      
+      /* Show hamburger on mobile */
+      .hamburger {
+        display: flex;
+        margin: 15px auto 10px;
+      }
+      
+      /* Hide nav by default */
+      nav {
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        width: 100%;
+      }
+      
+      nav.active {
+        max-height: 300px; /* Adjust based on your menu height */
+        padding-bottom: 10px;
+      }
+      
+      /* Make nav links full width when menu is open */
+      nav a {
+        margin: 4px 0;
+        width: 80%;
+        text-align: center;
+        font-size: 1.1rem;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+      
+      nav.active a {
+        opacity: 1;
+      }
+      
+      .nav-container {
+        flex-direction: column;
+        padding: 0;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="nav-container">
-    <nav>
+    <div class="hamburger" onclick="toggleNav()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <nav id="navbar">
       <a href="#home">Home</a>
       <a href="#schedule">Schedule</a>
       <a href="#travel">Travel</a>
@@ -291,7 +489,7 @@
       </div>
 
       <div class="content-section" style="text-align: center;">
-        <img src="images/sarah-avi.jpg" alt="Sarah and Avi's Wedding Logo" style="width: 50%; height: auto;">
+        <img src="images/sarah-avi.jpg" alt="Sarah and Avi's Wedding Logo" style="max-width: 80%; height: auto;">
       </div>
     </section>
 
@@ -378,13 +576,13 @@
       <div class="hotel-images">
         <div class="image-column" style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
           <div class="column-item">
-            <img src="https://www.thegrand.ie/wp-content/uploads/2023/08/Home-banner.jpg" alt="Grand Hotel Malahide Exterior" width="400" height="250" style="object-fit: cover;">
+            <img src="https://www.thegrand.ie/wp-content/uploads/2023/08/Home-banner.jpg" alt="Grand Hotel Malahide Exterior" style="max-width: 100%; height: auto;">
           </div>
           <div class="column-item">
-            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/267956926.jpg?k=cb5b82b030c25c5ae7087b1fa74bb74eef3dff93a1faa2d8e1737a03c6b99c56&o=&hp=1" alt="Coast Road Restaurant at The Grand Hotel" width="400" height="250" style="object-fit: cover;">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/267956926.jpg?k=cb5b82b030c25c5ae7087b1fa74bb74eef3dff93a1faa2d8e1737a03c6b99c56&o=&hp=1" alt="Coast Road Restaurant at The Grand Hotel" style="max-width: 100%; height: auto;">
           </div>
           <div class="column-item">
-            <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/18475949.jpg?k=f611238835a9152bb2332590aaf2f2494081f1f5442b549be076ad9a3f73c5bb&o=" alt="The Grand Hotel Entrance" width="400" height="250" style="object-fit: cover;">
+            <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/18475949.jpg?k=f611238835a9152bb2332590aaf2f2494081f1f5442b549be076ad9a3f73c5bb&o=" alt="The Grand Hotel Entrance" style="max-width: 100%; height: auto;">
           </div>
         </div>
       </div>
@@ -438,6 +636,20 @@
       </ul>
     </section>
   </div>
+
+  <script>
+    function toggleNav() {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('active');
+    }
+    
+    // Close menu when clicking on a link
+    document.querySelectorAll('#navbar a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navbar').classList.remove('active');
+      });
+    });
+  </script>
 </body>
 </html>
 
