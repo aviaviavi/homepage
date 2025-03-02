@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sarah + Avi's Family Wedding Celebration</title>
   <link rel="icon" href="images/wedding-logo.svg" type="image/svg+xml">
   <link href="https://db.onlinewebfonts.com/c/56b1d105d2fa63f97d89d9626b476ec8?family=Bobby+Jones+Soft+Regular" rel="stylesheet">
@@ -15,84 +16,120 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 40px 20px;
+      font-size: 16px; /* Base font size */
     }
+    
+    .content-wrapper {
+      width: 100%;
+      max-width: 800px;
+      padding: 40px 20px;
+      box-sizing: border-box;
+    }
+    
     h1 {
       font-family: "Bobby Jones Soft Regular", "Helvetica Neue", Arial, sans-serif;
       margin-bottom: 5px;
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: #2e7d32; /* green */
+      text-align: center;
     }
+    
     h2 {
       font-family: "Bobby Jones Soft Regular", "Helvetica Neue", Arial, sans-serif;
       margin-top: 0;
       margin-bottom: 20px;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       color: #e48f94; /* pinkish accent */
+      text-align: center;
     }
+    
     p {
       max-width: 600px;
       text-align: center;
       margin-bottom: 20px;
       line-height: 1.5;
+      font-size: 1.1rem;
+      margin-left: auto;
+      margin-right: auto;
     }
+    
     form {
       background-color: #fff;
       border: 2px solid #2e7d32;
       border-radius: 8px;
       padding: 20px;
-      max-width: 400px;
+      max-width: 500px;
       width: 100%;
       box-sizing: border-box;
+      margin: 20px auto;
     }
+    
     label {
       display: block;
       margin: 15px 0 8px;
       font-weight: bold;
       width: 100%;
+      font-size: 1.1rem;
     }
+    
     input[type="text"],
     input[type="email"],
     input[type="number"],
     select,
     textarea {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin-bottom: 15px;
       border: 1px solid #ccc;
       border-radius: 4px;
       box-sizing: border-box;
-      height: 40px;
+      height: 45px;
+      font-size: 1rem;
     }
+    
     textarea {
       min-height: 100px;
       font-family: "Helvetica Neue", Arial, sans-serif;
+      height: auto; 
     }
+    
     .checkbox-container {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       margin: 15px 0;
     }
+    
     input[type="checkbox"] {
       margin-right: 10px;
-      width: 18px;
-      height: 18px;
+      width: 20px;
+      height: 20px;
+      margin-top: 3px;
     }
+    
+    .checkbox-container label {
+      display: inline;
+      margin: 0;
+      line-height: 1.4;
+    }
+    
     button {
       background-color: #2e7d32;
       color: #fff;
       border: none;
-      padding: 12px 20px;
+      padding: 14px 20px;
       border-radius: 4px;
       cursor: pointer;
-      font-size: 1rem;
+      font-size: 1.1rem;
       width: 100%;
-      margin-top: 10px;
-      height: 45px;
+      margin-top: 20px;
+      height: auto;
+      min-height: 50px;
     }
+    
     button:hover {
       background-color: #246628;
     }
+    
     /* Add champagne background image to bottom left */
     body::after {
       content: "";
@@ -109,62 +146,125 @@
       opacity: 0.8; /* Adjust transparency as needed */
       pointer-events: none; /* Allows clicking through the image */
     }
+    
+    /* Back to main site link */
+    .back-link {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #2e7d32;
+      text-decoration: none;
+      display: inline-block;
+      padding: 8px 15px;
+      border: 1px solid #2e7d32;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    
+    .back-link:hover {
+      background-color: #2e7d32;
+      color: white;
+    }
+    
+    /* Responsive styles */
+    @media screen and (max-width: 768px) {
+      .content-wrapper {
+        padding: 30px 15px;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      form {
+        padding: 15px;
+      }
+      
+      /* Hide champagne graphic on mobile */
+      body::after {
+        display: none;
+      }
+      
+      /* Increase touch target size for mobile */
+      button, 
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      select {
+        height: 50px;
+      }
+      
+      /* Improve checkbox usability on mobile */
+      .checkbox-container {
+        margin: 20px 0;
+      }
+      
+      input[type="checkbox"] {
+        width: 24px;
+        height: 24px;
+      }
+    }
   </style>
 </head>
 <body>
+  <div class="content-wrapper">
+    <h1>Save Our Date</h1>
+    <h2>Sarah and Avi are getting married!</h2>
+    <p>
+      We'd love for you to celebrate our engagement with us the weekend of <strong>August 9, 2025</strong>
+      in <strong>Malahide, Ireland</strong>. Please let us know if you'll attend.
+    </p>
 
-  <h1>Save Our Date</h1>
-  <h2>Sarah and Avi are getting married!</h2>
-  <p>
-    We'd love for you to celebrate our engagement with us the weekend of <strong>August 9, 2025</strong>
-    in <strong>Malahide, Ireland</strong>. Please let us know if you'll attend.
-  </p>
+    <p>We're figuring out some specifics, more details to come!</p>
 
-  <p>We're figuring out some specifics, more details to come!</p>
-
-<form
-    action="https://formspree.io/f/movjobng"
-    method="POST"
->
-    <label>
-        Your name:
-        <input type="text" name="name" required>
-    </label>
-    
-    <label>
-        Your email:
-        <input type="email" name="email" required>
-    </label>
-    
-    <label>
-        Will you attend?
-        <select name="attending" required>
-            <option value="">Please select</option>
-            <option value="yes">Yes, I'll be there!</option>
-            <option value="no">Sorry, I can't make it</option>
-        </select>
-    </label>
-    
-    <label>
-        Number of attendees:
-        <input type="number" name="attendees" min="1" max="10" value="1">
-    </label>
-    
-    <div class="checkbox-container">
-        <input type="checkbox" name="require_lodging" id="require_lodging">
-        <label for="require_lodging" style="display: inline; margin: 0;">
-            I/we are interested in lodging options for the weekend.
+    <form
+        action="https://formspree.io/f/movjobng"
+        method="POST"
+    >
+        <label>
+            Your name:
+            <input type="text" name="name" required>
         </label>
-    </div>
+        
+        <label>
+            Your email:
+            <input type="email" name="email" required>
+        </label>
+        
+        <label>
+            Will you attend?
+            <select name="attending" required>
+                <option value="">Please select</option>
+                <option value="yes">Yes, I'll be there!</option>
+                <option value="no">Sorry, I can't make it</option>
+            </select>
+        </label>
+        
+        <label>
+            Number of attendees:
+            <input type="number" name="attendees" min="1" max="10" value="1">
+        </label>
+        
+        <div class="checkbox-container">
+            <input type="checkbox" name="require_lodging" id="require_lodging">
+            <label for="require_lodging" style="display: inline; margin: 0;">
+                I/we are interested in lodging options for the weekend.
+            </label>
+        </div>
+        
+        <label for="notes">
+            Additional comments or questions:
+            <textarea id="notes" name="notes" rows="4" style="resize: vertical;"></textarea>
+        </label>
+        
+        <button type="submit">Send</button>
+    </form>
     
-    <label for="notes">
-        Additional comments or questions:
-        <textarea id="notes" name="notes" rows="4" style="height: auto; resize: vertical;"></textarea>
-    </label>
-    
-    <button type="submit">Send</button>
-</form>
-
+    <a href="./wedding.html" class="back-link">← Back to Event Details</a>
+  </div>
 </body>
 </html>
 
