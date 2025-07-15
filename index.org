@@ -12,7 +12,7 @@
 
 *About me*
 
-  - Founder and CEO of [[https://scarf.sh][Scarf]] - Scarf builds sales & marketing intelligence for open source software projects.
+  - Founder and CEO of [[https://scarf.sh][Scarf]], a company focused on open source usage analytics. We process over 2 billion of open source package downloads every day.
   - Open source maintainer and advocate.
   - Functional programming enthusiast. I'm serving on the [[https://haskell.foundation][Haskell Foundation]] board, as well as the [[https://haskell.org][Haskell.org]] committee.
   - Former engineer at Pandora
@@ -20,17 +20,15 @@
 
 *Contact*
 
-  - Follow me on [[https://twitter.com/avi_press][Twitter]], [[https://bsky.app/profile/avi.press][Bluesky]], [[https://github.com/aviaviavi][Github]]
+  - Follow me on [[https://twitter.com/avi_press][Twitter]], [[https://github.com/aviaviavi][Github]], [[https://bsky.app/profile/avi.press][or even Bluesky]]
   - I hold open office hours for anyone that you can book with me [[https://cal.com/avi-press/office-hours][here]], no prior confirmation from me required.
   - Email: [[mailto:mail@avi.press][mail@avi.press]]
-
-*Other things*
-
-  - I'm a host of the [[https://www.youtube.com/watch?v=WERFZq5Oe2Y&list=PLS9wrEdf4JzWxrsk0hc4tZ98viiy6mrWV][Hacking Open Source Business Podcast]]. Smash that subscribe button, etc.
 
 *Content*
 
 |-------------------------------------------------------------------------------------------------------------------------------------+------------|
+| [[https://www.datacouncil.ai/talks/open-source-success-learnings-from-1-billion-downloads?hsLang=en][Open Source Success: Lessons from 1(0) Billion Downloads]]                                                                            | 2025-05-28 |
+| [[https://www.youtube.com/watch?v=vRbURjbJElU][State of Open Con Keynote: Open Source Data Updates]]                                                                                 | 2025-02-04 |
 | [[https://www.youtube.com/watch?v=mLujlRte1hw][Open Source Summit: What Information are Package & Container Registries Hiding From You?]]                                            | 2024-04-18 |
 | [[https://www.youtube.com/watch?v=D36tRYg4MZM][Open Source Summit: Lessons from 1 Billion OSS Downloads]]                                                                            | 2024-04-17 |
 | [[file:posts/2024-02-29-analytics-are-winning.org][Analytics are Starting to Win in Open Source]]                                                                                        | 2024-02-29 |
