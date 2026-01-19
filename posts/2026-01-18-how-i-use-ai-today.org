@@ -5,7 +5,7 @@
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/monospace-web.css">
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/styles.css">
 
-[[file:../index.org][Avi Press]] | January 19, 2026
+[[file:../index.org][Avi Press]] | January 18, 2026
 
 #+BEGIN_EXPORT html
 <img class="collapse" referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
