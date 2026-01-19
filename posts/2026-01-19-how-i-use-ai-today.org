@@ -13,7 +13,7 @@
 
 ---
 
-This is a point-in-time snapshot of how I use AI right now. It’ll be outdated soon, and that's okay. It will serve as a fun reference point for later.
+This is a point-in-time snapshot of how I use AI right now. It will be outdated soon, and that's okay. It will serve as a fun reference point for later.
 
 * ChatGPT
 
@@ -25,7 +25,7 @@ I have ChatGPT Pro, mainly used for things like:
 
 * Clawdbot
 
-Most of the /work/ AI does for me now is through Clawdbot running on a now repurposed old macbook pro in my home office, using ~openai-codex/gpt-5.2~ under the hood. I message it from my phone or computer on Telegram mostly and sometimes on Slack. Telegram voice notes are used heavily when I'm on the go. Talking to Codex is dryer than a pack of saltines but it gets stuff done and it does it accurately.
+Most of the /work/ AI does for me now is through Clawdbot running on a now re-purposed old macbook pro in my home office, using ~openai-codex/gpt-5.2~ under the hood. I message it from my phone or computer on Telegram mostly and sometimes on Slack. Telegram voice notes are used heavily when I'm on the go. Talking to Codex is dryer than a pack of Saltines but it gets stuff done and it does it accurately.
 
 ** Context from my whole life can connect to Clawdbot
 
@@ -55,9 +55,9 @@ I'll often queue up tasks by spawning subagents. I can have multiple things goin
 - I had a cracked windshield and today clawdbot created the insurance claim and all but grabbed the first available repair window, waiting for my confirmation.
 - Travel logistics and research for an upcoming vacation.
 - Generated a logo walls for a board meeting deck given a list of company names.
-- Asking for ad-hoc data queries in Slack, in english: "How many new orgs were created last week?"
+- Asking for ad-hoc data queries in Slack, in English: "How many new orgs were created last week?"
 - Fixing some bugs in our SDKs and sending PRs.
-- Edit <customer>'s custom Scarf report for this month. Run the query in metabase, get the resulting CSV and upload it to S3. Then send it to the ~#analytics~ channel in Slack.
+- Edit <customer>'s custom Scarf report for this month. Run the query in Metabase, get the resulting CSV and upload it to S3. Then send it to the ~#analytics~ channel in Slack.
 
 ** Surprises with Clawdbot so far
 
