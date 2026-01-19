@@ -39,7 +39,7 @@ Everything running on my laptop means I can more safely* connect other systems. 
 - Metabase
 - GitHub
 - X
-- Ad-hoc site logins as needed (Amazon, Auto-insurance provider, etc. )
+- Ad-hoc site logins as needed (Amazon, auto-insurance provider, etc.)
 
 ** Cron jobs
 
@@ -53,7 +53,7 @@ Clawd supports cron jobs, which is very handy. I have a few scheduled:
 
 I'll often queue up tasks by spawning subagents. I can have multiple things going in the background without blocking the main interaction loop.
 
-- I had a cracked windshield and today clawdbot created the insurance claim and all but grabbed the first available repair window, waiting for my confirmation.
+- I had a cracked windshield and today *clawdbot created the insurance claim on its own* and all but grabbed the first available repair window, waiting for my confirmation.
 - Travel logistics and research for an upcoming vacation.
 - Generated a logo walls for a board meeting deck given a list of company names.
 - Asking for ad-hoc data queries in Slack, in English: "How many new orgs were created last week?"
