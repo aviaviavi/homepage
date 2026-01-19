@@ -1,0 +1,45 @@
+/* Theme switcher (System → Light → Dark)
+   Uses :root CSS variables from monospace-web when present. */
+
+:root[data-theme="light"] {
+  --text-color: #000;
+  --text-color-alt: #666;
+  --background-color: #fff;
+  --background-color-alt: #eee;
+}
+
+:root[data-theme="dark"] {
+  --text-color: #fff;
+  --text-color-alt: #aaa;
+  --background-color: #000;
+  --background-color-alt: #111;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 9999;
+
+  font: inherit;
+  line-height: 1;
+
+  padding: 0.35rem 0.6rem;
+  background: var(--background-color, #fff);
+  color: var(--text-color, #000);
+  border: 1px solid var(--text-color, #000);
+  border-radius: 3px;
+
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.theme-toggle:hover {
+  opacity: 1;
+}
+
+@media print {
+  .theme-toggle {
+    display: none;
+  }
+}
