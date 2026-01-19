@@ -3,9 +3,15 @@
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="./images/dwarf-icon.png">
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="./css/monospace-web.css">
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="./css/styles.css">
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="./css/theme-toggle.css">
+#+HTML_HEAD_EXTRA: <script defer src="./js/theme-toggle.js"></script>
 
 #+BEGIN_EXPORT html
 <img class="collapse" referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<button id="theme-toggle" class="theme-toggle" type="button"></button>
 #+END_EXPORT
 
 *About me*
