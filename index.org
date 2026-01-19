@@ -27,6 +27,7 @@
 *Content*
 
 |-------------------------------------------------------------------------------------------------------------------------------------+------|
+| [[file:posts/2026-01-19-how-i-use-ai-today.org][How I Use AI (A Snapshot, January 2026)]]                                                                                             | 2026 |
 | [[https://www.datacouncil.ai/talks/open-source-success-learnings-from-1-billion-downloads?hsLang=en][Open Source Success: Lessons from 1(0) Billion Downloads]]                                                                            | 2025 |
 | [[https://www.youtube.com/watch?v=vRbURjbJElU][State of Open Con Keynote: Open Source Data Updates]]                                                                                 |      |
 | [[https://www.youtube.com/watch?v=mLujlRte1hw][Open Source Summit: What Information are Package & Container Registries Hiding From You?]]                                            | 2024 |

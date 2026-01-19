@@ -1,0 +1,73 @@
+#+title: How I Use AI (A Snapshot, January 2026)
+#+options: num:nil toc:nil date:nil
+#+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="/images/dwarf-icon.png">
+
+Avi Press | January 19, 2026
+
+[[file:../index.org][Home]]
+
+---
+
+This is a point-in-time snapshot of how I use AI right now. It’ll be outdated soon, and that's okay.
+
+* ChatGPT
+
+I have ChatGPT Pro, mainly used for things like:
+
+- Voice mode for looking things up and learning about a topic interactively. 
+- Deep research on a particular topic
+- Pulse is okay and sometimes has useful updates.
+
+* Clawdbot
+
+Most of the *work* AI does for me now is through clawdbot running on a now repurposed old macbook pro in my home office, using ~openai-codex/gpt-5.2~ under the hood. I message it from my phone or computer on Telegram mostly and sometimes on Slack. Telegram voice notes are used heavily when I'm on the go. Talking to Codex is dryer than a pack of saltines but it gets stuff done and it does it accurately.
+
+** Context from my whole life can connect to Clawdbot
+
+Everything running on my laptop means I can more safely* connect other systems. So far, I've given clawd access to:
+
+- Email
+- Calendar
+- Telegram
+- Slack
+- Linear
+- Metabase
+- X
+- Ad-hoc site logins as needed (Amazon, Auto-insurance provider, etc. )
+
+** Cron jobs
+
+Clawd supports cron jobs. I have a few scheduled:
+
+- Every morning, check my calendar, linear and provide a morning digest. 
+- Every morning, Look through gmail and find customer / prospect conversations I need to follow up on. 
+- Every morning, send a digest of the latest Scarf signups to our #sales channel, categorized by sales fit level and company enrichment. 
+
+** Task examples from the last week
+
+I'll often queue up tasks by spawning subagents. I can have multiple things 
+
+- I had a cracked windshield and today clawdbot created the insurance claim and all but grabbed the first available repair window, waiting for my confirmation. 
+- Travel logistics and research. 
+- Logo walls for a deck: ~make a logo wall for <list of companies> with a transparent background.~
+- Asking for ad-hoc data queries in slack, in english: "How many new orgs were created last week?"
+- Fixing some bugs in our SDKs and sending PRs. 
+- Edit <customer>'s custom Scarf report for this month. Run the query in metabase, get the resulting CSV and upload it to S3. Then send it to the ~#analytics~ channel in Slack. 
+
+** Surprises with clawdbot so far
+
+*** It's surprisingly robust and self aware.
+
+Clawdbot largely moved itself from my currently macbook to my old one, which is now acting as its dedicated server. It ssh-ed into my old laptop and largely set itself up, needing me mainly for confirmations and some clarification. 
+
+*** Heartbeats are useful. 
+
+Clawdbot will check in from time to time via a heartbeat. Sometimes it's annoying, but more often than not it's following up on info or clarification that it needs, which is very helpful for pushing your task forward!
+
+*** Things still break a lot. 
+
+Sometimes it just forgets it has credentials to stuff. Sometimes other things just randomly break. 
+
+*** It will gladly SSH into other machines if you want it to. 
+
+Clawdbot fleet coming soon. 
