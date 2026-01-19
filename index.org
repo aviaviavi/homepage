@@ -8,8 +8,6 @@
 <img class="collapse" referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
 #+END_EXPORT
 
-\\
-
 *About me*
 
   - Founder and CEO of [[https://scarf.sh][Scarf]], a company focused on open source usage analytics. We process over 2 billion of open source package downloads every day.
