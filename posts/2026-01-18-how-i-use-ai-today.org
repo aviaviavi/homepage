@@ -52,7 +52,7 @@ Everything running on my laptop means I can more safely* connect other systems. 
 Clawd supports cron jobs, which is very handy. I have a few scheduled:
 
 - Every morning, check my calendar, linear and provide a morning digest.
-- Every morning, Look through gmail and find customer / prospect conversations I need to follow up on.
+- Every morning, look through gmail and find customer / prospect conversations I need to follow up on.
 - Every morning, send a digest of the latest Scarf signups to our #sales channel, categorized by sales fit level and company enrichment.
 
 ** Task examples from the last week
@@ -62,9 +62,9 @@ I'll often queue up tasks by spawning subagents. I can have multiple things goin
 - I had a cracked windshield and today *clawdbot created the insurance claim on its own* and all but grabbed the first available repair window, waiting for my confirmation.
 - Travel logistics and research for an upcoming vacation.
 - Generated a logo walls for a board meeting deck given a list of company names.
-- Asking for ad-hoc data queries in Slack, in English: "How many new orgs were created last week?"
-- Fixing some bugs in our SDKs and sending PRs.
-- Edit <customer>'s custom Scarf report for this month. Run the query in Metabase, get the resulting CSV and upload it to S3. Then send it to the ~#analytics~ channel in Slack.
+- Asked ad-hoc data queries in Slack, in English, eg "How many new orgs were created last week?"
+- Fixed some bugs in Scarf's SDKs and sent PRs.
+- Edited a customer's custom Scarf report for the month. Clawdbot ran the query in Metabase, got the resulting CSV and uploaded it to S3. It then sent it to the ~#analytics~ channel in Slack for customer hand-off.
 
 ** Surprises with Clawdbot so far
 
