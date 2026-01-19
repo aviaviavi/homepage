@@ -13,7 +13,7 @@
 
 ---
 
-This is a point-in-time snapshot of how I use AI right now. It will be outdated soon, and that's okay. It will serve as a fun reference point for later.
+The way I've been using AI has changed dramatically in the last month. This post is a point-in-time snapshot of how I'm AI in life and at work right now. It will be outdated soon, and that's okay. It will serve as a fun reference point for later.
 
 * ChatGPT
 
