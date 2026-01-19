@@ -6,7 +6,8 @@
 <!-- 2026-01-18 Sun 20:24 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sitemap for project homepage-content</title>
+<title>A Snapshot of How I'm Using AI in January 2026</title>
+<meta name="author" content="Avi Press" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -192,23 +193,136 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="./images/dwarf-icon.png">
+<link rel="stylesheet" href="../css/monospace-web.css">
+<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Sitemap for project homepage-content</h1>
+<h1 class="title">A Snapshot of How I'm Using AI in January 2026</h1>
+<p>
+<a href="../index.html">Avi Press</a> | January 19, 2026
+</p>
+
+<img class="collapse" referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
+
+<p>
+&#x2014;
+</p>
+
+<p>
+This is a point-in-time snapshot of how I use AI right now. It’ll be outdated soon, and that's okay. It will serve as a fun reference point for later.
+</p>
+<div id="outline-container-org7f24747" class="outline-2">
+<h2 id="org7f24747">ChatGPT</h2>
+<div class="outline-text-2" id="text-org7f24747">
+<p>
+I have ChatGPT Pro, mainly used for things like:
+</p>
+
 <ul class="org-ul">
-<li><a href="index.html">Avi Press</a></li>
-<li><a href="sitemap.html">Sitemap for project homepage-content</a></li>
-<li>posts
-<ul class="org-ul">
-<li><a href="posts/2026-01-19-how-i-use-ai-today.html">A Snapshot of How I'm Using AI in January 2026</a></li>
-<li><a href="posts/2020-06-10-analytics-and-open-source-sustainability.html">Analytics and Open Source Sustainability</a></li>
-<li><a href="posts/2024-02-29-analytics-are-winning.html">Analytics are Starting to Win in Open Source</a></li>
-<li><a href="posts/2023-12-29-call-for-haskell-libraries.html">Call for Haskell Libraries</a></li>
-<li><a href="posts/2017-08-25-haskell-dbs-and-musicbrainz.html">Easy database access with Haskell and postgresql-simple</a></li>
-<li><a href="posts/2024-01-15-standalone-org.html">Let's Help Org Mode Escape From Emacs</a></li>
-</ul></li>
+<li>Voice mode for looking things up and learning about a topic interactively.</li>
+<li>Deep research on a particular topic</li>
+<li>Pulse is okay and sometimes has useful updates.</li>
 </ul>
+</div>
+</div>
+<div id="outline-container-orge20db1f" class="outline-2">
+<h2 id="orge20db1f">Clawdbot</h2>
+<div class="outline-text-2" id="text-orge20db1f">
+<p>
+Most of the <i>work</i> AI does for me now is through Clawdbot running on a now repurposed old macbook pro in my home office, using <code>openai-codex/gpt-5.2</code> under the hood. I message it from my phone or computer on Telegram mostly and sometimes on Slack. Telegram voice notes are used heavily when I'm on the go. Talking to Codex is dryer than a pack of saltines but it gets stuff done and it does it accurately.
+</p>
+</div>
+<div id="outline-container-orgee938af" class="outline-3">
+<h3 id="orgee938af">Context from my whole life can connect to Clawdbot</h3>
+<div class="outline-text-3" id="text-orgee938af">
+<p>
+Everything running on my laptop means I can more safely* connect other systems. So far, I've given clawd access to:
+</p>
+
+<ul class="org-ul">
+<li>Email</li>
+<li>Calendar</li>
+<li>Telegram</li>
+<li>Slack</li>
+<li>Linear</li>
+<li>Metabase</li>
+<li>X</li>
+<li>Ad-hoc site logins as needed (Amazon, Auto-insurance provider, etc. )</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgdae2c8a" class="outline-3">
+<h3 id="orgdae2c8a">Cron jobs</h3>
+<div class="outline-text-3" id="text-orgdae2c8a">
+<p>
+Clawd supports cron jobs, which is very handy. I have a few scheduled:
+</p>
+
+<ul class="org-ul">
+<li>Every morning, check my calendar, linear and provide a morning digest.</li>
+<li>Every morning, Look through gmail and find customer / prospect conversations I need to follow up on.</li>
+<li>Every morning, send a digest of the latest Scarf signups to our #sales channel, categorized by sales fit level and company enrichment.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgea30ab2" class="outline-3">
+<h3 id="orgea30ab2">Task examples from the last week</h3>
+<div class="outline-text-3" id="text-orgea30ab2">
+<p>
+I'll often queue up tasks by spawning subagents. I can have multiple things going in the background without blocking the main interaction loop.
+</p>
+
+<ul class="org-ul">
+<li>I had a cracked windshield and today clawdbot created the insurance claim and all but grabbed the first available repair window, waiting for my confirmation.</li>
+<li>Travel logistics and research for an upcoming vacation.</li>
+<li>Generated a logo walls for a board meeting deck given a list of company names.</li>
+<li>Asking for ad-hoc data queries in Slack, in english: "How many new orgs were created last week?"</li>
+<li>Fixing some bugs in our SDKs and sending PRs.</li>
+<li>Edit &lt;customer&gt;'s custom Scarf report for this month. Run the query in metabase, get the resulting CSV and upload it to S3. Then send it to the <code>#analytics</code> channel in Slack.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org95bfcd2" class="outline-3">
+<h3 id="org95bfcd2">Surprises with Clawdbot so far</h3>
+<div class="outline-text-3" id="text-org95bfcd2">
+</div>
+<div id="outline-container-org0b72ab4" class="outline-4">
+<h4 id="org0b72ab4">It's surprisingly robust and self aware.</h4>
+<div class="outline-text-4" id="text-org0b72ab4">
+<p>
+Clawdbot largely moved itself from my daily use macbook over to my old macbook, which is now acting as a dedicated server in my home office. It ssh-ed into my old laptop and largely set itself up, needing me mainly for confirmations and some clarification.
+</p>
+</div>
+</div>
+<div id="outline-container-org1b3f878" class="outline-4">
+<h4 id="org1b3f878">Heartbeats are useful.</h4>
+<div class="outline-text-4" id="text-org1b3f878">
+<p>
+Clawdbot will check in from time to time via a heartbeat. Sometimes it's annoying, but more often than not it's following up on info or clarification that it needs, which is very helpful for pushing your task forward!
+</p>
+</div>
+</div>
+<div id="outline-container-org3f66d5c" class="outline-4">
+<h4 id="org3f66d5c">Things still break a lot.</h4>
+<div class="outline-text-4" id="text-org3f66d5c">
+<p>
+Sometimes it just forgets it has credentials that it has. Sometimes other things just randomly break, like rate limits, model connectivity, or harness bugs.
+</p>
+</div>
+</div>
+<div id="outline-container-org8e98cbb" class="outline-4">
+<h4 id="org8e98cbb">It will gladly SSH into other machines if you want it to.</h4>
+<div class="outline-text-4" id="text-org8e98cbb">
+<p>
+AI fleet coming soon.
+</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="postamble">© Avi Press 2024</p>
