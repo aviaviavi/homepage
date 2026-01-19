@@ -4,6 +4,8 @@
 #+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="./images/dwarf-icon.png">
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/monospace-web.css">
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/styles.css">
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="./css/theme-toggle.css">
+#+HTML_HEAD_EXTRA: <script defer src="./js/theme-toggle.js"></script>
 
 [[file:../index.org][Avi Press]] | August 25, 2017
 
