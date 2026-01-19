@@ -25,7 +25,7 @@ I have ChatGPT Pro, mainly used for things like:
 
 * Clawdbot
 
-Most of the /work/ AI does for me now is through Clawdbot running on a now re-purposed old macbook pro in my home office, using ~openai-codex/gpt-5.2~ under the hood. I message it from my phone or computer on Telegram mostly and sometimes on Slack. Telegram voice notes are used heavily when I'm on the go. Talking to Codex is dryer than a pack of Saltines but it gets stuff done and it does it accurately.
+Most of the /work/ AI does for me is through Clawdbot running on a re-purposed old Macbook Pro in my home office, running on ~openai-codex/gpt-5.2~. I message it from my phone or computer on Telegram mostly and sometimes on Slack. Telegram voice notes are used heavily when I'm on the go. Talking to Codex is dryer than a pack of Saltines but it gets stuff done and it does it accurately.
 
 ** Context from my whole life can connect to Clawdbot
 
@@ -37,6 +37,7 @@ Everything running on my laptop means I can more safely* connect other systems. 
 - Slack
 - Linear
 - Metabase
+- GitHub
 - X
 - Ad-hoc site logins as needed (Amazon, Auto-insurance provider, etc. )
 
