@@ -1,0 +1,105 @@
+#+title: A Snapshot of How I'm Using AI in February 2026 (with OpenClaw)
+#+author: Avi Press + OpenClaw
+#+HTML_HEAD_EXTRA: <meta name="viewport" content="width=device-width, initial-scale=1">
+#+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="../images/dwarf-icon.png">
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/monospace-web.css">
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/styles.css">
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/theme-toggle.css">
+#+HTML_HEAD_EXTRA: <script defer src="../js/theme-toggle.js"></script>
+
+[[file:../index.org][Avi Press]] | February 2026
+
+#+BEGIN_EXPORT html
+<button id="theme-toggle" class="theme-toggle" type="button"></button>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<img class="collapse" referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
+#+END_EXPORT
+
+---
+
+This post is a follow-up to my January snapshot. That one was mostly about having an AI assistant with strong tool access.
+
+This month, the biggest shift is that I've moved from one assistant to a small system of coordinated background agents running in OpenClaw.
+
+Not a sci-fi thing. Just practical orchestration.
+
+* What's changed since January
+
+** 1) I now run multiple focused agents instead of one overloaded chat
+
+Instead of a single long thread trying to handle everything, I have specialized agents for recurring workflows (engineering tasks, reporting, meeting follow-up, lead ops, writing support).
+
+Each one has:
+- a narrow scope,
+- a recurring check-in schedule,
+- explicit logging,
+- and rules for when to alert me vs stay quiet.
+
+That structure has been more important than model quality improvements.
+
+** 2) Meeting follow-up is much more automated now
+
+A lot of value has come from turning meetings into execution automatically:
+- processing meeting notes,
+- extracting follow-up TODOs,
+- creating tickets where appropriate,
+- and de-duping work so we don't create duplicate issues.
+
+This sounds boring, but it's one of the highest-ROI changes I've made. Fewer dropped follow-ups, less manual triage.
+
+** 3) More real operational workflows are running end-to-end
+
+In the last couple weeks, my AI stack has been helping with:
+- code changes and PR flow,
+- recurring customer reporting pipelines,
+- lead export/sync workflows,
+- model and release compatibility checks,
+- backup and recovery operations.
+
+This isn't "look at my cool demo" usage. It's operational throughput.
+
+* What I learned about reliability
+
+The hard problems are usually systems problems, not "intelligence" problems.
+
+Things that still break:
+- auth state drift,
+- provider/version mismatch,
+- timeout behavior,
+- long-running job collisions.
+
+So we've leaned into:
+- explicit state files,
+- idempotent scripts,
+- conservative notification policies,
+- safe rollback defaults.
+
+At this point, my bar is not "can it do this once?" It's "can this run every day without creating noise?"
+
+* Org2 + orchestration is where this is getting really interesting
+
+The loop is starting to look like this:
+
+conversation -> notes -> tasks -> scheduled execution -> logged outcomes.
+
+For me, that's the core unlock. AI is not replacing decision-making. It's reducing the friction between "we decided to do this" and "this actually got done."
+
+* What AI is good at for me right now
+
+- turning unstructured updates into concrete next actions,
+- running repetitive operational workflows,
+- doing background execution while I stay focused on higher-leverage decisions,
+- and keeping a useful audit trail.
+
+* What still clearly needs a human
+
+- final voice and editorial taste,
+- strategic tradeoffs,
+- people decisions,
+- public communication.
+
+My current view is still pragmatic: the best pattern right now is not one giant autonomous agent. It's a set of constrained, observable agents with memory, state, and good escalation rules.
+
+If January was "AI assistant with tool access," February has felt more like "AI as an operations layer."
