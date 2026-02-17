@@ -6,7 +6,8 @@
 <!-- 2026-02-17 Tue 13:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sitemap for project homepage-content</title>
+<title>A Snapshot of How I'm Using AI in February 2026</title>
+<meta name="author" content="Avi Press + OpenClaw" />
 <meta name="generator" content="Org Mode" />
 <style type="text/css">
   #content { max-width: 60em; margin: auto; }
@@ -192,24 +193,131 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { }
 </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="../images/dwarf-icon.png">
+<link rel="stylesheet" href="../css/monospace-web.css">
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/theme-toggle.css">
+<script defer src="../js/theme-toggle.js"></script>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Sitemap for project homepage-content</h1>
+<h1 class="title">A Snapshot of How I'm Using AI in February 2026</h1>
+<p>
+<a href="../index.html">Avi Press</a> + OpenClaw | February 2026
+</p>
+
+<button id="theme-toggle" class="theme-toggle" type="button"></button>
+
+<img class="collapse" referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
+
+<p>
+&#x2014;
+</p>
+
+<p>
+This post is a follow-up to my <a href="2026-01-18-how-i-use-ai-today.html">January snapshot</a>. That one was mostly about having an AI assistant with strong tool access.
+</p>
+
+<p>
+This month, the biggest shift is that recurring work is now moved into dedicated subagents and an intentionally very lightweight orchestration system.
+</p>
+<div id="outline-container-orge248870" class="outline-2">
+<h2 id="orge248870">What's changed since January</h2>
+<div class="outline-text-2" id="text-orge248870">
+</div>
+<div id="outline-container-org00e77c4" class="outline-3">
+<h3 id="org00e77c4">OpenClaw has its own accounts for more autonomy with a blast radius.</h3>
+<div class="outline-text-3" id="text-org00e77c4">
+<p>
+I gave OpenClaw its own:
+</p>
+
 <ul class="org-ul">
-<li><a href="index.html">Avi Press</a></li>
-<li><a href="sitemap.html">Sitemap for project homepage-content</a></li>
-<li>posts
-<ul class="org-ul">
-<li><a href="posts/2026-02-07-how-were-using-ai-feb-2026.html">A Snapshot of How I'm Using AI in February 2026</a></li>
-<li><a href="posts/2026-01-18-how-i-use-ai-today.html">A Snapshot of How I'm Using AI in January 2026</a></li>
-<li><a href="posts/2020-06-10-analytics-and-open-source-sustainability.html">Analytics and Open Source Sustainability</a></li>
-<li><a href="posts/2024-02-29-analytics-are-winning.html">Analytics are Starting to Win in Open Source</a></li>
-<li><a href="posts/2023-12-29-call-for-haskell-libraries.html">Call for Haskell Libraries</a></li>
-<li><a href="posts/2017-08-25-haskell-dbs-and-musicbrainz.html">Easy database access with Haskell and postgresql-simple</a></li>
-<li><a href="posts/2024-01-15-standalone-org.html">Let's Help Org Mode Escape From Emacs</a></li>
-</ul></li>
+<li>email address on my personal domain</li>
+<li>It's own personal gmail, mainly for Google Drive</li>
+<li>A phone number via esim, which allowed me to move my main chat from Telegram into WhatsApp (for the encryption).</li>
+<li><a href="https://github.com/clavi-bot">GitHub account</a></li>
+<li>A strictly protected service account in Scarf's Google Workspace.</li>
 </ul>
+
+<p>
+This is helpful to separate the work that OpenClaw does from my own, and lets me grant fine-grained access to resources more natively to whatever platform its using.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf86b100" class="outline-3">
+<h3 id="orgf86b100">I now run a small set of focused agents instead of one overloaded chat</h3>
+<div class="outline-text-3" id="text-orgf86b100">
+<p>
+Instead of a single long thread trying to handle everything, I have specialized agents for recurring workflows (engineering tasks, reporting, meeting follow-up, lead ops, writing support).
+</p>
+
+<p>
+Each one has a narrow scope, a schedule that it runs on, and a lightweight orchestration system that I am building on top of org-mode (more on that below). Some of my subagents run daily, others run every 30 minutes, especailly the ones writing code.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf562338" class="outline-3">
+<h3 id="orgf562338">Org2 as the orchestration layer</h3>
+<div class="outline-text-3" id="text-orgf562338">
+<p>
+<a href="2024-01-15-standalone-org.html">I've long wanted to build an org-mode successor</a>, and now <a href="https://github.com/aviaviavi/org2">it's finally happening</a> with the help of OpenClaw.
+</p>
+
+<p>
+Each long-standing subagent now has a dedicated org2 file in Dropbox. Each has its hearbeat instructions in its org2 file, and logs its work, summary status, and blockers. That way, I can easily monitor whats happening from my editor and intervene asynronously when needed, without getting in the way of the normal chat flow.
+</p>
+
+<p>
+I am dogfooding org2 for myself as I do this, and migrating myself off of emacs (finally) and into the VScode ecosystem.
+</p>
+
+<p>
+Org2 is still not ready for primetime, but it is already supporting most of my day to day org-mode usage!
+</p>
+</div>
+</div>
+<div id="outline-container-orge4c69df" class="outline-3">
+<h3 id="orge4c69df">Meeting follow-up is much more automated now</h3>
+<div class="outline-text-3" id="text-orge4c69df">
+<p>
+A lot of value has come from turning meetings into execution automatically:
+</p>
+
+<ul class="org-ul">
+<li>Meetings are transcribed with <a href="https://hyprnote.com">Hyprnote</a>.</li>
+<li>Every hour, <code>MeetingBot</code> will SSH into my laptop, check for new meeting summaries.</li>
+<li>Any product feedback we get triggers a new Linear ticket to be made, checking for duplicates first.</li>
+<li>Any other follow up task for me is logged into my daily org mode notes, so I can track and get reminders on all of my devices.</li>
+</ul>
+
+<p>
+This has been hugely helpful at a time where I am in lots of meetings.
+</p>
+</div>
+</div>
+<div id="outline-container-org76d8642" class="outline-3">
+<h3 id="org76d8642">Other changes</h3>
+<div class="outline-text-3" id="text-org76d8642">
+<ul class="org-ul">
+<li>Codex 5.3 for basically everything.</li>
+<li>More personality via a much more robust SOUL.md</li>
+<li>Less voice notes and more pictures.</li>
+<li>QMD plugin for the memory layer.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9088564" class="outline-3">
+<h3 id="org9088564">Open Problems</h3>
+<div class="outline-text-3" id="text-org9088564">
+<ul class="org-ul">
+<li>Memory is still not reliable enough.</li>
+<li>Real time voice chat.</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="postamble">© Avi Press 2026</p>
