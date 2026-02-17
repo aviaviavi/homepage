@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2026-02-17 Tue 13:39 -->
+<!-- 2026-02-17 Tue 13:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A Snapshot of How I'm Using AI in February 2026</title>
@@ -216,11 +216,11 @@
 </p>
 
 <p>
-This post is a follow-up to my <a href="2026-01-18-how-i-use-ai-today.html">January snapshot</a>. That one was mostly about having an AI assistant with strong tool access.
+This post is a follow-up to my <a href="2026-01-18-how-i-use-ai-today.html">January snapshot</a>. My AI stack is continuing to change a lot, but OpenClaw is very much at the center of it all.
 </p>
 
 <p>
-This month, the biggest shift is that recurring work is now moved into dedicated subagents and an intentionally very lightweight orchestration system.
+This month, the biggest shift is that even more real work is getting done. Recurring tasks are increasingly being moved into dedicated subagents and an intentionally very lightweight orchestration system.
 </p>
 <div id="outline-container-orgfebf33a" class="outline-2">
 <h2 id="orgfebf33a">What's changed since January</h2>
@@ -254,7 +254,7 @@ Instead of a single long thread trying to handle everything, I have specialized 
 </p>
 
 <p>
-Each one has a narrow scope, a schedule that it runs on, and a lightweight orchestration system that I am building on top of org-mode (more on that below). Some of my subagents run daily, others run every 30 minutes, especailly the ones writing code.
+Each one has a narrow scope, a schedule that it runs on, and a lightweight orchestration system that I am building on top of org-mode (more on that below). Some of my subagents run daily, others run every 30 minutes, especially the ones writing code.
 </p>
 </div>
 </div>
@@ -266,7 +266,7 @@ Each one has a narrow scope, a schedule that it runs on, and a lightweight orche
 </p>
 
 <p>
-Each long-standing subagent now has a dedicated org2 file in Dropbox. Each has its hearbeat instructions in its org2 file, and logs its work, summary status, and blockers. That way, I can easily monitor whats happening from my editor and intervene asynronously when needed, without getting in the way of the normal chat flow.
+Each long-standing subagent now has a dedicated org2 file in Dropbox. Each has its heartbeat instructions in its org2 file, and logs its work, summary status, and blockers. That way, I can easily monitor whats happening from my editor and intervene asyncronously when needed, without getting in the way of the normal chat flow.
 </p>
 
 <p>
@@ -274,7 +274,7 @@ I am dogfooding org2 for myself as I do this, and migrating myself off of emacs 
 </p>
 
 <p>
-Org2 is still not ready for primetime, but it is already supporting most of my day to day org-mode usage!
+Org2 is still not ready for prime-time, but it is already supporting most of my day to day org-mode usage!
 </p>
 </div>
 </div>
@@ -294,6 +294,22 @@ A lot of value has come from kicking off meeting follow up items more automatica
 
 <p>
 This has been hugely helpful at a time where I am in lots of meetings.
+</p>
+</div>
+</div>
+<div id="outline-container-org980f387" class="outline-3">
+<h3 id="org980f387">An always-on data analyst in Slack</h3>
+<div class="outline-text-3" id="text-org980f387">
+<p>
+OpenClaw in our <code>#analytics</code> channel can easily answer any questions I have, and is even now handling our customer-facing reports.
+</p>
+</div>
+</div>
+<div id="outline-container-org8e105cd" class="outline-3">
+<h3 id="org8e105cd">A tedious spreadsheet tasks is now fully automated</h3>
+<div class="outline-text-3" id="text-org8e105cd">
+<p>
+Scarf offers lead gen services as an add-on to our platform. That has historically required a human to move leads from an internal spreadsheet to an external one, with different fields. OpenClaw has automated this fully!
 </p>
 </div>
 </div>

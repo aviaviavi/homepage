@@ -19,9 +19,9 @@
 
 ---
 
-This post is a follow-up to my [[file:2026-01-18-how-i-use-ai-today.org][January snapshot]]. That one was mostly about having an AI assistant with strong tool access.
+This post is a follow-up to my [[file:2026-01-18-how-i-use-ai-today.org][January snapshot]]. My AI stack is continuing to change a lot, but OpenClaw is very much at the center of it all.
 
-This month, the biggest shift is that recurring work is now moved into dedicated subagents and an intentionally very lightweight orchestration system.
+This month, the biggest shift is that even more real work is getting done. Recurring tasks are increasingly being moved into dedicated subagents and an intentionally very lightweight orchestration system.
 
 * What's changed since January
 
@@ -41,17 +41,17 @@ This is helpful to separate the work that OpenClaw does from my own, and lets me
 
 Instead of a single long thread trying to handle everything, I have specialized agents for recurring workflows (engineering tasks, reporting, meeting follow-up, lead ops, writing support).
 
-Each one has a narrow scope, a schedule that it runs on, and a lightweight orchestration system that I am building on top of org-mode (more on that below). Some of my subagents run daily, others run every 30 minutes, especailly the ones writing code.
+Each one has a narrow scope, a schedule that it runs on, and a lightweight orchestration system that I am building on top of org-mode (more on that below). Some of my subagents run daily, others run every 30 minutes, especially the ones writing code.
 
 ** Org2 as the orchestration layer
 
 [[file:2024-01-15-standalone-org.org][I've long wanted to build an org-mode successor]], and now [[https://github.com/aviaviavi/org2][it's finally happening]] with the help of OpenClaw.
 
-Each long-standing subagent now has a dedicated org2 file in Dropbox. Each has its hearbeat instructions in its org2 file, and logs its work, summary status, and blockers. That way, I can easily monitor whats happening from my editor and intervene asynronously when needed, without getting in the way of the normal chat flow.
+Each long-standing subagent now has a dedicated org2 file in Dropbox. Each has its heartbeat instructions in its org2 file, and logs its work, summary status, and blockers. That way, I can easily monitor whats happening from my editor and intervene asyncronously when needed, without getting in the way of the normal chat flow.
 
 I am dogfooding org2 for myself as I do this, and migrating myself off of emacs (finally) and into the VScode ecosystem.
 
-Org2 is still not ready for primetime, but it is already supporting most of my day to day org-mode usage!
+Org2 is still not ready for prime-time, but it is already supporting most of my day to day org-mode usage!
 
 ** Meeting follow-ups are much more automated now
 
@@ -63,6 +63,14 @@ A lot of value has come from kicking off meeting follow up items more automatica
 - Any other follow up task for me is logged into my daily org mode notes, so I can track and get reminders on all of my devices.
 
 This has been hugely helpful at a time where I am in lots of meetings.
+
+** An always-on data analyst in Slack
+
+OpenClaw in our ~#analytics~ channel can easily answer any questions I have, and is even now handling our customer-facing reports.
+
+** A tedious spreadsheet tasks is now fully automated
+
+Scarf offers lead gen services as an add-on to our platform. That has historically required a human to move leads from an internal spreadsheet to an external one, with different fields. OpenClaw has automated this fully!
 
 ** Other changes
 
