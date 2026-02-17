@@ -7,6 +7,17 @@
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/styles.css">
 #+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/theme-toggle.css">
 #+HTML_HEAD_EXTRA: <script defer src="../js/theme-toggle.js"></script>
+#+HTML_HEAD_EXTRA: <link rel="canonical" href="https://avi.press/posts/2023-12-29-call-for-haskell-libraries.html" />
+#+HTML_HEAD_EXTRA: <meta property="og:site_name" content="Avi Press" />
+#+HTML_HEAD_EXTRA: <meta property="og:type" content="article" />
+#+HTML_HEAD_EXTRA: <meta property="og:title" content="Call for Haskell Libraries" />
+#+HTML_HEAD_EXTRA: <meta property="og:description" content="Call for Haskell Libraries — Avi Press" />
+#+HTML_HEAD_EXTRA: <meta property="og:url" content="https://avi.press/posts/2023-12-29-call-for-haskell-libraries.html" />
+#+HTML_HEAD_EXTRA: <meta property="og:image" content="https://avi.press/images/og/2023-12-29-call-for-haskell-libraries.png" />
+#+HTML_HEAD_EXTRA: <meta name="twitter:card" content="summary_large_image" />
+#+HTML_HEAD_EXTRA: <meta name="twitter:title" content="Call for Haskell Libraries" />
+#+HTML_HEAD_EXTRA: <meta name="twitter:description" content="Call for Haskell Libraries — Avi Press" />
+#+HTML_HEAD_EXTRA: <meta name="twitter:image" content="https://avi.press/images/og/2023-12-29-call-for-haskell-libraries.png" />
 
 [[file:../index.org][Avi Press]] | December 29, 2023
 

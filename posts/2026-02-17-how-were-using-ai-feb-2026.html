@@ -6,9 +6,9 @@
 <!-- 2026-02-17 Tue 11:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Analytics and Open Source Sustainability</title>
+<title>A Snapshot of How I'm Using AI in February 2026</title>
 <meta name="generator" content="Org mode" />
-<meta name="author" content="Avi Press" />
+<meta name="author" content="Avi Press + OpenClaw" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -221,33 +221,45 @@
     /*]]>*///-->
 // @license-end
 </script>
-<link rel="canonical" href="https://avi.press/posts/2020-06-10-analytics-and-open-source-sustainability.html" />
+<link rel="canonical" href="https://avi.press/posts/2026-02-17-how-were-using-ai-feb-2026.html" />
 <meta property="og:site_name" content="Avi Press" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Analytics and Open Source Sustainability" />
-<meta property="og:description" content="Analytics and Open Source Sustainability — Avi Press" />
-<meta property="og:url" content="https://avi.press/posts/2020-06-10-analytics-and-open-source-sustainability.html" />
-<meta property="og:image" content="https://avi.press/images/og/2020-06-10-analytics-and-open-source-sustainability.png" />
+<meta property="og:title" content="A Snapshot of How I&#x27;m Using AI in February 2026" />
+<meta property="og:description" content="A Snapshot of How I&#x27;m Using AI in February 2026 — Avi Press" />
+<meta property="og:url" content="https://avi.press/posts/2026-02-17-how-were-using-ai-feb-2026.html" />
+<meta property="og:image" content="https://avi.press/images/og/2026-02-17-how-were-using-ai-feb-2026.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Analytics and Open Source Sustainability" />
-<meta name="twitter:description" content="Analytics and Open Source Sustainability — Avi Press" />
-<meta name="twitter:image" content="https://avi.press/images/og/2020-06-10-analytics-and-open-source-sustainability.png" />
+<meta name="twitter:title" content="A Snapshot of How I&#x27;m Using AI in February 2026" />
+<meta name="twitter:description" content="A Snapshot of How I&#x27;m Using AI in February 2026 — Avi Press" />
+<meta name="twitter:image" content="https://avi.press/images/og/2026-02-17-how-were-using-ai-feb-2026.png" />
 </head>
 <body>
 <div id="content">
-<h1 class="title">Analytics and Open Source Sustainability</h1>
+<h1 class="title">A Snapshot of How I'm Using AI in February 2026</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgcc71df9">1. But why do this at all?</a></li>
-<li><a href="#orge1639c2">2. Where Scarf is headed next</a></li>
+<li><a href="#org2930876">1. What's changed since January</a>
+<ul>
+<li><a href="#org1767d8c">1.1. OpenClaw has its own accounts for more autonomy with a blast radius.</a></li>
+<li><a href="#org46e0015">1.2. I now run a small set of focused agents instead of one overloaded chat</a></li>
+<li><a href="#org7aff8ec">1.3. Org2 as the orchestration layer</a></li>
+<li><a href="#org70d18cb">1.4. Meeting follow-ups are much more automated now</a></li>
+<li><a href="#org5923e15">1.5. An always-on data analyst in Slack</a></li>
+<li><a href="#org737ccac">1.6. A tedious spreadsheet tasks is now fully automated</a></li>
+<li><a href="#orgbcc9145">1.7. Other changes</a></li>
+<li><a href="#org3c51c07">1.8. Open Problems</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <p>
-<a href="../index.html">Avi Press</a> | July 10, 2020
+<a href="../index.html">Avi Press</a> | February 17, 2026
 </p>
+
+<button id="theme-toggle" class="theme-toggle" type="button"></button>
 
 <img class="collapse" referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
 
@@ -256,45 +268,135 @@
 </p>
 
 <p>
-Last week, a discussion was sparked about Scarf's JavaScript analytics package, scarf-js. An issue was opened on GitHub and the discussion grew, ultimately moving into the Reactiflux Discord server with many people jumping in and voicing opinions on the topic. An excellent blog post from a scarf-js user, Erik Rasmussen, explained his perspective on this topic as an open-source maintainer. This post shares Scarf's perspective.
+This post is a follow-up to my <a href="2026-01-18-how-i-use-ai-today.html">January snapshot</a>. My AI stack is continuing to change a lot, but OpenClaw is very much at the center of it all.
 </p>
 
 <p>
-If you haven't seen scarf-js before, it's a JavaScript package that works like Google Analytics but for open-source JavaScript packages. Its primary purpose is informing maintainers about which companies are using their software, in efforts to connect maintainers to their commercial users in order to set up support agreements and/or sponsorship. Even if a maintainer has no desire to monetize their project, having a well filled out "Used By" section on a project's README or website is effective for marketing. Scarf-js works by providing a post-install hook that makes a minimal (non-personally-identifying) analytics call after it is installed via an <code>npm install</code>. Scarf then surfaces this information only to the maintainer.
+This month, the biggest shift is that even more real work is getting done. Recurring tasks are increasingly being moved into dedicated subagents and an intentionally very lightweight orchestration system.
 </p>
 
-<p>
-A concern raised about scarf-js is that when developers run <code>npm install</code>, they don't expect data to be sent to anyone besides npm. Even though npm/GitHub/Microsoft already has the exact same data Scarf is collecting (even more actually: <a href="https://www.npmjs.com/policies/privacy#data">https://www.npmjs.com/policies/privacy#data</a>), to many developers, it's more about expectations than about the actual data being collected. Some people are simply against analytics in any context, which is also understandable but unfortunately far less pragmatic for those responsible for keeping software running smoothly.
-</p>
-
-<div id="outline-container-orgcc71df9" class="outline-2">
-<h2 id="orgcc71df9"><span class="section-number-2">1</span> But why do this at all?</h2>
+<div id="outline-container-org2930876" class="outline-2">
+<h2 id="org2930876"><span class="section-number-2">1</span> What's changed since January</h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org1767d8c" class="outline-3">
+<h3 id="org1767d8c"><span class="section-number-3">1.1</span> OpenClaw has its own accounts for more autonomy with a blast radius.</h3>
+<div class="outline-text-3" id="text-1-1">
 <p>
-People start open-source projects for all kinds of reasons, but rarely for monetary gain. This is what makes the OSS community so special - solve a problem you have, share your solution to help people around the world, and collaborate with anyone who wants to participate and contribute back. Use whatever you need to solve your problems at hand, no strings attached. Today however, OSS maintainers often find themselves in an unexpected position - companies are heavily relying on their work, and have demanding expectations of maintainers. Features they want need to be added. Documentation needs to be superb. Bugs need to not only be fixed, but also back-ported to older release branches, as companies are often slow to update to the latest major release of any particular package. All of these expectations are communicated in public, with the maintainers' personal reputation on the line if they don't consistently deliver. Their passion project which should be an asset has turned into a public liability.
+I gave OpenClaw its own:
 </p>
 
-<p>
-What makes this even harder is that maintainers are working in the dark. They don't find out about issues until someone tells them about it, and unfortunately this is often done in a less-than-empathetic manner. It's challenging to spot problems in advance, and maintainers have no choice but to be mainly reactive, which can be stressful. In most other domains of software that a business might use or build - websites, apps, connected devices, or otherwise - pushing out code with no observability into what the code is actually doing would be a reckless choice. Collectively, we've decided we're okay with that tradeoff. We give up some privacy, but we get to use more reliable software as a result. We have yet to allow open-source maintainers this same privilege, but this double standard is becoming less and less practical. As an OSS maintainer, your code could be critical to the operation of every Fortune 500 company in the world yet you still have no idea how your code is being run and used except when users explicitly tell you about it.
-</p>
+<ul class="org-ul">
+<li>email address on my personal domain</li>
+<li>It's own personal gmail, mainly for Google Drive</li>
+<li>A phone number via esim, which allowed me to move my main chat from Telegram into WhatsApp (for the encryption).</li>
+<li><a href="https://github.com/clavi-bot">GitHub account</a></li>
+<li>A strictly protected service account in Scarf's Google Workspace.</li>
+</ul>
 
 <p>
-If maintainers are to be fairly compensated for the valuable software they create, it will fall largely on commercial organizations to pay them - whether for support, managed services, sponsorship, or anything else. To that end, keeping maintainers in the loop about who their commercial users are is vital. Providing information that directly makes maintenance more effective helps both maintainers and everyone that uses their software. Scarf is stepping in to bridge this observability gap by providing these analytics as responsibly as possible.
+This is helpful to separate the work that OpenClaw does from my own, and lets me grant fine-grained access to resources more natively to whatever platform its using.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orge1639c2" class="outline-2">
-<h2 id="orge1639c2"><span class="section-number-2">2</span> Where Scarf is headed next</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org46e0015" class="outline-3">
+<h3 id="org46e0015"><span class="section-number-3">1.2</span> I now run a small set of focused agents instead of one overloaded chat</h3>
+<div class="outline-text-3" id="text-1-2">
 <p>
-Overall, Scarf won't succeed in its mission of helping open-source maintainers without the larger developer community behind us. We're prioritizing additional components of our suite of tools to provide maintainers with basic analytics that still respects individual privacy and also don't go against developers' expectations about how and when data can be collected. We're currently in a world where big companies collect extremely personal details about our lives, yet rebuke when the software they use for free tries to collect even the smallest amount of data about them - even when it's easy to just opt-out. In the relationship between open-source developers and their commercial users, it's time to tip the scales back towards the open-source developers. Stay tuned for more details!
+Instead of a single long thread trying to handle everything, I have specialized agents for recurring workflows (engineering tasks, reporting, meeting follow-up, lead ops, writing support).
 </p>
+
+<p>
+Each one has a narrow scope, a schedule that it runs on, and a lightweight orchestration system that I am building on top of org-mode (more on that below). Some of my subagents run daily, others run every 30 minutes, especially the ones writing code.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7aff8ec" class="outline-3">
+<h3 id="org7aff8ec"><span class="section-number-3">1.3</span> Org2 as the orchestration layer</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+<a href="2024-01-15-standalone-org.html">I've long wanted to build an org-mode successor</a>, and now <a href="https://github.com/aviaviavi/org2">it's finally happening</a> with the help of OpenClaw.
+</p>
+
+<p>
+Each long-standing subagent now has a dedicated org2 file in Dropbox. Each has its heartbeat instructions in its org2 file, and logs its work, summary status, and blockers. That way, I can easily monitor whats happening from my editor and intervene asyncronously when needed, without getting in the way of the normal chat flow.
+</p>
+
+<p>
+I am dogfooding org2 for myself as I do this, and migrating myself off of emacs (finally) and into the VScode ecosystem.
+</p>
+
+<p>
+Org2 is still not ready for prime-time, but it is already supporting most of my day to day org-mode usage!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org70d18cb" class="outline-3">
+<h3 id="org70d18cb"><span class="section-number-3">1.4</span> Meeting follow-ups are much more automated now</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+A lot of value has come from kicking off meeting follow up items more automatically:
+</p>
+
+<ul class="org-ul">
+<li>Meetings are transcribed with <a href="https://hyprnote.com">Hyprnote</a>.</li>
+<li>Every hour, <code>MeetingBot</code> will SSH into my laptop, check for new meeting summaries.</li>
+<li>Any product feedback we get triggers a new Linear ticket to be made, checking for duplicates first.</li>
+<li>Any other follow up task for me is logged into my daily org mode notes, so I can track and get reminders on all of my devices.</li>
+</ul>
+
+<p>
+This has been hugely helpful at a time where I am in lots of meetings.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5923e15" class="outline-3">
+<h3 id="org5923e15"><span class="section-number-3">1.5</span> An always-on data analyst in Slack</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+OpenClaw in our <code>#analytics</code> channel can easily answer any questions I have, and is even now handling our customer-facing reports.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org737ccac" class="outline-3">
+<h3 id="org737ccac"><span class="section-number-3">1.6</span> A tedious spreadsheet tasks is now fully automated</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+Scarf offers lead gen services as an add-on to our platform. That has historically required a human to move leads from an internal spreadsheet to an external one, with different fields. OpenClaw has automated this fully!
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbcc9145" class="outline-3">
+<h3 id="orgbcc9145"><span class="section-number-3">1.7</span> Other changes</h3>
+<div class="outline-text-3" id="text-1-7">
+<ul class="org-ul">
+<li>Codex 5.3 for basically everything.</li>
+<li>More personality via a much more robust SOUL.md than I had before.</li>
+<li>Less voice notes and more pictures, mostly because voice notes are slow (with my current setup)</li>
+<li>QMD plugin for the memory layer.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3c51c07" class="outline-3">
+<h3 id="org3c51c07"><span class="section-number-3">1.8</span> Open Problems</h3>
+<div class="outline-text-3" id="text-1-8">
+<ul class="org-ul">
+<li>Memory is still not reliable enough.</li>
+<li>Real time voice chat.</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Avi Press</p>
+<p class="author">Author: Avi Press + OpenClaw</p>
 <p class="date">Created: 2026-02-17 Tue 11:07</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>

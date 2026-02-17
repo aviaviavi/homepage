@@ -6,7 +6,7 @@
 <!-- 2026-02-17 Tue 11:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Analytics and Open Source Sustainability</title>
+<title>A Snapshot of How I'm Using AI in January 2026</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Avi Press" />
 <style type="text/css">
@@ -221,33 +221,49 @@
     /*]]>*///-->
 // @license-end
 </script>
-<link rel="canonical" href="https://avi.press/posts/2020-06-10-analytics-and-open-source-sustainability.html" />
+<link rel="canonical" href="https://avi.press/posts/2026-01-18-how-i-use-ai-today.html" />
 <meta property="og:site_name" content="Avi Press" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Analytics and Open Source Sustainability" />
-<meta property="og:description" content="Analytics and Open Source Sustainability — Avi Press" />
-<meta property="og:url" content="https://avi.press/posts/2020-06-10-analytics-and-open-source-sustainability.html" />
-<meta property="og:image" content="https://avi.press/images/og/2020-06-10-analytics-and-open-source-sustainability.png" />
+<meta property="og:title" content="A Snapshot of How I&#x27;m Using AI in January 2026" />
+<meta property="og:description" content="A Snapshot of How I&#x27;m Using AI in January 2026 — Avi Press" />
+<meta property="og:url" content="https://avi.press/posts/2026-01-18-how-i-use-ai-today.html" />
+<meta property="og:image" content="https://avi.press/images/og/2026-01-18-how-i-use-ai-today.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Analytics and Open Source Sustainability" />
-<meta name="twitter:description" content="Analytics and Open Source Sustainability — Avi Press" />
-<meta name="twitter:image" content="https://avi.press/images/og/2020-06-10-analytics-and-open-source-sustainability.png" />
+<meta name="twitter:title" content="A Snapshot of How I&#x27;m Using AI in January 2026" />
+<meta name="twitter:description" content="A Snapshot of How I&#x27;m Using AI in January 2026 — Avi Press" />
+<meta name="twitter:image" content="https://avi.press/images/og/2026-01-18-how-i-use-ai-today.png" />
 </head>
 <body>
 <div id="content">
-<h1 class="title">Analytics and Open Source Sustainability</h1>
+<h1 class="title">A Snapshot of How I'm Using AI in January 2026</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgcc71df9">1. But why do this at all?</a></li>
-<li><a href="#orge1639c2">2. Where Scarf is headed next</a></li>
+<li><a href="#org2d0ed67">1. ChatGPT</a></li>
+<li><a href="#org8a1381d">2. Clawdbot</a>
+<ul>
+<li><a href="#org8e34242">2.1. Context from my whole life can connect to Clawdbot</a></li>
+<li><a href="#org1240e69">2.2. Cron jobs</a></li>
+<li><a href="#org2004e2e">2.3. Task examples from the last week</a></li>
+<li><a href="#org2891eb4">2.4. Surprises with Clawdbot so far</a>
+<ul>
+<li><a href="#org56839e8">2.4.1. It's surprisingly robust and self aware.</a></li>
+<li><a href="#org4ec74f9">2.4.2. Heartbeats are useful.</a></li>
+<li><a href="#org62739d7">2.4.3. Things still break a lot.</a></li>
+<li><a href="#org923d107">2.4.4. It will gladly SSH into other machines if you want it to.</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 <p>
-<a href="../index.html">Avi Press</a> | July 10, 2020
+<a href="../index.html">Avi Press</a> | January 18, 2026
 </p>
+
+<button id="theme-toggle" class="theme-toggle" type="button"></button>
 
 <img class="collapse" referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
 
@@ -256,40 +272,125 @@
 </p>
 
 <p>
-Last week, a discussion was sparked about Scarf's JavaScript analytics package, scarf-js. An issue was opened on GitHub and the discussion grew, ultimately moving into the Reactiflux Discord server with many people jumping in and voicing opinions on the topic. An excellent blog post from a scarf-js user, Erik Rasmussen, explained his perspective on this topic as an open-source maintainer. This post shares Scarf's perspective.
+The way I've been using AI has changed dramatically in the last month. This post is a point-in-time snapshot of my personal AI setup for life and work right now. It will be outdated soon, and that's okay. It will serve as a fun reference point for later.
 </p>
 
-<p>
-If you haven't seen scarf-js before, it's a JavaScript package that works like Google Analytics but for open-source JavaScript packages. Its primary purpose is informing maintainers about which companies are using their software, in efforts to connect maintainers to their commercial users in order to set up support agreements and/or sponsorship. Even if a maintainer has no desire to monetize their project, having a well filled out "Used By" section on a project's README or website is effective for marketing. Scarf-js works by providing a post-install hook that makes a minimal (non-personally-identifying) analytics call after it is installed via an <code>npm install</code>. Scarf then surfaces this information only to the maintainer.
-</p>
-
-<p>
-A concern raised about scarf-js is that when developers run <code>npm install</code>, they don't expect data to be sent to anyone besides npm. Even though npm/GitHub/Microsoft already has the exact same data Scarf is collecting (even more actually: <a href="https://www.npmjs.com/policies/privacy#data">https://www.npmjs.com/policies/privacy#data</a>), to many developers, it's more about expectations than about the actual data being collected. Some people are simply against analytics in any context, which is also understandable but unfortunately far less pragmatic for those responsible for keeping software running smoothly.
-</p>
-
-<div id="outline-container-orgcc71df9" class="outline-2">
-<h2 id="orgcc71df9"><span class="section-number-2">1</span> But why do this at all?</h2>
+<div id="outline-container-org2d0ed67" class="outline-2">
+<h2 id="org2d0ed67"><span class="section-number-2">1</span> ChatGPT</h2>
 <div class="outline-text-2" id="text-1">
 <p>
-People start open-source projects for all kinds of reasons, but rarely for monetary gain. This is what makes the OSS community so special - solve a problem you have, share your solution to help people around the world, and collaborate with anyone who wants to participate and contribute back. Use whatever you need to solve your problems at hand, no strings attached. Today however, OSS maintainers often find themselves in an unexpected position - companies are heavily relying on their work, and have demanding expectations of maintainers. Features they want need to be added. Documentation needs to be superb. Bugs need to not only be fixed, but also back-ported to older release branches, as companies are often slow to update to the latest major release of any particular package. All of these expectations are communicated in public, with the maintainers' personal reputation on the line if they don't consistently deliver. Their passion project which should be an asset has turned into a public liability.
+I have ChatGPT Pro, mainly used for things like:
 </p>
 
-<p>
-What makes this even harder is that maintainers are working in the dark. They don't find out about issues until someone tells them about it, and unfortunately this is often done in a less-than-empathetic manner. It's challenging to spot problems in advance, and maintainers have no choice but to be mainly reactive, which can be stressful. In most other domains of software that a business might use or build - websites, apps, connected devices, or otherwise - pushing out code with no observability into what the code is actually doing would be a reckless choice. Collectively, we've decided we're okay with that tradeoff. We give up some privacy, but we get to use more reliable software as a result. We have yet to allow open-source maintainers this same privilege, but this double standard is becoming less and less practical. As an OSS maintainer, your code could be critical to the operation of every Fortune 500 company in the world yet you still have no idea how your code is being run and used except when users explicitly tell you about it.
-</p>
-
-<p>
-If maintainers are to be fairly compensated for the valuable software they create, it will fall largely on commercial organizations to pay them - whether for support, managed services, sponsorship, or anything else. To that end, keeping maintainers in the loop about who their commercial users are is vital. Providing information that directly makes maintenance more effective helps both maintainers and everyone that uses their software. Scarf is stepping in to bridge this observability gap by providing these analytics as responsibly as possible.
-</p>
+<ul class="org-ul">
+<li>Voice mode for looking things up and learning about a topic interactively.</li>
+<li>Deep research on a particular topic</li>
+<li>Pulse is okay and sometimes has useful updates.</li>
+</ul>
 </div>
 </div>
 
-<div id="outline-container-orge1639c2" class="outline-2">
-<h2 id="orge1639c2"><span class="section-number-2">2</span> Where Scarf is headed next</h2>
+<div id="outline-container-org8a1381d" class="outline-2">
+<h2 id="org8a1381d"><span class="section-number-2">2</span> Clawdbot</h2>
 <div class="outline-text-2" id="text-2">
 <p>
-Overall, Scarf won't succeed in its mission of helping open-source maintainers without the larger developer community behind us. We're prioritizing additional components of our suite of tools to provide maintainers with basic analytics that still respects individual privacy and also don't go against developers' expectations about how and when data can be collected. We're currently in a world where big companies collect extremely personal details about our lives, yet rebuke when the software they use for free tries to collect even the smallest amount of data about them - even when it's easy to just opt-out. In the relationship between open-source developers and their commercial users, it's time to tip the scales back towards the open-source developers. Stay tuned for more details!
+Most of the <i>work</i> AI does for me is through Clawdbot running on a re-purposed old Macbook Pro in my home office, running on <code>openai-codex/gpt-5.2</code>. I message it from my phone or computer on Telegram mostly and sometimes on Slack. Telegram voice notes are used heavily when I'm on the go. Talking to Codex is dryer than a pack of Saltines but it gets stuff done and it does it accurately.
 </p>
+</div>
+
+<div id="outline-container-org8e34242" class="outline-3">
+<h3 id="org8e34242"><span class="section-number-3">2.1</span> Context from my whole life can connect to Clawdbot</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Everything running on my laptop means I can more safely* connect other systems. So far, I've given clawd access to:
+</p>
+
+<ul class="org-ul">
+<li>Email</li>
+<li>Calendar</li>
+<li>Telegram</li>
+<li>Slack</li>
+<li>Linear</li>
+<li>Metabase</li>
+<li>GitHub</li>
+<li>X</li>
+<li>Ad-hoc site logins as needed (Amazon, auto-insurance provider, etc.)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1240e69" class="outline-3">
+<h3 id="org1240e69"><span class="section-number-3">2.2</span> Cron jobs</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Clawd supports cron jobs, which is very handy. I have a few scheduled:
+</p>
+
+<ul class="org-ul">
+<li>Every morning, check my calendar, linear and provide a morning digest.</li>
+<li>Every morning, look through gmail and find customer / prospect conversations I need to follow up on.</li>
+<li>Every morning, send a digest of the latest Scarf signups to our #sales channel, categorized by sales fit level and company enrichment.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2004e2e" class="outline-3">
+<h3 id="org2004e2e"><span class="section-number-3">2.3</span> Task examples from the last week</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+I'll often queue up tasks by spawning subagents. I can have multiple things going in the background without blocking the main interaction loop.
+</p>
+
+<ul class="org-ul">
+<li>I had a cracked windshield and today <b>clawdbot created the insurance claim on its own</b> and all but grabbed the first available repair window, waiting for my confirmation.</li>
+<li>Travel logistics and research for an upcoming vacation.</li>
+<li>Generated a logo walls for a board meeting deck given a list of company names.</li>
+<li>Asked ad-hoc data queries in Slack, in English, eg "How many new orgs were created last week?"</li>
+<li>Fixed some bugs in Scarf's SDKs and sent PRs.</li>
+<li>Edited a customer's custom Scarf report for the month. Clawdbot ran the query in Metabase, got the resulting CSV and uploaded it to S3. It then sent it to the <code>#analytics</code> channel in Slack for customer hand-off.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2891eb4" class="outline-3">
+<h3 id="org2891eb4"><span class="section-number-3">2.4</span> Surprises with Clawdbot so far</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-org56839e8" class="outline-4">
+<h4 id="org56839e8"><span class="section-number-4">2.4.1</span> It's surprisingly robust and self aware.</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<p>
+Clawdbot largely moved itself from my daily use macbook over to my old macbook, which is now acting as a dedicated server in my home office. It ssh-ed into my old laptop and largely set itself up, needing me mainly for confirmations and some clarification.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4ec74f9" class="outline-4">
+<h4 id="org4ec74f9"><span class="section-number-4">2.4.2</span> Heartbeats are useful.</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<p>
+Clawdbot will check in from time to time via a heartbeat. Sometimes it's annoying, but more often than not it's following up on info or clarification that it needs, which is very helpful for pushing your task forward!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org62739d7" class="outline-4">
+<h4 id="org62739d7"><span class="section-number-4">2.4.3</span> Things still break a lot.</h4>
+<div class="outline-text-4" id="text-2-4-3">
+<p>
+Sometimes it just forgets it has credentials that it has. Sometimes other things just randomly break, like rate limits, model connectivity, or harness bugs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org923d107" class="outline-4">
+<h4 id="org923d107"><span class="section-number-4">2.4.4</span> It will gladly SSH into other machines if you want it to.</h4>
+<div class="outline-text-4" id="text-2-4-4">
+<p>
+AI fleet coming soon.
+</p>
+</div>
+</div>
 </div>
 </div>
 </div>
