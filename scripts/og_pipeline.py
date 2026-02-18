@@ -4,6 +4,7 @@ import html
 import os
 import re
 import subprocess
+import textwrap
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,16 +24,25 @@ def title_from_org(path: Path) -> str:
     return path.stem
 
 
+def format_title(title: str) -> str:
+    clean = " ".join(title.replace("\n", " ").split())
+    wrapped = textwrap.wrap(clean, width=34)
+    if len(wrapped) > 3:
+        wrapped = wrapped[:3]
+        wrapped[-1] = wrapped[-1].rstrip(" .") + "…"
+    return "\n".join(wrapped)
+
+
 def run_magick(title: str, out_path: Path):
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    title = title.replace("\n", " ").strip()
+    title = format_title(title)
     cmd = [
         "magick", "-size", "1200x630", "gradient:#0f172a-#1e293b",
         "-fill", "#38bdf8", "-draw", "rectangle 0,0 1200,14",
         "-fill", "white", "-font", "Helvetica-Bold", "-pointsize", "64",
         "-gravity", "northwest", "-annotate", "+70+70", "avi.press",
-        "-font", "Helvetica", "-pointsize", "58", "-gravity", "center",
-        "-fill", "white", "-interline-spacing", "10", "-annotate", "+0+20", title,
+        "-font", "Helvetica", "-pointsize", "48", "-gravity", "center",
+        "-fill", "white", "-interline-spacing", "14", "-annotate", "+0+40", title,
         "-font", "Helvetica", "-pointsize", "34", "-gravity", "southwest",
         "-annotate", "+70+50", "Avi Press",
         str(out_path),
