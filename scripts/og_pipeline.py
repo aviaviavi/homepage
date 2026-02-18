@@ -24,6 +24,14 @@ def title_from_org(path: Path) -> str:
     return path.stem
 
 
+def date_from_slug(slug: str) -> str:
+    m = re.match(r"^(\d{4})-(\d{2})-(\d{2})-", slug)
+    if not m:
+        return ""
+    y, mo, d = m.groups()
+    return f"{y}-{mo}-{d}"
+
+
 def format_title(title: str) -> str:
     clean = " ".join(title.replace("\n", " ").split())
     wrapped = textwrap.wrap(clean, width=34)
@@ -33,7 +41,7 @@ def format_title(title: str) -> str:
     return "\n".join(wrapped)
 
 
-def run_magick(title: str, out_path: Path):
+def run_magick(title: str, out_path: Path, post_date: str = ""):
     out_path.parent.mkdir(parents=True, exist_ok=True)
     title = format_title(title)
     cmd = [
@@ -42,8 +50,10 @@ def run_magick(title: str, out_path: Path):
         "-fill", "white", "-font", "Helvetica-Bold", "-pointsize", "64",
         "-gravity", "northwest", "-annotate", "+70+70", "avi.press",
         "-font", "Helvetica", "-pointsize", "48", "-gravity", "center",
-        "-fill", "white", "-interline-spacing", "14", "-annotate", "+0+40", title,
-        "-font", "Helvetica", "-pointsize", "34", "-gravity", "southwest",
+        "-fill", "white", "-interline-spacing", "14", "-annotate", "+0+28", title,
+        "-font", "Helvetica", "-pointsize", "28", "-fill", "#cbd5e1", "-gravity", "center",
+        "-annotate", "+0+178", post_date,
+        "-font", "Helvetica", "-pointsize", "34", "-fill", "white", "-gravity", "southwest",
         "-annotate", "+70+50", "Avi Press",
         str(out_path),
     ]
@@ -117,7 +127,7 @@ def run_all():
         image_rel = f"images/og/{slug}.png"
         image_abs = f"{SITE_URL}/{image_rel}"
         canonical = f"{SITE_URL}/posts/{slug}.html"
-        run_magick(title, ROOT / image_rel)
+        run_magick(title, ROOT / image_rel, date_from_slug(slug))
         block = build_meta_block(title, canonical, image_abs)
         update_org_head(org_path, block)
         html_path = html_posts.get(slug)
