@@ -45,16 +45,17 @@ def run_magick(title: str, out_path: Path, post_date: str = ""):
     out_path.parent.mkdir(parents=True, exist_ok=True)
     title = format_title(title)
     cmd = [
-        "magick", "-size", "1200x630", "gradient:#0f172a-#1e293b",
-        "-fill", "#38bdf8", "-draw", "rectangle 0,0 1200,14",
-        "-fill", "white", "-font", "Helvetica-Bold", "-pointsize", "64",
-        "-gravity", "northwest", "-annotate", "+70+70", "avi.press",
-        "-font", "Helvetica", "-pointsize", "48", "-gravity", "center",
-        "-fill", "white", "-interline-spacing", "14", "-annotate", "+0+28", title,
-        "-font", "Helvetica", "-pointsize", "28", "-fill", "#cbd5e1", "-gravity", "center",
-        "-annotate", "+0+178", post_date,
-        "-font", "Helvetica", "-pointsize", "34", "-fill", "white", "-gravity", "southwest",
-        "-annotate", "+70+50", "Avi Press",
+        "magick", "-size", "1200x630", "xc:#ffffff",
+        "-fill", "#111111", "-draw", "rectangle 0,0 1200,6",
+        "-fill", "#111111", "-font", "Helvetica-Bold", "-pointsize", "52",
+        "-gravity", "northwest", "-annotate", "+70+66", "avi.press",
+        "-fill", "#111111", "-font", "Helvetica", "-pointsize", "50", "-gravity", "center",
+        "-interline-spacing", "16", "-annotate", "+0+22", title,
+        "-font", "Helvetica", "-pointsize", "26", "-fill", "#555555", "-gravity", "center",
+        "-annotate", "+0+176", post_date,
+        "-stroke", "#e5e7eb", "-strokewidth", "2", "-draw", "line 70,546 1130,546",
+        "-font", "Helvetica", "-pointsize", "32", "-fill", "#111111", "-gravity", "southwest",
+        "-annotate", "+70+42", "Avi Press",
         str(out_path),
     ]
     subprocess.run(cmd, check=True)
