@@ -1,0 +1,33 @@
+{
+  "publish": {
+    "projects": {
+      "homepage": {
+        "baseDir": ".",
+        "outDir": "./docs",
+        "include": [
+          "index.org",
+          "posts/**/*.org",
+          "sitemap.org"
+        ],
+        "ignore": [
+          ".git/**"
+        ],
+        "recursive": true,
+        "rewriteFileLinks": true,
+        "includeDefaultStyle": false,
+        "assets": {
+          "include": [
+            "CNAME",
+            "css/**",
+            "js/**",
+            "images/**",
+            ".well-known/**"
+          ],
+          "ignore": [
+            "**/.DS_Store"
+          ]
+        }
+      }
+    }
+  }
+}

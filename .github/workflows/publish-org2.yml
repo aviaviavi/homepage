@@ -1,0 +1,68 @@
+name: Publish homepage with Org2
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[skip ci]') }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout homepage
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout org2
+        uses: actions/checkout@v4
+        with:
+          repository: aviaviavi/org2
+          ref: main
+          path: org2
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install system deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick fonts-jetbrains-mono
+
+      - name: Build org2 CLI
+        working-directory: org2
+        run: |
+          npm ci
+          npm run build
+
+      - name: Run OG pipeline
+        run: python3 scripts/og_pipeline.py run
+
+      - name: Publish with org2
+        run: node org2/dist/cli.js publish homepage --config ./org2.json --apply
+
+      - name: Commit generated site (push to master only)
+        if: github.event_name == 'push'
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "clavi-bot"
+            git config user.email "clavi-bot@users.noreply.github.com"
+            git add -A
+            git commit -m "chore(site): regenerate docs via org2 publish + OG pipeline [skip ci]"
+            git push
+          else
+            echo "No generated changes"
+          fi
