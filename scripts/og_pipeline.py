@@ -42,27 +42,38 @@ def format_title(title: str) -> str:
     return "\n".join(wrapped)
 
 
-def run_magick(title: str, out_path: Path, post_date: str = ""):
+def run_magick(title: str, out_path: Path, post_date: str = "", *, homepage: bool = False):
     out_path.parent.mkdir(parents=True, exist_ok=True)
     title = format_title(title)
     magick_bin = shutil.which("magick") or shutil.which("convert")
     if not magick_bin:
         raise RuntimeError("Neither `magick` nor `convert` was found on PATH")
 
-    cmd = [
-        magick_bin, "-size", "1200x630", "xc:#ffffff",
-        "-fill", "#111111", "-draw", "rectangle 0,0 1200,6",
-        "-fill", "#111111", "-font", "JetBrains-Mono-Bold", "-pointsize", "50",
-        "-gravity", "northwest", "-annotate", "+70+66", "avi.press",
-        "-fill", "#111111", "-font", "JetBrains-Mono-Regular", "-pointsize", "46", "-gravity", "center",
-        "-interline-spacing", "16", "-annotate", "+0+22", title,
-        "-font", "JetBrains-Mono-Regular", "-pointsize", "24", "-fill", "#555555", "-gravity", "center",
-        "-annotate", "+0+176", post_date,
-        "-stroke", "#e5e7eb", "-strokewidth", "2", "-draw", "line 70,546 1130,546",
-        "-font", "JetBrains-Mono-Regular", "-pointsize", "30", "-fill", "#111111", "-gravity", "southwest",
-        "-annotate", "+70+42", "Avi Press",
-        str(out_path),
-    ]
+    if homepage:
+        cmd = [
+            magick_bin, "-size", "1200x630", "xc:#ffffff",
+            "-fill", "#111111", "-draw", "rectangle 0,0 1200,6",
+            "-fill", "#111111", "-font", "JetBrains-Mono-Bold", "-pointsize", "62", "-gravity", "center",
+            "-annotate", "+0-36", "Avi Press",
+            "-fill", "#555555", "-font", "JetBrains-Mono-Regular", "-pointsize", "36", "-gravity", "center",
+            "-annotate", "+0+58", "https://avi.press",
+            str(out_path),
+        ]
+    else:
+        cmd = [
+            magick_bin, "-size", "1200x630", "xc:#ffffff",
+            "-fill", "#111111", "-draw", "rectangle 0,0 1200,6",
+            "-fill", "#111111", "-font", "JetBrains-Mono-Bold", "-pointsize", "50",
+            "-gravity", "northwest", "-annotate", "+70+66", "avi.press",
+            "-fill", "#111111", "-font", "JetBrains-Mono-Regular", "-pointsize", "46", "-gravity", "center",
+            "-interline-spacing", "16", "-annotate", "+0+22", title,
+            "-font", "JetBrains-Mono-Regular", "-pointsize", "24", "-fill", "#555555", "-gravity", "center",
+            "-annotate", "+0+176", post_date,
+            "-stroke", "#e5e7eb", "-strokewidth", "2", "-draw", "line 70,546 1130,546",
+            "-font", "JetBrains-Mono-Regular", "-pointsize", "30", "-fill", "#111111", "-gravity", "southwest",
+            "-annotate", "+70+42", "Avi Press",
+            str(out_path),
+        ]
     subprocess.run(cmd, check=True)
 
 
@@ -118,7 +129,7 @@ def update_org_head(path: Path, block: str):
 
 def run_all():
     org_posts = sorted(POSTS_DIR.glob("*.org"))
-    run_magick("Avi Press", OG_DIR / "site.png")
+    run_magick("Avi Press", OG_DIR / "site.png", homepage=True)
 
     # homepage metadata
     home_block = build_meta_block("Avi Press", f"{SITE_URL}/", f"{SITE_URL}/images/og/site.png", is_home=True)
