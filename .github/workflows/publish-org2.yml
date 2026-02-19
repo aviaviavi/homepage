@@ -48,18 +48,19 @@ jobs:
           npm ci
           npm run build
 
-      - name: Run OG pipeline
+      - name: Run OG pipeline (push to master)
+        if: github.event_name == 'push'
         run: python3 scripts/og_pipeline.py run
 
       - name: Publish with org2
         run: node org2/dist/cli.js publish homepage --config ./org2.json --apply
 
-      - name: Verify generated files are committed
+      - name: Verify generated files are committed (PR)
+        if: github.event_name == 'pull_request'
         run: |
           rm -rf org2
           if [[ -n "$(git status --porcelain)" ]]; then
             echo "Generated output is out of date. Please run:"
-            echo "  python3 scripts/og_pipeline.py run"
             echo "  org2 publish homepage --config ./org2.json --apply"
             echo "Then commit the resulting changes (including docs/)."
             git status --short
