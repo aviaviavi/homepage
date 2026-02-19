@@ -5,6 +5,7 @@ import os
 import re
 import subprocess
 import textwrap
+import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -44,8 +45,12 @@ def format_title(title: str) -> str:
 def run_magick(title: str, out_path: Path, post_date: str = ""):
     out_path.parent.mkdir(parents=True, exist_ok=True)
     title = format_title(title)
+    magick_bin = shutil.which("magick") or shutil.which("convert")
+    if not magick_bin:
+        raise RuntimeError("Neither `magick` nor `convert` was found on PATH")
+
     cmd = [
-        "magick", "-size", "1200x630", "xc:#ffffff",
+        magick_bin, "-size", "1200x630", "xc:#ffffff",
         "-fill", "#111111", "-draw", "rectangle 0,0 1200,6",
         "-fill", "#111111", "-font", "JetBrains-Mono-Bold", "-pointsize", "50",
         "-gravity", "northwest", "-annotate", "+70+66", "avi.press",
