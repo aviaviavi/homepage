@@ -79,5 +79,5 @@
 | [[https://cocosci.princeton.edu/mike/CachingAlgorithms.pdf][Caching Algorithms and Rational Models of Memory]]                                                                                    | 2014 |
 
 *About this site*
-  - Written and built in [[https://orgmode.org/][Org Mode]].
+  - Written and published with [[https://github.com/aviaviavi/org2][Org2]], an org-mode successor.
   - Styles are from https://github.com/owickstrom/the-monospace-web
