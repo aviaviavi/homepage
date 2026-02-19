@@ -56,6 +56,7 @@ jobs:
 
       - name: Verify generated files are committed
         run: |
+          rm -rf org2
           if [[ -n "$(git status --porcelain)" ]]; then
             echo "Generated output is out of date. Please run:"
             echo "  python3 scripts/og_pipeline.py run"

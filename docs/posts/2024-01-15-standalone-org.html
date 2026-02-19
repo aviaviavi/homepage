@@ -1,198 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-<!-- 2026-02-17 Tue 20:56 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Let's Help Org Mode Escape From Emacs</title>
 <meta name="author" content="Avi Press" />
-<meta name="generator" content="Org Mode" />
-<style type="text/css">
-  #content { max-width: 60em; margin: auto; }
-  .title  { text-align: center;
-             margin-bottom: .2em; }
-  .subtitle { text-align: center;
-              font-size: medium;
-              font-weight: bold;
-              margin-top:0; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { font-family: monospace; color: green; }
-  .priority { font-family: monospace; color: orange; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: auto;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    padding: 3px;
-    color: #555;
-    background-color: #f2f2f299;
-  }
-  pre.src:hover:before { display: inline; margin-top: 14px;}
-  /* Languages per Org manual */
-  pre.src-asymptote:before { content: 'Asymptote'; }
-  pre.src-awk:before { content: 'Awk'; }
-  pre.src-authinfo::before { content: 'Authinfo'; }
-  pre.src-C:before { content: 'C'; }
-  /* pre.src-C++ doesn't work in CSS */
-  pre.src-clojure:before { content: 'Clojure'; }
-  pre.src-css:before { content: 'CSS'; }
-  pre.src-D:before { content: 'D'; }
-  pre.src-ditaa:before { content: 'ditaa'; }
-  pre.src-dot:before { content: 'Graphviz'; }
-  pre.src-calc:before { content: 'Emacs Calc'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-fortran:before { content: 'Fortran'; }
-  pre.src-gnuplot:before { content: 'gnuplot'; }
-  pre.src-haskell:before { content: 'Haskell'; }
-  pre.src-hledger:before { content: 'hledger'; }
-  pre.src-java:before { content: 'Java'; }
-  pre.src-js:before { content: 'Javascript'; }
-  pre.src-latex:before { content: 'LaTeX'; }
-  pre.src-ledger:before { content: 'Ledger'; }
-  pre.src-lisp:before { content: 'Lisp'; }
-  pre.src-lilypond:before { content: 'Lilypond'; }
-  pre.src-lua:before { content: 'Lua'; }
-  pre.src-matlab:before { content: 'MATLAB'; }
-  pre.src-mscgen:before { content: 'Mscgen'; }
-  pre.src-ocaml:before { content: 'Objective Caml'; }
-  pre.src-octave:before { content: 'Octave'; }
-  pre.src-org:before { content: 'Org mode'; }
-  pre.src-oz:before { content: 'OZ'; }
-  pre.src-plantuml:before { content: 'Plantuml'; }
-  pre.src-processing:before { content: 'Processing.js'; }
-  pre.src-python:before { content: 'Python'; }
-  pre.src-R:before { content: 'R'; }
-  pre.src-ruby:before { content: 'Ruby'; }
-  pre.src-sass:before { content: 'Sass'; }
-  pre.src-scheme:before { content: 'Scheme'; }
-  pre.src-screen:before { content: 'Gnu Screen'; }
-  pre.src-sed:before { content: 'Sed'; }
-  pre.src-sh:before { content: 'shell'; }
-  pre.src-sql:before { content: 'SQL'; }
-  pre.src-sqlite:before { content: 'SQLite'; }
-  /* additional languages in org.el's org-babel-load-languages alist */
-  pre.src-forth:before { content: 'Forth'; }
-  pre.src-io:before { content: 'IO'; }
-  pre.src-J:before { content: 'J'; }
-  pre.src-makefile:before { content: 'Makefile'; }
-  pre.src-maxima:before { content: 'Maxima'; }
-  pre.src-perl:before { content: 'Perl'; }
-  pre.src-picolisp:before { content: 'Pico Lisp'; }
-  pre.src-scala:before { content: 'Scala'; }
-  pre.src-shell:before { content: 'Shell Script'; }
-  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
-  /* additional language identifiers per "defun org-babel-execute"
-       in ob-*.el */
-  pre.src-cpp:before  { content: 'C++'; }
-  pre.src-abc:before  { content: 'ABC'; }
-  pre.src-coq:before  { content: 'Coq'; }
-  pre.src-groovy:before  { content: 'Groovy'; }
-  /* additional language identifiers from org-babel-shell-names in
-     ob-shell.el: ob-shell is the only babel language using a lambda to put
-     the execution function name together. */
-  pre.src-bash:before  { content: 'bash'; }
-  pre.src-csh:before  { content: 'csh'; }
-  pre.src-ash:before  { content: 'ash'; }
-  pre.src-dash:before  { content: 'dash'; }
-  pre.src-ksh:before  { content: 'ksh'; }
-  pre.src-mksh:before  { content: 'mksh'; }
-  pre.src-posh:before  { content: 'posh'; }
-  /* Additional Emacs modes also supported by the LaTeX listings package */
-  pre.src-ada:before { content: 'Ada'; }
-  pre.src-asm:before { content: 'Assembler'; }
-  pre.src-caml:before { content: 'Caml'; }
-  pre.src-delphi:before { content: 'Delphi'; }
-  pre.src-html:before { content: 'HTML'; }
-  pre.src-idl:before { content: 'IDL'; }
-  pre.src-mercury:before { content: 'Mercury'; }
-  pre.src-metapost:before { content: 'MetaPost'; }
-  pre.src-modula-2:before { content: 'Modula-2'; }
-  pre.src-pascal:before { content: 'Pascal'; }
-  pre.src-ps:before { content: 'PostScript'; }
-  pre.src-prolog:before { content: 'Prolog'; }
-  pre.src-simula:before { content: 'Simula'; }
-  pre.src-tcl:before { content: 'tcl'; }
-  pre.src-tex:before { content: 'TeX'; }
-  pre.src-plain-tex:before { content: 'Plain TeX'; }
-  pre.src-verilog:before { content: 'Verilog'; }
-  pre.src-vhdl:before { content: 'VHDL'; }
-  pre.src-xml:before { content: 'XML'; }
-  pre.src-nxml:before { content: 'XML'; }
-  /* add a generic configuration mode; LaTeX export needs an additional
-     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
-  pre.src-conf:before { content: 'Configuration File'; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.org-right  { text-align: center;  }
-  th.org-left   { text-align: center;   }
-  th.org-center { text-align: center; }
-  td.org-right  { text-align: right;  }
-  td.org-left   { text-align: left;   }
-  td.org-center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara { display: inline; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .equation-container {
-    display: table;
-    text-align: center;
-    width: 100%;
-  }
-  .equation {
-    vertical-align: middle;
-  }
-  .equation-label {
-    display: table-cell;
-    text-align: right;
-    vertical-align: middle;
-  }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { }
-</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" sizes="32x32" href="../images/dwarf-icon.png">
 <link rel="stylesheet" href="../css/monospace-web.css">
@@ -210,90 +22,66 @@
 <meta name="twitter:title" content="Let&#x27;s Help Org Mode Escape From Emacs" />
 <meta name="twitter:description" content="Let&#x27;s Help Org Mode Escape From Emacs — Avi Press" />
 <meta name="twitter:image" content="https://avi.press/images/og/2024-01-15-standalone-org.png" />
+<link id="org2-prism-light" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.min.css" media="all" />
+<link id="org2-prism-dark" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.min.css" media="not all" />
+<style>:root[data-theme="light"] code[class*="language-"],:root[data-theme="light"] pre[class*="language-"]{color:#1f2937!important;} @media (prefers-color-scheme: light){:root:not([data-theme]) code[class*="language-"],:root:not([data-theme]) pre[class*="language-"]{color:#1f2937!important;}}</style>
+<script>(function(){var root=document.documentElement;function hasDarkToken(s){return /(^|\s)(dark|theme-dark|dark-mode)(\s|$)/.test((s||"").toLowerCase());}function luminanceFromRgb(rgb){var m=(rgb||"").match(/d+(?:.d+)?/g);if(!m||m.length<3)return null;var r=Number(m[0]),g=Number(m[1]),b=Number(m[2]);if(!Number.isFinite(r)||!Number.isFinite(g)||!Number.isFinite(b))return null;return (0.2126*r+0.7152*g+0.0722*b)/255;}function inferDarkFromStyles(){try{var el=document.body||root;var bg=getComputedStyle(el).backgroundColor;var l=luminanceFromRgb(bg);if(l===null)return null;return l<0.5;}catch(_){return null;}}function pick(){var explicit=(root.getAttribute("data-theme")||"").toLowerCase();var rootDark=hasDarkToken(root.className||"");var bodyDark=hasDarkToken((document.body&&document.body.className)||"");var inferred=inferDarkFromStyles();var dark=(explicit==="dark")||(explicit!=="light"&&(rootDark||bodyDark||(inferred===null?window.matchMedia("(prefers-color-scheme: dark)").matches:inferred)));var l=document.getElementById("org2-prism-light");var d=document.getElementById("org2-prism-dark");if(l&&d){l.media=dark?"not all":"all";d.media=dark?"all":"not all";}}pick();try{window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",pick);}catch(_){};if(typeof MutationObserver!=="undefined"){var mo=new MutationObserver(pick);mo.observe(root,{attributes:true,attributeFilter:["class","data-theme","style"]});if(document.body){mo.observe(document.body,{attributes:true,attributeFilter:["class","data-theme","style"]});}else{document.addEventListener("DOMContentLoaded",function(){if(document.body)mo.observe(document.body,{attributes:true,attributeFilter:["class","data-theme","style"]});pick();},{once:true});}}window.addEventListener("load",pick);})();</script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-haskell.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-typescript.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-jsx.min.js"></script>
+<style>
+#content { max-width: 60em; margin: auto; line-height: 1.35; }
+#content li > p { margin: 0; }
+#content li + li { margin-top: 0.2rem; }
+</style>
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Let's Help Org Mode Escape From Emacs</h1>
-<p>
-<a href="../index.html">Avi Press</a> | January 15, 2024
-</p>
-
+<main class="org2-document">
+<header class="org2-document-header">
+<h1 class="org2-document-title">Let's Help Org Mode Escape From Emacs</h1>
+</header>
+<p><a href="../index.html">Avi Press</a> | January 15, 2024</p>
 <button id="theme-toggle" class="theme-toggle" type="button"></button>
-
 <img class="collapse" referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
-
-<p>
-&#x2013;
-</p>
-
-<p>
-I love <a href="https://orgmode.org/">org mode</a>. This very post was written in, and generated from org mode. From note taking, to task management, to blogging, to organizing my cooking recipes, I use org mode for a lot, and I do it from <a href="https://www.spacemacs.org/">Spacemacs</a>.
-</p>
-
-<p>
-These days, my work running a startup offers virtually no time to write code, but I still find myself in Spacemacs a lot for my own notes and task tracking.
-</p>
-
-<p>
-For the little code I <i>do</i> write, I find having AI assistance (via CoPilot or Cody) to be tremendously helpful. So helpful, in fact, that I now tend to jump into VSCode for actual coding, and then back into Spacemacs for anything I need do in org mode. Getting these tools to work correctly in Spacemacs proved to be a huge pain and I don't have time for config tinkering any more.
-</p>
-
-<p>
-I wish I could either:
-</p>
-
-<ul class="org-ul">
-<li><i>Use Spacemacs for everything I can do in VSCode.</i> However, the relative pace of progress in the Emacs world vs VSCode and its plugin ecosystem are increasingly making this wish a pipe dream. VSCode is winning the editor war.</li>
-<li><i>Use VSCode for everything</i>. For me, this requires a full-featured org mode implementation. I currently feel stuck in Emacs just because of how great org mode is.</li>
+<p>&#x2013;</p>
+<p>I love <a href="https://orgmode.org/">org mode</a>. This very post was written in, and generated from org mode. From note taking, to task management, to blogging, to organizing my cooking recipes, I use org mode for a lot, and I do it from <a href="https://www.spacemacs.org/">Spacemacs</a>.</p>
+<p>These days, my work running a startup offers virtually no time to write code, but I still find myself in Spacemacs a lot for my own notes and task tracking.</p>
+<p>For the little code I <em>do</em> write, I find having AI assistance (via CoPilot or Cody) to be tremendously helpful. So helpful, in fact, that I now tend to jump into VSCode for actual coding, and then back into Spacemacs for anything I need do in org mode. Getting these tools to work correctly in Spacemacs proved to be a huge pain and I don't have time for config tinkering any more.</p>
+<p>I wish I could either:</p>
+<ul>
+<li><p><em>Use Spacemacs for everything I can do in VSCode.</em> However, the relative pace of progress in the Emacs world vs VSCode and its plugin ecosystem are increasingly making this wish a pipe dream. VSCode is winning the editor war.</p></li>
+<li><p><em>Use VSCode for everything</em>. For me, this requires a full-featured org mode implementation. I currently feel stuck in Emacs just because of how great org mode is.</p></li>
 </ul>
-
-<p>
-<b>Sadly, the only complete org mode implementation is Emacs. You should be able to use org mode in any text editor</b>.
-</p>
-
-<p>
-There are many examples of people trying to jailbreak org mode out of Emacs, but to date, they have failed.
-</p>
-
-<p>
-From my perspective, they have failed to grow into a full org implementation for a few reasons. Projects try to get bug-for-bug compatibility with Emacs org mode. This is both <a href="https://github.com/org-rs/org-rs/issues/41#issuecomment-527443876">very difficult</a> and not a good goal. Some of the projects picked programming languages that severely limit the base of potential contributors (eg, org-rs and Pandoc).
-</p>
-
-<p>
-I am interested in kicking off a new effort to create a stand-alone implementation of org mode. Its primary goal would be to <i>ensure that a comprehensive org mode experience could be achieved outside of Emacs.</i>
-</p>
-
-<p>
-A few design choices I believe would be correct for this goal:
-</p>
-
-<ul class="org-ul">
-<li>Establishing a more formal yet sane standard for org-mode behavior.
-<ul class="org-ul">
-<li>Letting go of bug-for-bug compatibility with Emacs as a goal. Let's let the quirky behavior die off and move forward with a more cohesive program, even if it looks a little bit different.</li>
-</ul></li>
-<li>Implemented in a popular programming language. Rewriting org mode is a large undertaking, and its success will rely on a community of contributors. This effort will fail if 50% of the people who <i>would</i> contribute end up not doing so because they don't have time to learn Rust or Haskell.</li>
-<li>Portable. It should not be difficult to get this integrated into any editor.</li>
-<li>Ensuring some of org mode's best features are on the starting roadmap, not an afterthought:
-<ul class="org-ul">
-<li>Agenda view</li>
-<li>Publishing</li>
-<li>Plugins like org-roam, org-crypt</li>
-</ul></li>
+<p><strong>Sadly, the only complete org mode implementation is Emacs. You should be able to use org mode in any text editor</strong>.</p>
+<p>There are many examples of people trying to jailbreak org mode out of Emacs, but to date, they have failed.</p>
+<p>From my perspective, they have failed to grow into a full org implementation for a few reasons. Projects try to get bug-for-bug compatibility with Emacs org mode. This is both <a href="https://github.com/org-rs/org-rs/issues/41#issuecomment-527443876">very difficult</a> and not a good goal. Some of the projects picked programming languages that severely limit the base of potential contributors (eg, org-rs and Pandoc).</p>
+<p>I am interested in kicking off a new effort to create a stand-alone implementation of org mode. Its primary goal would be to <em>ensure that a comprehensive org mode experience could be achieved outside of Emacs.</em></p>
+<p>A few design choices I believe would be correct for this goal:</p>
+<ul>
+<li>
+<p>Establishing a more formal yet sane standard for org-mode behavior.</p>
+<ul>
+<li><p>Letting go of bug-for-bug compatibility with Emacs as a goal. Let's let the quirky behavior die off and move forward with a more cohesive program, even if it looks a little bit different.</p></li>
 </ul>
-
-<p>
-If working on this would be of interest, please get in touch! I'm interested in getting a small group together to get this side project off the ground.
-</p>
+</li>
+<li><p>Implemented in a popular programming language. Rewriting org mode is a large undertaking, and its success will rely on a community of contributors. This effort will fail if 50% of the people who <em>would</em> contribute end up not doing so because they don't have time to learn Rust or Haskell.</p></li>
+<li><p>Portable. It should not be difficult to get this integrated into any editor.</p></li>
+<li>
+<p>Ensuring some of org mode's best features are on the starting roadmap, not an afterthought:</p>
+<ul>
+<li><p>Agenda view</p></li>
+<li><p>Publishing</p></li>
+<li><p>Plugins like org-roam, org-crypt</p></li>
+</ul>
+</li>
+</ul>
+<p>If working on this would be of interest, please get in touch! I'm interested in getting a small group together to get this side project off the ground.</p>
+</main>
 </div>
-<div id="postamble" class="status">
-<p class="postamble">© Avi Press 2026</p>
-            <p class="postamble">
-              <a href="https://twitter.com/avi_press">Twitter</a>
-              <a href="https://github.com/aviaviavi">GitHub</a>
-              <a href="https://www.linkedin.com/in/avi-press-4437a356">LinkedIn</a>
-              <a href="https://bsky.app/profile/avi.press">Bluesky</a>
-  </p>
-</div>
+<div id="postamble" class="status"><p class="postamble">©️ Avi Press 2026</p><p class="postamble"><a href="https://twitter.com/avi_press">Twitter</a> <a href="https://github.com/aviaviavi">GitHub</a> <a href="https://www.linkedin.com/in/avi-press-4437a356">LinkedIn</a> <a href="https://bsky.app/profile/avi.press">Bluesky</a></p></div>
 </body>
 </html>
