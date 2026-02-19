@@ -1,10 +1,198 @@
-<!doctype html>
-<html lang="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<meta charset="utf-8" />
+<!-- 2026-02-17 Tue 20:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A Snapshot of How I'm Using AI in February 2026</title>
 <meta name="author" content="Avi Press + OpenClaw" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" sizes="32x32" href="../images/dwarf-icon.png">
 <link rel="stylesheet" href="../css/monospace-web.css">
@@ -22,98 +210,150 @@
 <meta name="twitter:title" content="A Snapshot of How I&#x27;m Using AI in February 2026" />
 <meta name="twitter:description" content="A Snapshot of How I&#x27;m Using AI in February 2026 — Avi Press" />
 <meta name="twitter:image" content="https://avi.press/images/og/2026-02-17-how-were-using-ai-feb-2026.png" />
-<link id="org2-prism-light" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.min.css" media="all" />
-<link id="org2-prism-dark" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.min.css" media="not all" />
-<style>:root[data-theme="light"] code[class*="language-"],:root[data-theme="light"] pre[class*="language-"]{color:#1f2937!important;} @media (prefers-color-scheme: light){:root:not([data-theme]) code[class*="language-"],:root:not([data-theme]) pre[class*="language-"]{color:#1f2937!important;}}</style>
-<script>(function(){var root=document.documentElement;function hasDarkToken(s){return /(^|\s)(dark|theme-dark|dark-mode)(\s|$)/.test((s||"").toLowerCase());}function luminanceFromRgb(rgb){var m=(rgb||"").match(/d+(?:.d+)?/g);if(!m||m.length<3)return null;var r=Number(m[0]),g=Number(m[1]),b=Number(m[2]);if(!Number.isFinite(r)||!Number.isFinite(g)||!Number.isFinite(b))return null;return (0.2126*r+0.7152*g+0.0722*b)/255;}function inferDarkFromStyles(){try{var el=document.body||root;var bg=getComputedStyle(el).backgroundColor;var l=luminanceFromRgb(bg);if(l===null)return null;return l<0.5;}catch(_){return null;}}function pick(){var explicit=(root.getAttribute("data-theme")||"").toLowerCase();var rootDark=hasDarkToken(root.className||"");var bodyDark=hasDarkToken((document.body&&document.body.className)||"");var inferred=inferDarkFromStyles();var dark=(explicit==="dark")||(explicit!=="light"&&(rootDark||bodyDark||(inferred===null?window.matchMedia("(prefers-color-scheme: dark)").matches:inferred)));var l=document.getElementById("org2-prism-light");var d=document.getElementById("org2-prism-dark");if(l&&d){l.media=dark?"not all":"all";d.media=dark?"all":"not all";}}pick();try{window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",pick);}catch(_){};if(typeof MutationObserver!=="undefined"){var mo=new MutationObserver(pick);mo.observe(root,{attributes:true,attributeFilter:["class","data-theme","style"]});if(document.body){mo.observe(document.body,{attributes:true,attributeFilter:["class","data-theme","style"]});}else{document.addEventListener("DOMContentLoaded",function(){if(document.body)mo.observe(document.body,{attributes:true,attributeFilter:["class","data-theme","style"]});pick();},{once:true});}}window.addEventListener("load",pick);})();</script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-haskell.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-typescript.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-jsx.min.js"></script>
-<style>
-#content { max-width: 60em; margin: auto; line-height: 1.35; }
-#content li > p { margin: 0; }
-#content li + li { margin-top: 0.2rem; }
-</style>
 </head>
 <body>
 <div id="content" class="content">
-<main class="org2-document">
-<header class="org2-document-header">
-<h1 class="org2-document-title">A Snapshot of How I'm Using AI in February 2026</h1>
-</header>
-<p><a href="../index.html">Avi Press</a> | February 17, 2026</p>
+<h1 class="title">A Snapshot of How I'm Using AI in February 2026</h1>
+<p>
+<a href="../index.html">Avi Press</a> | February 17, 2026
+</p>
+
 <button id="theme-toggle" class="theme-toggle" type="button"></button>
+
 <img class="collapse" referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
-<p>&#x2014;</p>
-<p>This post is a follow-up to my <a href="2026-01-18-how-i-use-ai-today.html">January snapshot</a>. My AI stack is continuing to change a lot, but OpenClaw is very much at the center of it all.</p>
-<p>This month, the biggest shift is that even more real work is getting done. Recurring tasks are increasingly being moved into dedicated subagents and an intentionally very lightweight orchestration system.</p>
-<section class="org2-headline level-1">
-<h1 id="whats-changed-since-january">What's changed since January</h1>
-<section class="org2-headline level-2">
-<h2 id="openclaw-has-its-own-accounts-for-more-autonomy-with-a-blast-radius">OpenClaw has its own accounts for more autonomy with a blast radius.</h2>
-<p>I gave OpenClaw its own:</p>
-<ul>
-<li><p>email address on my personal domain</p></li>
-<li><p>It's own personal gmail, mainly for Google Drive</p></li>
-<li><p>A phone number via esim, which allowed me to move my main chat from Telegram into WhatsApp (for the encryption).</p></li>
-<li><p><a href="https://github.com/clavi-bot">GitHub account</a></p></li>
-<li><p>A strictly protected service account in Scarf's Google Workspace.</p></li>
-</ul>
-<p>This is helpful to separate the work that OpenClaw does from my own, and lets me grant fine-grained access to resources more natively to whatever platform its using.</p>
-</section>
-<section class="org2-headline level-2">
-<h2 id="i-now-run-a-small-set-of-focused-agents-instead-of-one-overloaded-chat">I now run a small set of focused agents instead of one overloaded chat</h2>
-<p>Instead of a single long thread trying to handle everything, I have specialized agents for recurring workflows (engineering tasks, reporting, meeting follow-up, lead ops, writing support).</p>
-<p>Each one has a narrow scope, a schedule that it runs on, and a lightweight orchestration system that I am building on top of org-mode (more on that below). Some of my subagents run daily, others run every 30 minutes, especially the ones writing code.</p>
-</section>
-<section class="org2-headline level-2">
-<h2 id="org2-as-the-orchestration-layer">Org2 as the orchestration layer</h2>
-<p><a href="2024-01-15-standalone-org.html">I've long wanted to build an org-mode successor</a>, and now <a href="https://github.com/aviaviavi/org2">it's finally happening</a> with the help of OpenClaw.</p>
-<p>Each long-standing subagent now has a dedicated org2 file in Dropbox. Each has its heartbeat instructions in its org2 file, and logs its work, summary status, and blockers. That way, I can easily monitor whats happening from my editor and intervene asyncronously when needed, without getting in the way of the normal chat flow.</p>
-<p>I am dogfooding org2 for myself as I do this, and migrating myself off of emacs (finally) and into the VScode ecosystem.</p>
-<p>Org2 is still not ready for prime-time, but it is already supporting most of my day to day org-mode usage!</p>
-</section>
-<section class="org2-headline level-2">
-<h2 id="meeting-follow-ups-are-much-more-automated-now">Meeting follow-ups are much more automated now</h2>
-<p>A lot of value has come from kicking off meeting follow up items more automatically:</p>
-<ul>
-<li><p>Meetings are transcribed with <a href="https://hyprnote.com">Hyprnote</a>.</p></li>
-<li><p>Every hour, <code>MeetingBot</code> will SSH into my laptop, check for new meeting summaries.</p></li>
-<li><p>Any product feedback we get triggers a new Linear ticket to be made, checking for duplicates first.</p></li>
-<li><p>Any other follow up task for me is logged into my daily org mode notes, so I can track and get reminders on all of my devices.</p></li>
-</ul>
-<p>This has been hugely helpful at a time where I am in lots of meetings.</p>
-</section>
-<section class="org2-headline level-2">
-<h2 id="an-always-on-data-analyst-in-slack">An always-on data analyst in Slack</h2>
-<p>OpenClaw in our <code>#analytics</code> channel can easily answer any questions I have, and is even now handling our customer-facing reports.</p>
-</section>
-<section class="org2-headline level-2">
-<h2 id="a-tedious-spreadsheet-tasks-is-now-fully-automated">A tedious spreadsheet tasks is now fully automated</h2>
-<p>Scarf offers lead gen services as an add-on to our platform. That has historically required a human to move leads from an internal spreadsheet to an external one, with different fields. OpenClaw has automated this fully!</p>
-</section>
-<section class="org2-headline level-2">
-<h2 id="other-changes">Other changes</h2>
-<ul>
-<li><p>Codex 5.3 for basically everything.</p></li>
-<li><p>More personality via a much more robust SOUL.md than I had before.</p></li>
-<li><p>Less voice notes and more pictures, mostly because voice notes are slow (with my current setup)</p></li>
-<li><p>QMD plugin for the memory layer.</p></li>
-</ul>
-</section>
-<section class="org2-headline level-2">
-<h2 id="open-problems">Open Problems</h2>
-<ul>
-<li><p>Memory is still not reliable enough.</p></li>
-<li><p>Real time voice chat.</p></li>
-</ul>
-</section>
-</section>
-</main>
+
+<p>
+&#x2014;
+</p>
+
+<p>
+This post is a follow-up to my <a href="2026-01-18-how-i-use-ai-today.html">January snapshot</a>. My AI stack is continuing to change a lot, but OpenClaw is very much at the center of it all.
+</p>
+
+<p>
+This month, the biggest shift is that even more real work is getting done. Recurring tasks are increasingly being moved into dedicated subagents and an intentionally very lightweight orchestration system.
+</p>
+<div id="outline-container-orgfebf33a" class="outline-2">
+<h2 id="orgfebf33a">What's changed since January</h2>
+<div class="outline-text-2" id="text-orgfebf33a">
 </div>
-<div id="postamble" class="status"><p class="postamble">©️ Avi Press 2026</p><p class="postamble"><a href="https://twitter.com/avi_press">Twitter</a> <a href="https://github.com/aviaviavi">GitHub</a> <a href="https://www.linkedin.com/in/avi-press-4437a356">LinkedIn</a> <a href="https://bsky.app/profile/avi.press">Bluesky</a></p></div>
+<div id="outline-container-org57f24ae" class="outline-3">
+<h3 id="org57f24ae">OpenClaw has its own accounts for more autonomy with a blast radius.</h3>
+<div class="outline-text-3" id="text-org57f24ae">
+<p>
+I gave OpenClaw its own:
+</p>
+
+<ul class="org-ul">
+<li>email address on my personal domain</li>
+<li>It's own personal gmail, mainly for Google Drive</li>
+<li>A phone number via esim, which allowed me to move my main chat from Telegram into WhatsApp (for the encryption).</li>
+<li><a href="https://github.com/clavi-bot">GitHub account</a></li>
+<li>A strictly protected service account in Scarf's Google Workspace.</li>
+</ul>
+
+<p>
+This is helpful to separate the work that OpenClaw does from my own, and lets me grant fine-grained access to resources more natively to whatever platform its using.
+</p>
+</div>
+</div>
+<div id="outline-container-org0368f7f" class="outline-3">
+<h3 id="org0368f7f">I now run a small set of focused agents instead of one overloaded chat</h3>
+<div class="outline-text-3" id="text-org0368f7f">
+<p>
+Instead of a single long thread trying to handle everything, I have specialized agents for recurring workflows (engineering tasks, reporting, meeting follow-up, lead ops, writing support).
+</p>
+
+<p>
+Each one has a narrow scope, a schedule that it runs on, and a lightweight orchestration system that I am building on top of org-mode (more on that below). Some of my subagents run daily, others run every 30 minutes, especially the ones writing code.
+</p>
+</div>
+</div>
+<div id="outline-container-orgeb34fff" class="outline-3">
+<h3 id="orgeb34fff">Org2 as the orchestration layer</h3>
+<div class="outline-text-3" id="text-orgeb34fff">
+<p>
+<a href="2024-01-15-standalone-org.html">I've long wanted to build an org-mode successor</a>, and now <a href="https://github.com/aviaviavi/org2">it's finally happening</a> with the help of OpenClaw.
+</p>
+
+<p>
+Each long-standing subagent now has a dedicated org2 file in Dropbox. Each has its heartbeat instructions in its org2 file, and logs its work, summary status, and blockers. That way, I can easily monitor whats happening from my editor and intervene asyncronously when needed, without getting in the way of the normal chat flow.
+</p>
+
+<p>
+I am dogfooding org2 for myself as I do this, and migrating myself off of emacs (finally) and into the VScode ecosystem.
+</p>
+
+<p>
+Org2 is still not ready for prime-time, but it is already supporting most of my day to day org-mode usage!
+</p>
+</div>
+</div>
+<div id="outline-container-org612f7a6" class="outline-3">
+<h3 id="org612f7a6">Meeting follow-ups are much more automated now</h3>
+<div class="outline-text-3" id="text-org612f7a6">
+<p>
+A lot of value has come from kicking off meeting follow up items more automatically:
+</p>
+
+<ul class="org-ul">
+<li>Meetings are transcribed with <a href="https://hyprnote.com">Hyprnote</a>.</li>
+<li>Every hour, <code>MeetingBot</code> will SSH into my laptop, check for new meeting summaries.</li>
+<li>Any product feedback we get triggers a new Linear ticket to be made, checking for duplicates first.</li>
+<li>Any other follow up task for me is logged into my daily org mode notes, so I can track and get reminders on all of my devices.</li>
+</ul>
+
+<p>
+This has been hugely helpful at a time where I am in lots of meetings.
+</p>
+</div>
+</div>
+<div id="outline-container-org980f387" class="outline-3">
+<h3 id="org980f387">An always-on data analyst in Slack</h3>
+<div class="outline-text-3" id="text-org980f387">
+<p>
+OpenClaw in our <code>#analytics</code> channel can easily answer any questions I have, and is even now handling our customer-facing reports.
+</p>
+</div>
+</div>
+<div id="outline-container-org8e105cd" class="outline-3">
+<h3 id="org8e105cd">A tedious spreadsheet tasks is now fully automated</h3>
+<div class="outline-text-3" id="text-org8e105cd">
+<p>
+Scarf offers lead gen services as an add-on to our platform. That has historically required a human to move leads from an internal spreadsheet to an external one, with different fields. OpenClaw has automated this fully!
+</p>
+</div>
+</div>
+<div id="outline-container-org96afe6e" class="outline-3">
+<h3 id="org96afe6e">Other changes</h3>
+<div class="outline-text-3" id="text-org96afe6e">
+<ul class="org-ul">
+<li>Codex 5.3 for basically everything.</li>
+<li>More personality via a much more robust SOUL.md than I had before.</li>
+<li>Less voice notes and more pictures, mostly because voice notes are slow (with my current setup)</li>
+<li>QMD plugin for the memory layer.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd02829d" class="outline-3">
+<h3 id="orgd02829d">Open Problems</h3>
+<div class="outline-text-3" id="text-orgd02829d">
+<ul class="org-ul">
+<li>Memory is still not reliable enough.</li>
+<li>Real time voice chat.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="postamble">© Avi Press 2026</p>
+            <p class="postamble">
+              <a href="https://twitter.com/avi_press">Twitter</a>
+              <a href="https://github.com/aviaviavi">GitHub</a>
+              <a href="https://www.linkedin.com/in/avi-press-4437a356">LinkedIn</a>
+              <a href="https://bsky.app/profile/avi.press">Bluesky</a>
+  </p>
+</div>
 </body>
 </html>

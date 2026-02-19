@@ -1,9 +1,197 @@
-<!doctype html>
-<html lang="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<meta charset="utf-8" />
+<!-- 2026-02-17 Tue 20:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Avi Press</title>
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" sizes="32x32" href="./images/dwarf-icon.png">
 <link rel="stylesheet" href="./css/monospace-web.css">
@@ -21,91 +209,242 @@
 <meta name="twitter:title" content="Avi Press" />
 <meta name="twitter:description" content="Personal site and writing by Avi Press" />
 <meta name="twitter:image" content="https://avi.press/images/og/site.png" />
-<link id="org2-prism-light" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism.min.css" media="all" />
-<link id="org2-prism-dark" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-okaidia.min.css" media="not all" />
-<style>:root[data-theme="light"] code[class*="language-"],:root[data-theme="light"] pre[class*="language-"]{color:#1f2937!important;} @media (prefers-color-scheme: light){:root:not([data-theme]) code[class*="language-"],:root:not([data-theme]) pre[class*="language-"]{color:#1f2937!important;}}</style>
-<script>(function(){var root=document.documentElement;function hasDarkToken(s){return /(^|\s)(dark|theme-dark|dark-mode)(\s|$)/.test((s||"").toLowerCase());}function luminanceFromRgb(rgb){var m=(rgb||"").match(/d+(?:.d+)?/g);if(!m||m.length<3)return null;var r=Number(m[0]),g=Number(m[1]),b=Number(m[2]);if(!Number.isFinite(r)||!Number.isFinite(g)||!Number.isFinite(b))return null;return (0.2126*r+0.7152*g+0.0722*b)/255;}function inferDarkFromStyles(){try{var el=document.body||root;var bg=getComputedStyle(el).backgroundColor;var l=luminanceFromRgb(bg);if(l===null)return null;return l<0.5;}catch(_){return null;}}function pick(){var explicit=(root.getAttribute("data-theme")||"").toLowerCase();var rootDark=hasDarkToken(root.className||"");var bodyDark=hasDarkToken((document.body&&document.body.className)||"");var inferred=inferDarkFromStyles();var dark=(explicit==="dark")||(explicit!=="light"&&(rootDark||bodyDark||(inferred===null?window.matchMedia("(prefers-color-scheme: dark)").matches:inferred)));var l=document.getElementById("org2-prism-light");var d=document.getElementById("org2-prism-dark");if(l&&d){l.media=dark?"not all":"all";d.media=dark?"all":"not all";}}pick();try{window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",pick);}catch(_){};if(typeof MutationObserver!=="undefined"){var mo=new MutationObserver(pick);mo.observe(root,{attributes:true,attributeFilter:["class","data-theme","style"]});if(document.body){mo.observe(document.body,{attributes:true,attributeFilter:["class","data-theme","style"]});}else{document.addEventListener("DOMContentLoaded",function(){if(document.body)mo.observe(document.body,{attributes:true,attributeFilter:["class","data-theme","style"]});pick();},{once:true});}}window.addEventListener("load",pick);})();</script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-haskell.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-typescript.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-jsx.min.js"></script>
-<style>
-#content { max-width: 60em; margin: auto; line-height: 1.35; }
-#content li > p { margin: 0; }
-#content li + li { margin-top: 0.2rem; }
-</style>
 </head>
 <body>
 <div id="content" class="content">
-<main class="org2-document">
-<header class="org2-document-header">
-<h1 class="org2-document-title">Avi Press</h1>
-</header>
+<h1 class="title">Avi Press</h1>
 <img class="collapse" referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
+
 <button id="theme-toggle" class="theme-toggle" type="button"></button>
-<p><strong>About me</strong></p>
-<ul>
-<li><p>Founder and CEO of <a href="https://scarf.sh">Scarf</a>, a company focused on open source usage analytics. We process over 2 billion of open source package downloads every day.</p></li>
-<li><p>Open source maintainer and advocate.</p></li>
-<li><p>Functional programming enthusiast. I'm serving on the <a href="https://haskell.foundation">Haskell Foundation</a> board, as well as the <a href="https://haskell.org">Haskell.org</a> committee.</p></li>
-<li><p>Former engineer at Pandora</p></li>
-<li><p>Based in Oakland, California</p></li>
+
+<p>
+<b>About me</b>
+</p>
+
+<ul class="org-ul">
+<li>Founder and CEO of <a href="https://scarf.sh">Scarf</a>, a company focused on open source usage analytics. We process over 2 billion of open source package downloads every day.</li>
+<li>Open source maintainer and advocate.</li>
+<li>Functional programming enthusiast. I'm serving on the <a href="https://haskell.foundation">Haskell Foundation</a> board, as well as the <a href="https://haskell.org">Haskell.org</a> committee.</li>
+<li>Former engineer at Pandora</li>
+<li>Based in Oakland, California</li>
 </ul>
-<p><strong>Contact</strong></p>
-<ul>
-<li><p>Follow me on <a href="https://twitter.com/avi_press">Twitter</a>, <a href="https://github.com/aviaviavi">Github</a>, <a href="https://bsky.app/profile/avi.press">or even Bluesky</a></p></li>
-<li><p>I hold open office hours for anyone that you can book with me <a href="https://cal.com/avi-press/office-hours">here</a>, no prior confirmation from me required.</p></li>
-<li><p>Email: <a href="mailto:mail@avi.press">mail@avi.press</a></p></li>
+
+<p>
+<b>Contact</b>
+</p>
+
+<ul class="org-ul">
+<li>Follow me on <a href="https://twitter.com/avi_press">Twitter</a>, <a href="https://github.com/aviaviavi">Github</a>, <a href="https://bsky.app/profile/avi.press">or even Bluesky</a></li>
+<li>I hold open office hours for anyone that you can book with me <a href="https://cal.com/avi-press/office-hours">here</a>, no prior confirmation from me required.</li>
+<li>Email: <a href="mailto:mail@avi.press">mail@avi.press</a></li>
 </ul>
-<p><strong>Content</strong></p>
-<table>
+
+<p>
+<b>Content</b>
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
 <tbody>
-<tr><td><a href="posts/2026-02-17-how-were-using-ai-feb-2026.html">A Snapshot of How I'm Using AI in February 2026 (with OpenClaw)</a></td><td>2026</td></tr>
-<tr><td><a href="posts/2026-01-18-how-i-use-ai-today.html">A Snapshot of How I'm Using AI in January 2026</a></td><td></td></tr>
-<tr><td><a href="https://www.datacouncil.ai/talks/open-source-success-learnings-from-1-billion-downloads?hsLang=en">Open Source Success: Lessons from 1(0) Billion Downloads</a></td><td>2025</td></tr>
-<tr><td><a href="https://www.youtube.com/watch?v=vRbURjbJElU">State of Open Con Keynote: Open Source Data Updates</a></td><td></td></tr>
-<tr><td><a href="https://www.youtube.com/watch?v=mLujlRte1hw">Open Source Summit: What Information are Package &amp; Container Registries Hiding From You?</a></td><td>2024</td></tr>
-<tr><td><a href="https://www.youtube.com/watch?v=D36tRYg4MZM">Open Source Summit: Lessons from 1 Billion OSS Downloads</a></td><td></td></tr>
-<tr><td><a href="posts/2024-02-29-analytics-are-winning.html">Analytics are Starting to Win in Open Source</a></td><td></td></tr>
-<tr><td><a href="posts/2024-01-15-standalone-org.html">Let's Help Org Mode Escape From Emacs</a></td><td></td></tr>
-<tr><td><a href="posts/2023-12-29-call-for-haskell-libraries.html">Call for Haskell Libraries</a></td><td>2023</td></tr>
-<tr><td><a href="https://www.youtube.com/watch?v=qw4S_6FXsp4">Why Haskell is a Terrible Choice For Startups (And Why We Picked It Anyway)</a></td><td></td></tr>
-<tr><td><a href="https://www.youtube.com/watch?v=7XHlbqLLFXs&amp;list=PL6kQg8bP1Ji55k6rDro2rIL8GMzTRQwB3&amp;index=8">How Do You Know if Your Project is Any Good? (All Things Open)</a></td><td>2022</td></tr>
-<tr><td><a href="https://twit.tv/shows/floss-weekly/episodes/693?autostart=false">FLOSS Weekly Podcast</a></td><td></td></tr>
-<tr><td><a href="https://www.youtube.com/watch?v=Yt_IgHZD4v4">The Secret Sauce: Who's Looking At Your GitHub Project? (YouTube)</a></td><td></td></tr>
-<tr><td><a href="https://percona.podbean.com/e/data-collection-download-metrics-and-scarf-percona-database-podcast-77-w-avi-press/">Percona's HOSS Talks FOSS Podcast</a></td><td></td></tr>
-<tr><td><a href="https://www.forbes.com/sites/forbestechcouncil/2022/06/01/distribution-and-the-economics-of-open-source-software">Distribution and the Economics of Open-Source Software (Forbes)</a></td><td></td></tr>
-<tr><td><a href="https://www.youtube.com/watch?v=aKUJ0_n0KZ0&amp;list=PLmyjALM1NE24x6-vPqfgnMWrymQddJHy6">PyCon 2022 Talk - Beyond the Download Count: Understanding the Usage of your Public Python Packages</a></td><td></td></tr>
-<tr><td><a href="https://anchor.fm/ossstartuppodcast/episodes/E31-Understanding-Your-Open-Source-Usage-with-Scarf-e1honsa">Open Source Startup Podcast: Understanding Your Open Source Usage with Scarf</a></td><td></td></tr>
-<tr><td><a href="https://www.forbes.com/sites/forbestechcouncil/2022/04/06/uniting-to-act-on-untapped-leverage-how-open-source-maintainers-can-work-together-and-prioritize-long-term-sustainability">Uniting To Act On Untapped Leverage: How Open-Source Maintainers Can Work Together And Prioritize Long-Term Sustainability (Forbes)</a></td><td></td></tr>
-<tr><td><a href="https://www.youtube.com/watch?v=ZEo7JZb3Xpo">Cloud Native Containers Meetup - Beyond the Download: Understanding the Usage of Your Public Containers</a></td><td></td></tr>
-<tr><td><a href="https://about.scarf.sh/post/standing-with-ukraine">Scarf Will Block Package Downloads from the Russian Government</a></td><td></td></tr>
-<tr><td><a href="https://podcast.chaoss.community/53">CHAOSSCast:Gathering Open Source Usage Data with Avi Press</a></td><td></td></tr>
-<tr><td><a href="https://www.emilyomier.com/podcast/making-data-transparent-and-accessible-with-avi-press">Cloud Native Startup Podcast: Making Data Transparent and Accessible</a></td><td></td></tr>
-<tr><td><a href="https://serokell.io/blog/how-scarf-uses-haskell">Serokell Blog Interview: Haskell in Production @ Scarf</a></td><td>2021</td></tr>
-<tr><td><a href="https://about.scarf.sh/post/direct-downloads-via-scarf-gateway">Measuring Downloads of Anything You Distribute</a></td><td></td></tr>
-<tr><td><a href="https://podcast.curiefense.io/15">Committing to Cloud Native Podcast: Analytics for Open Source Maintainers with Avi Press</a></td><td></td></tr>
-<tr><td><a href="https://console.substack.com/p/console-51?s=r">My interview on the Console Newsletter</a></td><td></td></tr>
-<tr><td><a href="https://podcast.sustainoss.org/70">Sustain OSS Podcast: Avi Press and Scarf</a></td><td></td></tr>
-<tr><td><a href="https://about.scarf.sh/post/announcing-scarf-gateway">Announcing The Scarf Gateway</a></td><td></td></tr>
-<tr><td><a href="https://www.coss.community/cossc/ocs-2020-breakout-avi-press-founder-and-ceo-of-scarf-63j">Open Core Summit: Fireside Chat with Joseph Jacks on OSS Analytics</a></td><td>2020</td></tr>
-<tr><td><a href="https://about.scarf.sh/post/package-registries-and-open-source">Are Package Registries Holding Open-Source Hostage?</a></td><td></td></tr>
-<tr><td><a href="https://about.scarf.sh/post/analytics-and-open-source-sustainability">Analytics and Open Source Sustainability</a></td><td></td></tr>
-<tr><td><a href="https://github.com/aviaviavi/talks/blob/master/intro-to-parsers-2019-01/PITCHME.md">Introduction to Parsers in Haskell (slides)</a></td><td>2019</td></tr>
-<tr><td><a href="https://medium.com/swlh/a-failed-effort-to-get-paid-for-an-open-source-project-bd7fa4658a1e">A Failed Effort to Get Paid for an Open Source Project</a></td><td></td></tr>
-<tr><td><a href="posts/2017-08-25-haskell-dbs-and-musicbrainz.html">Easy Database Access with Haskell and postgresql-simple</a></td><td>2017</td></tr>
-<tr><td><a href="https://cocosci.princeton.edu/mike/CachingAlgorithms.pdf">Caching Algorithms and Rational Models of Memory</a></td><td>2014</td></tr>
+<tr>
+<td class="org-left"><a href="posts/2026-02-17-how-were-using-ai-feb-2026.html">A Snapshot of How I'm Using AI in February 2026 (with OpenClaw)</a></td>
+<td class="org-right">2026</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="posts/2026-01-18-how-i-use-ai-today.html">A Snapshot of How I'm Using AI in January 2026</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.datacouncil.ai/talks/open-source-success-learnings-from-1-billion-downloads?hsLang=en">Open Source Success: Lessons from 1(0) Billion Downloads</a></td>
+<td class="org-right">2025</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.youtube.com/watch?v=vRbURjbJElU">State of Open Con Keynote: Open Source Data Updates</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.youtube.com/watch?v=mLujlRte1hw">Open Source Summit: What Information are Package &amp; Container Registries Hiding From You?</a></td>
+<td class="org-right">2024</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.youtube.com/watch?v=D36tRYg4MZM">Open Source Summit: Lessons from 1 Billion OSS Downloads</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="posts/2024-02-29-analytics-are-winning.html">Analytics are Starting to Win in Open Source</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="posts/2024-01-15-standalone-org.html">Let's Help Org Mode Escape From Emacs</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="posts/2023-12-29-call-for-haskell-libraries.html">Call for Haskell Libraries</a></td>
+<td class="org-right">2023</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.youtube.com/watch?v=qw4S_6FXsp4">Why Haskell is a Terrible Choice For Startups (And Why We Picked It Anyway)</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.youtube.com/watch?v=7XHlbqLLFXs&amp;list=PL6kQg8bP1Ji55k6rDro2rIL8GMzTRQwB3&amp;index=8">How Do You Know if Your Project is Any Good? (All Things Open)</a></td>
+<td class="org-right">2022</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://twit.tv/shows/floss-weekly/episodes/693?autostart=false">FLOSS Weekly Podcast</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.youtube.com/watch?v=Yt_IgHZD4v4">The Secret Sauce: Who's Looking At Your GitHub Project? (YouTube)</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://percona.podbean.com/e/data-collection-download-metrics-and-scarf-percona-database-podcast-77-w-avi-press/">Percona's HOSS Talks FOSS Podcast</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.forbes.com/sites/forbestechcouncil/2022/06/01/distribution-and-the-economics-of-open-source-software">Distribution and the Economics of Open-Source Software (Forbes)</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.youtube.com/watch?v=aKUJ0_n0KZ0&amp;list=PLmyjALM1NE24x6-vPqfgnMWrymQddJHy6">PyCon 2022 Talk - Beyond the Download Count: Understanding the Usage of your Public Python Packages</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://anchor.fm/ossstartuppodcast/episodes/E31-Understanding-Your-Open-Source-Usage-with-Scarf-e1honsa">Open Source Startup Podcast: Understanding Your Open Source Usage with Scarf</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.forbes.com/sites/forbestechcouncil/2022/04/06/uniting-to-act-on-untapped-leverage-how-open-source-maintainers-can-work-together-and-prioritize-long-term-sustainability">Uniting To Act On Untapped Leverage: How Open-Source Maintainers Can Work Together And Prioritize Long-Term Sustainability (Forbes)</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.youtube.com/watch?v=ZEo7JZb3Xpo">Cloud Native Containers Meetup - Beyond the Download: Understanding the Usage of Your Public Containers</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://about.scarf.sh/post/standing-with-ukraine">Scarf Will Block Package Downloads from the Russian Government</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://podcast.chaoss.community/53">CHAOSSCast:Gathering Open Source Usage Data with Avi Press</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.emilyomier.com/podcast/making-data-transparent-and-accessible-with-avi-press">Cloud Native Startup Podcast: Making Data Transparent and Accessible</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://serokell.io/blog/how-scarf-uses-haskell">Serokell Blog Interview: Haskell in Production @ Scarf</a></td>
+<td class="org-right">2021</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://about.scarf.sh/post/direct-downloads-via-scarf-gateway">Measuring Downloads of Anything You Distribute</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://podcast.curiefense.io/15">Committing to Cloud Native Podcast: Analytics for Open Source Maintainers with Avi Press</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://console.substack.com/p/console-51?s=r">My interview on the Console Newsletter</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://podcast.sustainoss.org/70">Sustain OSS Podcast: Avi Press and Scarf</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://about.scarf.sh/post/announcing-scarf-gateway">Announcing The Scarf Gateway</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://www.coss.community/cossc/ocs-2020-breakout-avi-press-founder-and-ceo-of-scarf-63j">Open Core Summit: Fireside Chat with Joseph Jacks on OSS Analytics</a></td>
+<td class="org-right">2020</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://about.scarf.sh/post/package-registries-and-open-source">Are Package Registries Holding Open-Source Hostage?</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://about.scarf.sh/post/analytics-and-open-source-sustainability">Analytics and Open Source Sustainability</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://github.com/aviaviavi/talks/blob/master/intro-to-parsers-2019-01/PITCHME.md">Introduction to Parsers in Haskell (slides)</a></td>
+<td class="org-right">2019</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://medium.com/swlh/a-failed-effort-to-get-paid-for-an-open-source-project-bd7fa4658a1e">A Failed Effort to Get Paid for an Open Source Project</a></td>
+<td class="org-right">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="posts/2017-08-25-haskell-dbs-and-musicbrainz.html">Easy Database Access with Haskell and postgresql-simple</a></td>
+<td class="org-right">2017</td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://cocosci.princeton.edu/mike/CachingAlgorithms.pdf">Caching Algorithms and Rational Models of Memory</a></td>
+<td class="org-right">2014</td>
+</tr>
 </tbody>
 </table>
-<p><strong>About this site</strong></p>
-<ul>
-<li><p>Written and built in <a href="https://orgmode.org/">Org Mode</a>.</p></li>
-<li><p>Styles are from <a href="https://github.com/owickstrom/the-monospace-web">https://github.com/owickstrom/the-monospace-web</a></p></li>
+
+<p>
+<b>About this site</b>
+</p>
+<ul class="org-ul">
+<li>Written and built in <a href="https://orgmode.org/">Org Mode</a>.</li>
+<li>Styles are from <a href="https://github.com/owickstrom/the-monospace-web">https://github.com/owickstrom/the-monospace-web</a></li>
 </ul>
-</main>
 </div>
-<div id="postamble" class="status"><p class="postamble">©️ Avi Press 2026</p><p class="postamble"><a href="https://twitter.com/avi_press">Twitter</a> <a href="https://github.com/aviaviavi">GitHub</a> <a href="https://www.linkedin.com/in/avi-press-4437a356">LinkedIn</a> <a href="https://bsky.app/profile/avi.press">Bluesky</a></p></div>
+<div id="postamble" class="status">
+<p class="postamble">© Avi Press 2026</p>
+            <p class="postamble">
+              <a href="https://twitter.com/avi_press">Twitter</a>
+              <a href="https://github.com/aviaviavi">GitHub</a>
+              <a href="https://www.linkedin.com/in/avi-press-4437a356">LinkedIn</a>
+              <a href="https://bsky.app/profile/avi.press">Bluesky</a>
+  </p>
+</div>
 </body>
 </html>
