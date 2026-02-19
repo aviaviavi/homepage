@@ -77,6 +77,37 @@ def run_magick(title: str, out_path: Path, post_date: str = "", *, homepage: boo
     subprocess.run(cmd, check=True)
 
 
+
+
+def build_sitemap_xml(org_posts: list[Path]) -> str:
+    urls = [f"{SITE_URL}/"]
+    for org_path in sorted(org_posts):
+        urls.append(f"{SITE_URL}/posts/{org_path.stem}.html")
+
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ]
+    for url in urls:
+        lines.append('  <url>')
+        lines.append(f'    <loc>{url}</loc>')
+        lines.append('  </url>')
+    lines.append('</urlset>')
+    return "\n".join(lines) + "\n"
+
+
+def build_sitemap_org(org_posts: list[Path]) -> str:
+    lines = [
+        '#+TITLE: Sitemap for project homepage-content',
+        '',
+        '- [[file:index.org][Avi Press]]',
+        '- posts',
+    ]
+    for org_path in sorted(org_posts, reverse=True):
+        title = title_from_org(org_path)
+        lines.append(f'  - [[file:posts/{org_path.name}][{title}]]')
+    return "\n".join(lines) + "\n"
+
 def build_meta_block(title: str, canonical_url: str, image_url: str, is_home=False) -> str:
     desc = "Personal site and writing by Avi Press"
     if not is_home:
@@ -130,6 +161,10 @@ def update_org_head(path: Path, block: str):
 def run_all():
     org_posts = sorted(POSTS_DIR.glob("*.org"))
     run_magick("Avi Press", OG_DIR / "site.png", homepage=True)
+
+    # sitemaps
+    (ROOT / "sitemap.xml").write_text(build_sitemap_xml(org_posts), encoding="utf-8")
+    (ROOT / "sitemap.org").write_text(build_sitemap_org(org_posts), encoding="utf-8")
 
     # homepage metadata
     home_block = build_meta_block("Avi Press", f"{SITE_URL}/", f"{SITE_URL}/images/og/site.png", is_home=True)

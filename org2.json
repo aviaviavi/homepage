@@ -4,16 +4,34 @@
       "homepage": {
         "baseDir": ".",
         "outDir": "./docs",
-        "include": ["index.org", "posts/**/*.org", "sitemap.org"],
-        "ignore": [".git/**"],
+        "include": [
+          "index.org",
+          "posts/**/*.org",
+          "sitemap.org"
+        ],
+        "ignore": [
+          ".git/**"
+        ],
         "recursive": true,
         "rewriteFileLinks": true,
         "includeDefaultStyle": false,
-        "postambleHtml": "<div id=\"postamble\" class=\"status\"><p class=\"postamble\">©️ Avi Press 2026</p><p class=\"postamble\"><a href=\"https://twitter.com/avi_press\">Twitter</a> <a href=\"https://github.com/aviaviavi\">GitHub</a> <a href=\"https://www.linkedin.com/in/avi-press-4437a356\">LinkedIn</a> <a href=\"https://bsky.app/profile/avi.press\">Bluesky</a></p></div>",
-        "index": { "file": "sitemap.html", "title": "Sitemap for project homepage-content" },
+        "postambleHtml": "<div id=\"postamble\" class=\"status\"><p class=\"postamble\">\u00a9\ufe0f Avi Press 2026</p><p class=\"postamble\"><a href=\"https://twitter.com/avi_press\">Twitter</a> <a href=\"https://github.com/aviaviavi\">GitHub</a> <a href=\"https://www.linkedin.com/in/avi-press-4437a356\">LinkedIn</a> <a href=\"https://bsky.app/profile/avi.press\">Bluesky</a></p></div>",
+        "index": {
+          "file": "sitemap.html",
+          "title": "Sitemap for project homepage-content"
+        },
         "assets": {
-          "include": ["CNAME", "css/**", "js/**", "images/**", ".well-known/**"],
-          "ignore": ["**/.DS_Store"]
+          "include": [
+            "CNAME",
+            "css/**",
+            "js/**",
+            "images/**",
+            ".well-known/**",
+            "sitemap.xml"
+          ],
+          "ignore": [
+            "**/.DS_Store"
+          ]
         }
       }
     }
