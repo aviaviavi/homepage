@@ -1,0 +1,81 @@
+name: Build & Deploy homepage (Org2)
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout homepage
+        uses: actions/checkout@v4
+
+      - name: Checkout org2
+        uses: actions/checkout@v4
+        with:
+          repository: aviaviavi/org2
+          ref: main
+          path: org2
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install system deps
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick fonts-jetbrains-mono
+
+      - name: Build org2 CLI
+        working-directory: org2
+        run: |
+          npm ci
+          npm run build
+
+      - name: Run OG pipeline
+        run: python3 scripts/og_pipeline.py run
+
+      - name: Publish with org2
+        run: node org2/dist/cli.js publish homepage --config ./org2.json --apply
+
+      - name: Configure Pages
+        if: github.event_name == 'push'
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        if: github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs
+
+  deploy:
+    if: github.event_name == 'push'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
