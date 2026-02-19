@@ -1,4 +1,4 @@
-name: Publish homepage with Org2
+name: Build & Deploy homepage (Org2)
 
 on:
   pull_request:
@@ -8,17 +8,20 @@ on:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   build:
-    if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[skip ci]') }}
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout homepage
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Checkout org2
         uses: actions/checkout@v4
@@ -48,24 +51,31 @@ jobs:
           npm ci
           npm run build
 
-      - name: Run OG pipeline (push to master)
-        if: github.event_name == 'push'
+      - name: Run OG pipeline
         run: python3 scripts/og_pipeline.py run
 
       - name: Publish with org2
         run: node org2/dist/cli.js publish homepage --config ./org2.json --apply
 
-      - name: Verify generated files are committed (PR)
-        if: github.event_name == 'pull_request'
-        run: |
-          rm -rf org2
-          if [[ -n "$(git status --porcelain)" ]]; then
-            echo "Generated output is out of date. Please run:"
-            echo "  org2 publish homepage --config ./org2.json --apply"
-            echo "Then commit the resulting changes (including docs/)."
-            git status --short
-            git diff --stat
-            exit 1
-          else
-            echo "Generated output is up to date"
-          fi
+      - name: Configure Pages
+        if: github.event_name == 'push'
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        if: github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs
+
+  deploy:
+    if: github.event_name == 'push'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
