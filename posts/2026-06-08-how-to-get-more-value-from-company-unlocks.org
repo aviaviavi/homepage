@@ -1,0 +1,143 @@
+#+title: How to Get More Value From Company Unlocks
+#+author: Avi Press + OpenClaw
+#+HTML_HEAD_EXTRA: <meta name="viewport" content="width=device-width, initial-scale=1">
+#+HTML_HEAD_EXTRA: <link rel="icon" type="image/png" sizes="32x32" href="../images/dwarf-icon.png">
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/monospace-web.css">
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/styles.css">
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="../css/theme-toggle.css">
+#+HTML_HEAD_EXTRA: <script defer src="../js/theme-toggle.js"></script>
+#+HTML_HEAD_EXTRA: <link rel="canonical" href="https://avi.press/posts/2026-06-08-how-to-get-more-value-from-company-unlocks.html" />
+#+HTML_HEAD_EXTRA: <meta property="og:site_name" content="Avi Press" />
+#+HTML_HEAD_EXTRA: <meta property="og:type" content="article" />
+#+HTML_HEAD_EXTRA: <meta property="og:title" content="How to Get More Value From Company Unlocks" />
+#+HTML_HEAD_EXTRA: <meta property="og:description" content="How to Get More Value From Company Unlocks — Avi Press" />
+#+HTML_HEAD_EXTRA: <meta property="og:url" content="https://avi.press/posts/2026-06-08-how-to-get-more-value-from-company-unlocks.html" />
+#+HTML_HEAD_EXTRA: <meta property="og:image" content="https://avi.press/images/og/2026-06-08-how-to-get-more-value-from-company-unlocks.png" />
+#+HTML_HEAD_EXTRA: <meta name="twitter:card" content="summary_large_image" />
+#+HTML_HEAD_EXTRA: <meta name="twitter:title" content="How to Get More Value From Company Unlocks" />
+#+HTML_HEAD_EXTRA: <meta name="twitter:description" content="How to Get More Value From Company Unlocks — Avi Press" />
+#+HTML_HEAD_EXTRA: <meta name="twitter:image" content="https://avi.press/images/og/2026-06-08-how-to-get-more-value-from-company-unlocks.png" />
+
+[[file:../index.org][Avi Press]] | June 8, 2026
+
+#+BEGIN_EXPORT html
+<button id="theme-toggle" class="theme-toggle" type="button"></button>
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+<img class="collapse" referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
+#+END_EXPORT
+
+---
+
+Company unlocks are not meant to be a slightly larger spreadsheet.
+
+The value is not just revealing another company name. The value is knowing which company deserves attention, why it matters, what signal Scarf saw, and what the next move should be.
+
+This matters especially for new Maven Central and Sonatype publishers coming into Scarf. A package maintainer can suddenly see real company adoption signals that were previously hidden inside registry traffic. That is powerful, but it can also be noisy if you treat every newly visible company the same way.
+
+The best unlock workflow starts with a question.
+
+* Start with the job you need done
+
+Before unlocking companies, decide what decision you are trying to make.
+
+Good questions look like:
+
+- Which companies from my target-account list are already using this project?
+- Which new companies appeared this week?
+- Which existing accounts are growing, going quiet, or coming back?
+- Which signals look like real adoption rather than security scanning or CI noise?
+- Which companies should sales, DevRel, support, or community follow up with first?
+
+That framing changes the whole workflow. Instead of spending credits just to reveal names, you are using unlocks to answer a specific operational question.
+
+* Compare against the accounts you already care about
+
+One of the strongest uses of Scarf is cross-referencing open source activity against an existing book of business.
+
+If a sales team already has target accounts, open opportunities, renewals, or strategic prospects, package usage becomes much more valuable when it is joined to that context. A company using your package is interesting. A company using your package that is also in an active evaluation, late-stage opportunity, or expansion motion is much more actionable.
+
+This is where Scarf AI is useful. Instead of manually paging through company insights, ask for a ranked view:
+
+- which target accounts are active
+- what they are using
+- whether activity is growing or shrinking
+- when they were first and last seen
+- what funnel stage or account status they map to
+- why they might be worth follow-up
+
+The output should be a prioritized account list, not just a metric.
+
+* Segment before you export
+
+Another common pattern: a user asks for a specific slice of companies, then immediately asks for something they can extract.
+
+That is the right instinct. Most teams do not need "all companies." They need a useful segment:
+
+- companies in a region
+- companies below or above an employee-count threshold
+- companies using a specific package, image, or documentation path
+- companies first seen in the last 30 days
+- companies with growing usage
+- companies that match a named filter
+
+Unlocks are more valuable when they are attached to a segment and a follow-up motion. A small, specific list beats a large generic one.
+
+* Treat confidence as part of the answer
+
+Not every signal means the same thing.
+
+Some package activity reflects real product usage. Some is CI. Some is security scanning. Some is a dependency pulled through a build system that does not imply a buyer is evaluating you directly.
+
+That does not make the data useless. It means the interpretation matters.
+
+A good company-unlock workflow should ask:
+
+- How confident are we in the company match?
+- Is the usage pattern consistent with real adoption?
+- Is this a security vendor, cloud provider, bot, proxy, or scanner?
+- Is activity tied to a package that meaningfully represents our product?
+- Has the account shown repeat behavior over time?
+
+This is why the best output is not simply "Company X used package Y." It is "Company X is a reasonable follow-up because of these signals, with this confidence, and this caveat."
+
+* Use unlocks to watch change over time
+
+Static lists get stale quickly.
+
+The better workflow is to ask what changed:
+
+- new companies this week
+- companies that grew materially this month
+- companies that went inactive
+- companies that reappeared after a quiet period
+- newly discovered companies inside an existing named filter
+
+These questions turn Scarf from a dashboard into an analyst. A weekly "what changed?" list is often more useful than another broad export.
+
+* Know what the counts mean
+
+The most common confusion is that the numbers are related but not identical.
+
+"Companies discovered" means Scarf found company-level activity in the underlying usage data. "Unlocked companies" means a subset of those companies have had their identity revealed and made usable in downstream workflows. Unlock credits control how many company identities you can reveal, not how much raw activity exists.
+
+That distinction matters. If you see more discovered companies than unlocked companies, that does not mean data is missing. It means there is more activity available to prioritize.
+
+* A practical first workflow
+
+If you are just getting started, I would not unlock randomly.
+
+I would do this:
+
+1. Pick one package or project that matters commercially.
+2. Ask for companies first seen or growing in the last 30 days.
+3. Exclude obvious scanners, low-confidence matches, and companies that are not useful for your motion.
+4. Cross-reference the remaining companies against your CRM or target-account list.
+5. Unlock the best-fit companies.
+6. Export a short list with reason, signal, confidence, last seen, and recommended next action.
+7. Repeat weekly.
+
+That is the whole point: turn open source adoption into a repeatable follow-up loop.
+
+Dashboards tell you what happened. A good unlock workflow helps you decide what to do next.
