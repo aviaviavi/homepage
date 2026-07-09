@@ -56,14 +56,19 @@
 <button id="theme-toggle" class="theme-toggle" type="button"></button>
 <img class="collapse" referrerpolicy="no-referrer-when-downgrade" src="https://static.scarf.sh/a.png?x-pxid=88710f57-e0e5-4c62-84b8-f3bf70797a81" />
 <p>&#x2014;</p>
-<p>This has been a hard post to write. I almost didn't write it at all, since I prefer to build and promote than to critique. However, I hope this post can add constructively to the discussion about Haskell’s future.</p>
+<section class="org2-headline level-1">
+<h1 id="disclaimer">Disclaimer</h1>
+<p>This has been a hard post to write. I almost didn't write it at all, since I prefer to build and promote than to critique. However, I hope this post can add constructively to the discussion about Haskell’s future. I must underline that I'm not writing this criticizing Haskell from the outside. I care enough about Haskell to be honest about why Scarf has reluctantly moved away from it, in hopes it sways people in the community to take this feedback seriously.</p>
+</section>
+<section class="org2-headline level-1">
+<h1 id="where-ive-been">Where I've been</h1>
 <p>For the last 16 years, I have been a huge fan of Haskell. It has been undeniably the most important programming language in my life. Learning it made me a much better programmer. I have advocated for it, built a company that runs on it, and I serve on the board of the Haskell Foundation and the Haskell.org committee.</p>
 <p>I have also been open about the places where I think Haskell needs to improve.</p>
-<p>I must underline that I'm not writing this criticizing Haskell from the outside. I care enough about Haskell to be honest about why Scarf has reluctantly moved away from it, in hopes it sways people in the community to take this feedback seriously.</p>
 <p>Since Scarf launched, our backend has been built in Haskell. The main API that powers our app uses libraries like Servant, Beam on top of PostgreSQL. We also built a high-performance Haskell service for Scarf Gateway directly on top of WAI, which sits directly in the download path for a high volume of open source package traffic. These systems have real uptime requirements, contractually committed SLAs, and we have managed that successfully in production for years.</p>
 <p>We put Haskell through a serious production test, and many of its promises held up. The code was reliable. The type system caught real bugs. The language forced us to be thoughtful about how we modelled our domain. High performance code has been generally straight-forward to achieve.</p>
 <p>But the costs were real too. The biggest ones were compilation time and ecosystem friction. We spent a lot of time optimizing builds, caches, Nix, developer environments, CI, and all the other machinery you end up needing around a serious Haskell codebase. For a long time, that was workable. Our team knows the language and tooling deeply. We knew where the sharp edges were, and we mostly lived with it.</p>
 <p>Then AI changed the tradeoffs.</p>
+</section>
 <section class="org2-headline level-1">
 <h1 id="haskell-after-ai">Haskell after AI</h1>
 <p>LLMs are now very good at writing code. They are not perfect, obviously, but they are good enough that the economics of software development have changed.</p>

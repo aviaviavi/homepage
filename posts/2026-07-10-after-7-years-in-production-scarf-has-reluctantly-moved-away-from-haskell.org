@@ -29,13 +29,15 @@
 
 ---
 
-This has been a hard post to write. I almost didn't write it at all, since I prefer to build and promote than to critique. However, I hope this post can add constructively to the discussion about Haskell’s future.
+* Disclaimer
+
+This has been a hard post to write. I almost didn't write it at all, since I prefer to build and promote than to critique. However, I hope this post can add constructively to the discussion about Haskell’s future. I must underline that I'm not writing this criticizing Haskell from the outside. I care enough about Haskell to be honest about why Scarf has reluctantly moved away from it, in hopes it sways people in the community to take this feedback seriously.
+
+* Where I've been
 
 For the last 16 years, I have been a huge fan of Haskell. It has been undeniably the most important programming language in my life. Learning it made me a much better programmer. I have advocated for it, built a company that runs on it, and I serve on the board of the Haskell Foundation and the Haskell.org committee.
 
 I have also been open about the places where I think Haskell needs to improve.
-
-I must underline that I'm not writing this criticizing Haskell from the outside. I care enough about Haskell to be honest about why Scarf has reluctantly moved away from it, in hopes it sways people in the community to take this feedback seriously.
 
 Since Scarf launched, our backend has been built in Haskell. The main API that powers our app uses libraries like Servant, Beam on top of PostgreSQL. We also built a high-performance Haskell service for Scarf Gateway directly on top of WAI, which sits directly in the download path for a high volume of open source package traffic. These systems have real uptime requirements, contractually committed SLAs, and we have managed that successfully in production for years.
 
