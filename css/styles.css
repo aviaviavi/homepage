@@ -3,6 +3,12 @@ img.collapse {
     height: 1px;
 }
 
+img.embedded-post-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 td.org-right {
     text-align: right;
     width: 10rem;
@@ -58,4 +64,3 @@ td.org-right {
 /*     white-space: nowrap; */
 /*     width: 1px; */
 /* } */
-

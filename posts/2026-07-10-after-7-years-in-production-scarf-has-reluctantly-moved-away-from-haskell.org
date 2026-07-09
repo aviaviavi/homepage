@@ -95,7 +95,13 @@ An AI-enabled Haskell ecosystem would ask different questions. How do we make Ha
 
 Haskell should be unusually well positioned to be relevant to AI-enabled engineers and agents. Type safety can be a huge advantage for LLM-generated code if the compiler is helping the agent converge quickly. But that is not the same thing as optimizing the language for humans writing code by hand. Agents have different bottlenecks. They are cheap at generating code and expensive when blocked. They benefit from fast feedback, clear examples, low setup friction, and errors that help them repair the code quickly.
 
-https://x.com/gdb/status/2007228511363444905
+#+BEGIN_EXPORT html
+<p>
+  <a href="https://x.com/gdb/status/2007228511363444905">
+    <img class="embedded-post-image" src="../images/posts/2026-07-10-gdb-tweet.png" alt="Screenshot of a Greg Brockman tweet about Rust being a perfect language for agents, with replies mentioning Haskell." />
+  </a>
+</p>
+#+END_EXPORT
 
 If Haskell wants to be great in the AI era, it needs to optimize for that world on purpose.
 

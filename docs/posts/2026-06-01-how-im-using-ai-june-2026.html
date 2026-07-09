@@ -63,7 +63,7 @@
 </section>
 <section class="org2-headline level-2">
 <h2 id="harnesses">Harnesses</h2>
-<p>OpenClaw is still the central system. I'm scheduling more cron jobs over time as the workflows have stabalized significantly in the last month or so.</p>
+<p>OpenClaw is still the central system. I'm scheduling more cron jobs over time as the workflows have stabilized significantly in the last month or so.</p>
 <p>I'm also using the Codex desktop app significantly more for more in-depth coding tasks. Codex also has some of its own automations, like pull request review sweeps.</p>
 </section>
 <section class="org2-headline level-2">
@@ -74,7 +74,7 @@
 <h2 id="context-and-other-orchestration">Context and other orchestration</h2>
 <section class="org2-headline level-3">
 <h3 id="org2">Org2</h3>
-<p>My side proejct <a href="https://org2.avi.press">Org2</a> is becoming central to my workflow, just as org-mode in Emacs has been for years. My daily notes, meeting recordings, emails, and more are all flowing into my org notes. Org2's structure and backlinking seems to work well for the LLMs to have good context from my work and life, and the new emacs-free CLI provides a deterministic API for things like agenda planning, encryption, backlinking, formatting, and more.</p>
+<p>My side project <a href="https://org2.avi.press">Org2</a> is becoming central to my workflow, just as org-mode in Emacs has been for years. My daily notes, meeting recordings, emails, and more are all flowing into my org notes. Org2's structure and backlinking seems to work well for the LLMs to have good context from my work and life, and the new emacs-free CLI provides a deterministic API for things like agenda planning, encryption, backlinking, formatting, and more.</p>
 <p>By staying largely compatible with existing org tools, I still have a reliable way for OpenClaw to trigger reminders on any device, and manage the todo list I actually follow day to day from my phone, laptop, but now from any editor.</p>
 <p>I fun tangent: I've also multi-recipient encryption support to `org2-crypt`, which allows me to securely share secrets with individual agents via PGP. It's become a very ergonomic way to share secrets with OpenClaw that are encrypted end to end.</p>
 <p>Development of org2 is also itself a very automated process at this point. I just ask OpenClaw to implement features or fix bugs as I come across them organically. I'm not reviewing its code at all anymore.</p>
@@ -86,15 +86,15 @@
 <section class="org2-headline level-3">
 <h3 id="semi-automated-software-development">Semi-automated software development</h3>
 <ul>
-<li><p>OpenClaw is continuously ingesting all of my meeting trascripts and notes, and opens Linear tickets where appropriate.</p></li>
-<li><p>When a particilar label is added to any Linear ticket, OpenClaw will begin working and send a PR. We are finding more places where this label can be added automatically. For frontend tickets, it will even post screenshots of the rendered UI changes for easier review.</p></li>
+<li><p>OpenClaw is continuously ingesting all of my meeting transcripts and notes, and opens Linear tickets where appropriate.</p></li>
+<li><p>When a particular label is added to any Linear ticket, OpenClaw will begin working and send a PR. We are finding more places where this label can be added automatically. For frontend tickets, it will even post screenshots of the rendered UI changes for easier review.</p></li>
 <li><p>Codex reviews OpenClaw's work continuously. When Codex signs off, OpenClaw will merge. </p></li>
 <li><p>Deploys are still done by a human (for now).</p></li>
 </ul>
 </section>
 <section class="org2-headline level-3">
 <h3 id="user-support">User support</h3>
-<p>OpenClaw reads support tickets and drafts resposes, and sends them after manual approval. We're increasingly giving it more access to actually respond to customer support tasks on its own. </p>
+<p>OpenClaw reads support tickets and drafts responses, and sends them after manual approval. We're increasingly giving it more access to actually respond to customer support tasks on its own. </p>
 </section>
 <section class="org2-headline level-3">
 <h3 id="documentation-updates">Documentation updates</h3>
@@ -102,7 +102,7 @@
 </section>
 <section class="org2-headline level-3">
 <h3 id="scarf-ai-review-and-improvement">Scarf AI review and improvement</h3>
-<p>OpenClaw reads through Scarf AI chats, and monitors for bad responeses from Scarf. It sends a digest to us in Slack and follows up with Linear tickets where appropriate (which will then get implemented automatically once the relevant label is added).</p>
+<p>OpenClaw reads through Scarf AI chats, and monitors for bad responses from Scarf. It sends a digest to us in Slack and follows up with Linear tickets where appropriate (which will then get implemented automatically once the relevant label is added).</p>
 </section>
 </section>
 <section class="org2-headline level-2">
