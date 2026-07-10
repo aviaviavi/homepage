@@ -31,7 +31,7 @@
 
 * Disclaimer
 
-This has been a hard post to write. I almost didn't write it at all, since I prefer to build and promote than to critique. However, I hope this post can add constructively to the discussion about Haskell’s future. I must underline that I'm not writing this criticizing Haskell from the outside. I care enough about Haskell to be honest about why Scarf has reluctantly moved away from it, in hopes it sways people in the community to take this feedback seriously.
+This has been a hard post to write. I almost didn't write it at all, since I prefer to build and promote than to critique. However, I hope this post can add constructively to the discussion about Haskell’s future. I must underline that I'm not writing this criticizing Haskell from the outside. I care enough about Haskell to be honest about why [[https://about.scarf.sh][Scarf]] has reluctantly moved away from it, in hopes it sways people in the community to take this feedback seriously.
 
 * Where I've been
 
