@@ -39,7 +39,7 @@ For the last 16 years, I have been a huge fan of Haskell. It has been undeniably
 
 I have also been open about the places where I think Haskell needs to improve.
 
-Since Scarf launched, our backend has been built in Haskell. The main API that powers our app uses libraries like Servant, Beam on top of PostgreSQL. We also built a high-performance Haskell service for Scarf Gateway directly on top of WAI, which sits directly in the download path for a high volume of open source package traffic. These systems have real uptime requirements, contractually committed SLAs, and we have managed that successfully in production for years.
+Since Scarf launched, our backend has been built in Haskell. The main API that powers our app uses libraries like Servant, Beam for PostgreSQL, and even our own client for ClickHouse. We also built a high-performance Haskell service for Scarf Gateway directly on top of WAI, which sits directly in the download path for a high volume of open source package traffic. These systems have real uptime requirements, contractually committed SLAs, and we have managed that successfully in production for years.
 
 We put Haskell through a serious production test, and many of its promises held up. The code was reliable. The type system caught real bugs. The language forced us to be thoughtful about how we modelled our domain. High performance code has been generally straight-forward to achieve.
 
